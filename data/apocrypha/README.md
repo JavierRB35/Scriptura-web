@@ -1,6 +1,6 @@
 # Archivo documental de evangelios extracanonicos — Scriptura
 
-**Estado:** **6/6 traducciones españolas completas como borradores**; conservados los 6 originales ingleses de dominio público; **0 obras pendientes de traducir**. Las seis traducciones españolas requieren **revisión editorial y filológica independiente** antes de una eventual publicación. No están incorporadas a la base de datos ni al lector web público. Se encuentran separadas de la Biblia canónica Reina-Valera 1909.
+**Estado:** **6/6 traducciones españolas completas como borradores**, con 6 originales ingleses conservados y **0 obras pendientes de traducir**. Ahora son accesibles desde **`/biblioteca`** como versiones provisionales, claramente etiquetadas. Sigue pendiente la revisión editorial y filológica independiente. No se incorporan a la base de datos ni al lector bíblico canónico Reina-Valera 1909.
 
 ## Textos archivados y traducciones
 
@@ -36,4 +36,4 @@ La declaración de Mattison **no cubre automáticamente otras traducciones, imá
 
 **No inventar numeración de versículos:** conservar dichos, capítulos/apartados, unidades numeradas o páginas del manuscrito según la obra. Las lagunas y variantes son parte esencial del texto histórico y deben seguir visibles.
 
-**Publicación diferida:** hasta completar la revisión editorial no crear fichas web que simulen un libro publicado, ni mezclar pasajes apócrifos con los 66 libros de la Biblia RV1909.
+**Nueva decisión de producto:** la Biblioteca ofrece acceso explícito a estos seis **borradores provisionales**, con información de derechos, origen y revisión pendiente. No presentarlos como ediciones académicamente revisadas y no mezclarlos con los 66 libros de la Biblia RV1909. Véase [el protocolo de Biblioteca](../../docs/11-BIBLIOTECA-WEB.md).
