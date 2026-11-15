@@ -438,3 +438,173 @@ Una mujer de entre la multitud le dijo: «Dichoso el vientre que te llevó y los
 ## Dicho 80. El mundo es un cuerpo
 
 Jesús dijo: «Quien ha conocido el mundo ha encontrado el cuerpo; pero, de quien ha encontrado el cuerpo, el mundo no es digno».
+
+
+## Dicho 81. La riqueza y la renuncia (1)
+
+Jesús dijo: «Quien se haya enriquecido debe convertirse en gobernante, y quien tenga poder debe renunciar a él».
+
+## Dicho 82. Jesús y el fuego (2)
+
+Jesús dijo: «Quien está cerca de mí está cerca del fuego, y quien está lejos de mí está lejos del Reino».
+
+## Dicho 83. La luz y las imágenes
+
+Jesús dijo: «Las imágenes se manifiestan a las personas, pero la luz que hay dentro de ellas está oculta en la imagen de la luz del Padre. Él se manifestará, pero su imagen quedará oculta por su luz».
+
+## Dicho 84. Nuestras imágenes anteriores
+
+Jesús dijo: «Cuando veis vuestro propio parecido, os alegráis. Pero cuando veáis vuestras imágenes, las que llegaron a existir antes que vosotros, que no mueren y no se manifiestan, ¡cuánto tendréis que soportar!».
+
+## Dicho 85. Adán no fue digno
+
+Jesús dijo: «Adán llegó a existir gracias a un gran poder y una gran riqueza, pero no llegó a ser digno de vosotros. Si hubiera sido digno, [no habría conocido] la muerte».
+
+## Dicho 86. Zorros y aves
+
+Jesús dijo: «[Los zorros tienen madrigueras] y las aves tienen nidos, pero el Hijo de la Humanidad no tiene dónde reclinar la cabeza y descansar».
+
+## Dicho 87. El cuerpo y el alma
+
+Jesús dijo: «¡Qué desdichado es el cuerpo que depende de otro cuerpo, y qué desdichada el alma que depende de ambos!».
+
+## Dicho 88. Ángeles y profetas
+
+Jesús dijo: «Los ángeles y los profetas vendrán a vosotros y os darán lo que os pertenece. Vosotros les daréis lo que tenéis y os preguntaréis: “¿Cuándo vendrán a llevarse lo que es suyo?”».
+
+## Dicho 89. El interior y el exterior
+
+Jesús dijo: «¿Por qué laváis el exterior de la copa? ¿No sabéis que quien hizo el interior hizo también el exterior?».
+
+## Dicho 90. El yugo de Jesús es fácil
+
+Jesús dijo: «Venid a mí, porque mi yugo es fácil y mis exigencias son ligeras. Encontraréis descanso».
+
+## Dicho 91. Interpretar las señales
+
+Le dijeron: «Dinos quién eres para que podamos confiar en ti».
+
+Él les dijo: «Sabéis interpretar el aspecto del cielo y de la tierra, pero no conocéis a quien tenéis delante ni sabéis interpretar el momento presente».
+
+## Dicho 92. Buscar y encontrar
+
+Jesús dijo: «Buscad y encontraréis. Antes no respondí a vuestras preguntas. Ahora quiero daros respuestas, pero no las estáis buscando».
+
+## Dicho 93. No arrojar perlas a los cerdos
+
+«No deis lo santo a los perros, no sea que lo arrojen al estercolero. No arrojéis perlas a los cerdos, no sea que […]».
+
+## Dicho 94. Llamad y se os abrirá
+
+Jesús [dijo]: «Quien busque encontrará, [y a quien llame] se le abrirá».
+
+## Dicho 95. Dar dinero
+
+[Jesús dijo]: «Si tenéis dinero, no lo prestéis con intereses. Dadlo, en cambio, [a] alguien de quien no vayáis a recuperarlo».
+
+## Dicho 96. La parábola de la levadura
+
+Jesús [dijo]: «El Reino del Padre puede compararse con una mujer que tomó un poco de levadura y la [escondió] en harina. Con ella preparó grandes hogazas de pan. ¡Quien tenga oídos para oír, que oiga!».
+
+## Dicho 97. La parábola de la jarra de harina
+
+Jesús dijo: «El Reino del Padre puede compararse con una mujer que llevaba una jarra de harina. Mientras recorría [un] largo camino, el asa de la jarra se rompió y la harina fue derramándose detrás de ella, sobre el camino. Ella no lo sabía y no se dio cuenta del problema hasta que llegó a casa, dejó la jarra en el suelo y la encontró vacía».
+
+## Dicho 98. La parábola del asesino
+
+Jesús dijo: «El Reino del Padre puede compararse con un hombre que quería matar a alguien poderoso. Desenvainó su espada en su casa y la hundió en la pared para comprobar si su mano era suficientemente fuerte. Después mató al poderoso».
+
+## Dicho 99. La verdadera familia de Jesús
+
+Los discípulos le dijeron: «Tus hermanos y tu madre están fuera».
+
+Él les dijo: «Las personas que están aquí y cumplen la voluntad de mi Padre son mis hermanos y mi madre. Ellas entrarán en el Reino de mi Padre».
+
+## Dicho 100. Dar al César lo que es del César
+
+Le mostraron a Jesús una moneda de oro y le dijeron: «Los que pertenecen al César nos exigen tributos».
+
+Él les dijo: «Dad al César lo que pertenece al César, dad a Dios lo que pertenece a Dios y dadme a mí lo que me pertenece».
+
+## Dicho 101. El discipulado (2)
+
+«Quien no odie a su [padre] y a su madre como yo no puede convertirse en mi [discípulo], y quien [no] ame a su [padre] y a su madre como yo tampoco puede convertirse en mi [discípulo]. Pues mi madre […], pero [mi] verdadera [Madre] me dio la Vida».
+
+## Dicho 102. El perro en el pesebre
+
+Jesús dijo: «¡Qué desgracia para los fariseos, que se parecen a un perro acostado en el pesebre del ganado! El perro no come y [tampoco deja] que coma el ganado».
+
+## Dicho 103. La parábola de los ladrones
+
+Jesús dijo: «Dichoso quien sabe por dónde van a entrar los ladrones. [Puede] levantarse, reunir sus defensas y prepararse para protegerse antes de que lleguen».
+
+## Dicho 104. La oración y el ayuno
+
+Le dijeron a [Jesús]: «Ven, oremos y ayunemos hoy».
+
+Jesús dijo: «¿Qué mal he hecho? ¿Acaso he fallado?
+
+»Más bien, cuando el novio salga de la cámara nupcial, entonces deberán ayunar y orar».
+
+## Dicho 105. Conocer al padre y a la madre
+
+Jesús dijo: «A quien conozca a su padre y a su madre lo llamarán bastardo».
+
+## Dicho 106. La unidad (2)
+
+Jesús dijo: «Cuando hagáis de los dos uno solo, os convertiréis en Hijos de la Humanidad; y si decís: “¡Montaña, apártate!”, se apartará».
+
+## Dicho 107. La parábola de la oveja perdida
+
+Jesús dijo: «El Reino puede compararse con un pastor que tenía cien ovejas. La más grande se extravió. Él dejó las noventa y nueve y buscó aquella hasta encontrarla. Después de tanto esfuerzo, le dijo a la oveja: “Te quiero más que a las noventa y nueve”».
+
+## Dicho 108. Llegar a ser como Jesús
+
+Jesús dijo: «Quien beba de mi boca se volverá como yo, y yo mismo me volveré como esa persona; entonces se le revelará lo que estaba oculto».
+
+## Dicho 109. La parábola del tesoro escondido
+
+Jesús dijo: «El Reino puede compararse con alguien que tenía un tesoro [escondido] en su campo. [Esa persona] no lo sabía. Al morir, dejó el campo a su hijo. El hijo tampoco lo sabía; tomó el campo y lo vendió.
+
+»El comprador aró el campo, [encontró] el tesoro y comenzó a prestar dinero con intereses a quien quiso».
+
+## Dicho 110. La riqueza y la renuncia (2)
+
+Jesús dijo: «Quien haya encontrado el mundo y se haya hecho rico debe renunciar al mundo».
+
+## Dicho 111. Los vivos no morirán (2)
+
+Jesús dijo: «Los cielos y la tierra se enrollarán ante vosotros, y quien viva del Viviente no verá la muerte».
+
+¿Acaso no dice Jesús: «De quien se encuentra a sí mismo, el mundo no es digno»?
+
+## Dicho 112. La carne y el alma
+
+Jesús dijo: «¡Qué desgracia para la carne que depende del alma! ¡Qué desgracia para el alma que depende de la carne!».
+
+## Dicho 113. El Reino ya está presente
+
+Sus discípulos le dijeron: «¿Cuándo llegará el Reino?».
+
+«No llegará si lo buscáis observando. No dirán: “¡Mirad, aquí!” ni “¡Mirad, allí!”. Más bien, el Reino del Padre ya está extendido sobre la tierra y las personas no lo ven».
+
+## Dicho 114. Pedro y María
+
+Simón Pedro les dijo: «María debe marcharse de entre nosotros, porque las mujeres no son dignas de la vida».
+
+Jesús dijo: «Mirad, ¿he de convertirla en hombre? Para que también ella llegue a ser un espíritu viviente, es igual que vosotros, los hombres, porque toda mujer que se haga varonil entrará en el Reino de los cielos».
+
+---
+
+**El Evangelio según Tomás**
+
+## Notas de traducción
+
+Las notas siguientes traducen y adaptan las explicaciones editoriales de Mark M. Mattison. Las referencias bibliográficas se conservan para permitir el cotejo; las decisiones controvertidas no se presentan como certezas filológicas.
+
+- **Dicho 13 — «Tres cosas».** También podría traducirse «tres palabras». El término copto correspondiente a «palabra» puede traducirse asimismo como «dicho», como sucede en el comienzo del evangelio.
+- **Dichos 16, 49 y 75 — «Uno».** Literalmente, *monachos*, que suele traducirse por «único», «solitario» o «solo». Sobre la elección del traductor, véase Mark M. Mattison, *The Gospel of Thomas: A New Translation for Spiritual Seekers* (CreateSpace Independent Publishing Platform, 2015), pp. 24-25, en diálogo con Cynthia Bourgeault, *The Wisdom Jesus: Transforming Heart and Mind – a New Perspective on Christ and His Message* (Shambhala, 2009), p. 21; «The Gift of Life: The Unified Solitude of the Desert Fathers», *Parabola* (1989), vol. 14, n.º 2, pp. 27-28; y Gabriele Winkler, «The Origins and Idiosyncrasies of the Earliest Form of Ascetisicm», en William Skuldarek, O.S.B. (ed.), *The Continuing Quest for God: Monastic Spirituality in Tradition and Transition* (The Liturgical Press, 1981), pp. 28-29.
+- **Dicho 61 — «Igual».** El copto dice literalmente «destruido». Puede tratarse de un error del copista: modificando una letra se obtiene «igual», lo que enlazaría con la expresión anterior «Yo soy el que existe en igualdad». Por eso se marca como corrección editorial mediante \`/igual\\\`.
+- **Dicho 65 — «Acreedor».** También podría leerse «una buena persona». Véase Michael W. Grondin, «Good Man or Usurer? Battle over a Lacuna», revisión del 31 de mayo de 2014, http://gospel-thomas.net/lacuna.htm (consultado por el traductor en 2015).
+- **Dicho 105 — «Bastardo».** Literalmente, «hijo de una prostituta».
+- **Dicho 114 — «Varonil».** Para las dificultades de interpretación, véase Mattison, *The Gospel of Thomas*, pp. 25-26, siguiendo a Samuel Zinner, *The Gospel of Thomas in the Light of Early Jewish, Christian and Islamic Esoteric Trajectories: with a contextualized commentary and a new translation of the Thomas Gospel* (The Matheson Trust, 2011), pp. 288-290, y Paul Schüngel, «Ein Vorschlag, EvTho 114 neu zu übersetzen», *Novum Testamentum* (1994), vol. 36, n.º 4, pp. 394-401.
