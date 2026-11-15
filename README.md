@@ -45,7 +45,8 @@ La aplicación original Android ([JavierRB35/Scriptura](https://github.com/Javie
 4. **Gratuita y financiada por el propietario**: sin pagos ni donaciones.
 5. **Pruebas reales**: una función está completada solo con código operativo, persistencia real, permisos correctos y pruebas satisfactorias.
 6. Modificaciones menores y seguras directamente en `main`; ramas/PR solo cuando el riesgo lo justifique.
-7. **Diseño y recursos:** respetar decisiones V01–V16 de `docs/05-DIRECTRIZ-IDENTIDAD-VISUAL.md` y briefs de `docs/06-CATALOGO-RECURSOS-GRAFICOS.md`; ninguna imagen decorativa dentro de capítulos bíblicos.
+7. **Diseño y recursos:** respetar decisiones V01–V17 de `docs/05-DIRECTRIZ-IDENTIDAD-VISUAL.md` y briefs de `docs/06-CATALOGO-RECURSOS-GRAFICOS.md`; ninguna imagen decorativa dentro de capítulos bíblicos.
+8. **Versículos numerados y separados:** cada versículo debe mostrar su número y comenzar en una nueva línea/bloque; prohibidos versículos consecutivos en párrafo corrido (V17, especificación §6.4).
 
 ## Desarrollo
 
