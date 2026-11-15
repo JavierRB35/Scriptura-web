@@ -17,6 +17,7 @@ const sourceSans = Source_Sans_3({
 
 const ESTADO = [
   { area: "Biblioteca bíblica y búsqueda", fase: "Disponible", listo: true },
+  { area: "Biblioteca de textos antiguos", fase: "Disponible", listo: true },
   { area: "Comunidad y debates", fase: "En desarrollo", listo: false },
   { area: "Administración y moderación", fase: "En desarrollo", listo: false },
   { area: "Asistente de IA con fuentes verificadas", fase: "En desarrollo", listo: false },
@@ -167,7 +168,7 @@ export default function Home() {
                 href="/biblia"
                 className="mt-4 inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
-                Abrir la biblioteca →
+                Abrir la Biblia →
               </Link>
             </article>
 
@@ -201,14 +202,20 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-              <p className="text-sm font-semibold text-muted">03 · En desarrollo</p>
+              <p className="text-sm font-semibold text-accent">03 · Disponible</p>
               <h3 className="mt-5 text-[1.45rem] font-normal leading-[1.3]" style={serif}>
-                Comprender con fuentes
+                Explorar textos antiguos
               </h3>
               <p className="mt-3 text-[.98rem] leading-[1.75] text-muted">
-                Acompañamiento documental y asistencia fundamentada en fuentes
-                verificables, previstos para una fase posterior.
+                Seis evangelios apócrifos con lectura íntegra, manuscritos
+                documentados y traducciones provisionales claramente identificadas.
               </p>
+              <Link
+                href="/biblioteca"
+                className="mt-4 inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              >
+                Abrir Biblioteca →
+              </Link>
             </article>
           </div>
         </section>
