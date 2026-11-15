@@ -76,6 +76,17 @@
 - [ ] Revisar las 18 excepciones de la tanda 3 y los restantes arcaísmos polisémicos con intervención editorial verificable.
 - [ ] Auditar exhaustivamente todo el corpus antes de etiquetar una adaptación como completa.
 
+
+## Ampliación — Biblioteca de textos antiguos (2026-11-15)
+
+- [x] Catálogo público `/biblioteca` con categorías de los seis evangelios extracanonicos y acceso desde navegación/portada.
+- [x] Lector genérico por identificador; original y versión española ligados al manifiesto, apartados y numeración preservados.
+- [x] Soporte para altas futuras: nueva fuente, Markdown, metadatos y derechos en manifiesto; sin página personalizada por obra.
+- [x] Avisos editoriales visibles de que son **traducciones de trabajo** y fuentes extracanonicas, con `noindex` mientras no haya revisión.
+- [x] Validaciones de estructura, integridad y test unitario del catálogo.
+- [ ] Cotejar y revisar de manera independiente las seis versiones españolas antes de declararlas ediciones revisadas.
+- [ ] Verificar y subir los archivos de imágenes de los evangelios, todavía no comprobados en `public/images/apocrypha`.
+
 ## Fase 3 — Comunidad
 
 - [ ] Perfiles, alias únicos, preferencias de privacidad (historial privado por defecto).
