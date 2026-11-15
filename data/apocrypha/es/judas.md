@@ -83,3 +83,60 @@ Jesús le respondió: «Las almas de todas las generaciones humanas morirán. Si
 Judas preguntó: «¿Qué harán las demás generaciones humanas?».
 
 Jesús respondió: «No es posible ⟦p. 44⟧ sembrar sobre [roca] y recoger su fruto. Del mismo modo, [no es posible sembrar sobre] la raza [impura], junto con la sabiduría perecedera [y] la mano que creó a los seres humanos mortales para que sus almas suban a los reinos superiores. [En verdad] os digo que [ningún gobernante], ángel [ni] poder podrá contemplar los [lugares] que [esta gran] generación santa [verá]». Después de decir esto, Jesús se marchó.
+
+
+Judas dijo: «Maestro, ya que has escuchado a todos los demás, escúchame ahora a mí también, porque he tenido una gran visión».
+
+Al oírlo, Jesús se rio y le dijo: «¿Por qué estás tan alterado, demonio decimotercero? Habla, y tendré paciencia contigo».
+
+Judas le dijo: «En la visión me vi a mí mismo. Los doce discípulos me apedreaban y ⟦p. 45⟧ me perseguían [apresuradamente]. También llegué al lugar adonde [te había seguido]. Vi [una casa en aquel lugar], cuyos límites mis ojos no podían [medir]. Grandes personas la rodeaban, y aquella casa tenía un techo cubierto de vegetación. En medio de la casa había [una multitud …]. ¡Maestro, déjame entrar con esas personas!».
+
+[Jesús] le respondió: «Tu estrella te ha extraviado, Judas», y añadió: «Ninguna persona nacida mortal es digna de entrar en la casa que has visto, porque ese lugar está reservado para los santos. Allí no gobernarán ni el sol ni la luna, ni tampoco el día, sino que los santos permanecerán siempre en ese reino junto con los ángeles santos. Mira, te he explicado los misterios del Reino ⟦p. 46⟧ y te he enseñado el error de las estrellas y […] enviado [a lo alto] sobre los doce reinos».
+
+Judas preguntó: «Maestro, mi descendencia no domina a los gobernantes, ¿verdad?».
+
+Jesús le respondió: «Ven, deja que te [hable] [de la generación santa. No para que vayas allí], sino porque te afligirás mucho cuando contemples el Reino y toda su generación».
+
+Al oírlo, Judas preguntó: «¿De qué me ha servido que me hayas separado de esa generación?».
+
+Jesús le respondió: «Te convertirás en el decimotercero, y las demás generaciones te maldecirán, pero gobernarás sobre ellas. En los últimos días […] hacia ti, y no ascenderás ⟦p. 47⟧ a la generación santa».
+
+## Jesús revela todas las cosas a Judas
+
+Jesús dijo: «[Ven] y te enseñaré los [misterios que ningún] ser humano [verá], porque existe un reino grande e ilimitado cuyos horizontes jamás ha visto ninguna generación de ángeles. [En] él se encuentra un [gran] Espíritu invisible, al que ningún ojo [angélico] ha visto jamás, que ningún corazón ha podido comprender y al que nunca se ha llamado con nombre alguno.
+
+»Allí apareció una nube luminosa. Y él (el Espíritu) dijo: “Que llegue a existir un ángel que me atienda”. Un gran ángel, el Autogenerado, el Dios de la Luz, surgió de la nube. A causa de él, otros cuatro ángeles llegaron a existir desde otra nube y asistieron al Autogenerado angélico. El ⟦p. 48⟧ [Autogenerado] dijo: “Que [un reino] llegue a existir”, y llegó a existir [como él había dicho]. Y [creó] la primera luminaria para que gobernara sobre él. Dijo: “Que haya ángeles que [la] sirvan”, y surgieron [miríadas] incontables. Dijo: “[Que] surja un reino luminoso”, y así fue. Creó la segunda luminaria para que lo gobernara, junto con miríadas de ángeles incontables que prestaran servicio. Así creó los demás reinos de luz. Los puso bajo gobierno y creó para ellos miríadas de ángeles innumerables que los ayudaran.
+
+»Adamas estaba en la primera nube de luz, que ninguno de los llamados “Dios” entre todos los ángeles podía ver. ⟦p. 49⟧ Y [Adamas engendró a Set en] aquel [lugar, conforme a la] imagen [de …] y a semejanza de [aquel] ángel. Hizo que apareciera la [generación] incorruptible de Set ante las doce [luminarias] andróginas. [Y después] hizo aparecer setenta y dos luminarias en la generación incorruptible, según la voluntad del Espíritu. Entonces las mismas setenta y dos luminarias hicieron aparecer trescientas sesenta luminarias en la generación incorruptible, según la voluntad del Espíritu, para que hubiera cinco por cada una. Los doce reinos de las doce luminarias constituyen a su padre, con seis cielos por reino, de modo que existen setenta y dos cielos para las setenta y dos luminarias, y por cada una de ellas ⟦p. 50⟧ [cinco] firmamentos, [que suman] trescientos sesenta [firmamentos]. [A ellas] se les otorgó autoridad y un [gran] ejército de ángeles incontables para su honor y servicio, junto con espíritus vírgenes [también] para el honor y [servicio] de todos los reinos y de los cielos con sus firmamentos.
+
+»La multitud de los inmortales recibe el nombre de “cosmos”, es decir, “perecedero”, de parte del padre y de las setenta y dos luminarias, junto con el Autogenerado y sus setenta y dos reinos. Allí apareció el primer ser humano con sus poderes incorruptibles. En el reino que apareció con su generación está la nube del conocimiento y el ángel llamado ⟦p. 51⟧ [Elelet …]. Después de estas cosas, [Elelet] dijo: “Que lleguen a existir doce ángeles [para] gobernar sobre el Caos y el [Hades]”. Entonces apareció de la nube un [ángel] cuyo rostro resplandecía de [fuego] y cuya apariencia estaba [manchada] de sangre. Su nombre era Nebro, que significa “Rebelde”. Otros lo llaman Yaldabaot. Otro ángel, Saklas, surgió también de la nube. Así que Nebro creó seis ángeles y Saklas (hizo lo mismo) para que fueran sus asistentes. Estos hicieron surgir doce ángeles en los cielos, cada uno de los cuales recibió una porción de los cielos.
+
+»Los doce gobernantes dijeron a los doce ángeles: “Que cada uno de vosotros ⟦p. 52⟧ […] y que ellos […] generación [… cinco] ángeles”:
+
+- El primero [es Yaot], llamado «el Bueno».
+- El segundo es Harmatot, [el ojo de fuego].
+- El [tercero] es Galila.
+- El cuarto [es] Yobel.
+- El quinto es Adonaios.
+
+»Estos son los cinco que gobernaron el Hades y son los primeros sobre el Caos.
+
+»Entonces Saklas dijo a sus ángeles: “Creemos un ser humano a nuestra imagen y semejanza”. Y modelaron a Adán y a su esposa Eva, que en la nube recibe el nombre de “Vida”, porque con ese nombre todas las generaciones lo buscan, y cada una la llama por sus propios nombres. Ahora bien, Saklas no ⟦p. 53⟧ [ordenó …] dar a luz, salvo […] entre las generaciones […] que este […] y el [ángel] le dijo: “Tu vida durará un tiempo limitado, junto con la de tus hijos”».
+
+Entonces Judas preguntó a Jesús: «¿[Cuánto] tiempo puede vivir una persona?».
+
+Jesús respondió: «¿Por qué te sorprende que la vida de Adán y de su generación tenga una duración limitada en el lugar en el que recibió su reino con su gobernante?».
+
+Judas preguntó a Jesús: «¿Muere el espíritu humano?».
+
+Jesús respondió: «Así es como sucede. Dios ordenó a Miguel que prestara espíritus a las personas para que sirvieran. Después el Grande ordenó a Gabriel que entregara espíritus a la gran generación que no tiene rey: el espíritu junto con el alma. De modo que el [resto] de las almas ⟦p. 54⟧ […] luz [… el] Caos […] buscan [el] espíritu que está dentro de vosotros, al que habéis dado vida en esta carne procedente de las generaciones angélicas. Entonces Dios hizo que se concediera conocimiento a Adán y a los que estaban con él, para que los reyes del Caos y del Hades no gobernaran sobre ellos».
+
+[Entonces] Judas preguntó a Jesús: «¿Qué harán, pues, esas generaciones?».
+
+Jesús dijo: «En verdad te digo que las estrellas llevan todas estas cosas a su cumplimiento. Cuando Saklas complete el tiempo que se le ha asignado, aparecerá su primera estrella con las generaciones y cumplirán lo que ha sido dicho. Entonces tendrán relaciones sexuales promiscuas en mi nombre, asesinarán a sus propios hijos ⟦p. 55⟧ y [ellos …] el mal y […] los reinos, conduciendo a las generaciones y presentándolas ante Saklas. [Y] después de eso […] traerá a las doce tribus de [Israel] desde […], y todas las [generaciones] servirán a Saklas, pecando en mi nombre. Y tu estrella [gobernará] el decimotercer reino». Entonces Jesús [se rio].
+
+[Judas] le preguntó: «Maestro, ¿por qué [te ríes de mí?».
+
+Jesús] [respondió]: «No me río [de ti, sino] del error de las estrellas, porque estas seis estrellas se extravían junto con esos cinco guerreros, y todas serán destruidas junto con sus creaciones».
+
+Judas preguntó entonces a Jesús: «¿Qué harán los que hayan sido bautizados en tu nombre?».
