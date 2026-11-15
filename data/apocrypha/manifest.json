@@ -25,12 +25,12 @@
       "translation_es_basis": "English public-domain edition by Mark M. Mattison based on Coptic",
       "translation_es_procedure": "AI-assisted Spanish translation from archived public-domain English edition; pending independent editorial / philological review",
       "translation_es_units": 114,
-      "translation_es_github_blob_sha": "0bc3f882b9e522d616492dde522c2b297922825a",
+      "translation_es_github_blob_sha": "129c0c59553b1dafe542572e4ff17a21456ca887",
       "translation_es_notes": "114 dichos numerados; prólogo y seis notas",
       "translation_es_source_language": "en",
       "translation_es_source_witness": "Nag Hammadi Codex II,2",
       "translation_es_unit_type": "sayings",
-      "translation_es_characters": 33118
+      "translation_es_characters": 33108
     },
     {
       "id": "mary",
@@ -55,8 +55,8 @@
       "translation_es_units": 9,
       "translation_es_unit_type": "extant manuscript pages (7-10; 15-19)",
       "translation_es_notes": "Páginas conservadas 7-10 y 15-19; faltan 1-6 y 11-14; cuatro notas",
-      "translation_es_github_blob_sha": "9d1f131da78ccf0ba42bd6ed0668053cc106315a",
-      "translation_es_characters": 8065
+      "translation_es_github_blob_sha": "63ccff97914ba31f0d789fad710205986ee4f492",
+      "translation_es_characters": 8053
     },
     {
       "id": "judas",
@@ -81,8 +81,8 @@
       "translation_es_units": 26,
       "translation_es_unit_type": "extant manuscript pages (33-58)",
       "translation_es_notes": "Páginas 33-58 conservadas; lagunas y 13 notas críticas",
-      "translation_es_github_blob_sha": "f4aa5963eca5bd8fd41eaddf3ef71a01b8945fa0",
-      "translation_es_characters": 23612
+      "translation_es_github_blob_sha": "1643479bd1cebdf1b44408c0b8f5e449005e1359",
+      "translation_es_characters": 23604
     },
     {
       "id": "peter",
@@ -107,8 +107,8 @@
       "translation_es_units": 60,
       "translation_es_unit_type": "numbered textual units",
       "translation_es_notes": "60 segmentos numerados; inicio y final fragmentarios",
-      "translation_es_github_blob_sha": "91d8ace106cd095e9dedbf3a53ef6b580c9a7d9a",
-      "translation_es_characters": 9846
+      "translation_es_github_blob_sha": "619437949302d682a141a8f60d1b1d8788d60021",
+      "translation_es_characters": 9844
     },
     {
       "id": "infancyjames",
@@ -133,8 +133,8 @@
       "translation_es_units": 25,
       "translation_es_unit_type": "chapters plus 4 alternative chapters",
       "translation_es_notes": "25 capítulos completos, versión breve alternativa 18-21 y 10 notas editoriales",
-      "translation_es_github_blob_sha": "734a134404ef91ad3a4111c2335d4a6673924479",
-      "translation_es_characters": 35463
+      "translation_es_github_blob_sha": "d0955d734e555edae757b7a3a71b6a8d6955db51",
+      "translation_es_characters": 35453
     },
     {
       "id": "infancythomas",
@@ -159,8 +159,8 @@
       "translation_es_units": 19,
       "translation_es_unit_type": "chapters",
       "translation_es_notes": "19 capítulos; advertencias de fuente de 10 y 17-18; nueve notas",
-      "translation_es_github_blob_sha": "a112d4e626f0e60d4c01cb242180abde50d78d52",
-      "translation_es_characters": 20392
+      "translation_es_github_blob_sha": "d872cc7079d0a462fcca77a5b659083f14304d0e",
+      "translation_es_characters": 20376
     }
   ],
   "translation_policy": "Seis traducciones completas de trabajo en español, derivadas de la edición inglesa de dominio público. Numeración original (dichos, capítulos, unidades numeradas o páginas) preservada sin inventar versículos. Se conservan lagunas y notas. Pendiente revisión editorial y cotejo de idiomas antiguos antes de cualquier publicación.",
