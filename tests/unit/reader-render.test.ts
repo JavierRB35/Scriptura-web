@@ -20,8 +20,11 @@ const props = {
   bookCode: "Gn",
   chapter: 1,
   editionAbbr: "RV1909",
+  editionId: "edicion-test",
   verses,
   initialRange: null,
+  user: null,
+  comments: [],
 };
 
 describe("V17: numeración, separación y fidelidad del lector", () => {

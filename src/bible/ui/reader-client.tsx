@@ -66,7 +66,9 @@ export function ReaderClient({
   comments,
 }: Props) {
   const [selected, setSelected] = useState(initialRange);
-  const [panel, setPanel] = useState<"none" | "pasaje" | "comentarios">("none");
+  const [panel, setPanel] = useState<"none" | "pasaje" | "comentarios">(
+    initialRange ? "pasaje" : "none"
+  );
   const [copied, setCopied] = useState(false);
 
   const fontScale = useSyncExternalStore(
@@ -104,6 +106,19 @@ export function ReaderClient({
   const roots = shownComments.filter((c) => !c.parentId);
   const repliesOf = (id: string) => shownComments.filter((c) => c.parentId === id);
 
+  // Resumen del pasaje seleccionado para el panel: presentación con ortografía
+  // actualizada; el texto canónico de la base no se altera.
+  const selectedText = useMemo(() => {
+    if (!selected) return "";
+    return verses
+      .filter((v) => v.verseNumber >= selected.start && v.verseNumber <= selected.end)
+      .map(
+        (v) =>
+          `${v.verseNumber} ${displayBibleVerse(v.text, { bookCode, chapter, verseNumber: v.verseNumber })}`
+      )
+      .join("\n");
+  }, [selected, verses, bookCode, chapter]);
+
   async function copyLink() {
     if (!selected) return;
     const url = `${window.location.origin}${backPath}?v=${selected.start}-${selected.end}`;
@@ -120,8 +135,12 @@ export function ReaderClient({
     <div>
       {/* Barra de herramientas de lectura */}
       <div className="sticky top-0 z-10 -mx-4 mb-6 flex items-center justify-between gap-2 border-b border-border bg-background/95 px-4 py-2 text-sm backdrop-blur">
-        <span className="text-muted">
+        <span
+          className="min-w-0 text-muted"
+          title="Texto original de 1909 conservado; lectura con ortografía actualizada"
+        >
           {editionAbbr} · Capítulo {chapter} · {comments.length} reflex.
+          <span className="ml-1 text-xs">· ort. actual</span>
         </span>
         <div className="flex items-center gap-1">
           <button
@@ -162,10 +181,14 @@ export function ReaderClient({
             <p
               key={v.verseKey}
               id={`v${v.verseNumber}`}
+              data-verse-number={v.verseNumber}
+              aria-label={`Seleccionar versículo ${v.verseNumber}`}
+              aria-pressed={inRange ? "true" : "false"}
               className={
-                inRange
+                (inRange
                   ? "-mx-1 cursor-pointer rounded bg-accent-soft px-1 transition-colors"
-                  : "-mx-1 cursor-pointer px-1 transition-colors hover:bg-accent-soft/50"
+                  : "-mx-1 cursor-pointer px-1 transition-colors hover:bg-accent-soft/50") +
+                (v.verseNumber === 1 ? " first-letter:float-left first-letter:mr-2" : "")
               }
               onClick={() => {
                 setSelected((prev) => verseClickLogic(prev, v.verseNumber));
@@ -174,19 +197,16 @@ export function ReaderClient({
             >
               {v.text ? (
                 <>
-                  <sup
-                    className="mr-1 select-none font-medium text-accent"
-                    aria-label={`versículo ${v.verseNumber}`}
-                  >
+                  <sup className="mr-1 select-none font-medium text-accent">
                     {v.verseNumber}
                   </sup>
                   {displayBibleVerse(v.text, { bookCode, chapter, verseNumber: v.verseNumber })}
                 </>
               ) : (
                 <em className="text-muted">
-                  {v.verseNumber}. (Este versículo no tiene texto en esta edición; su
-                  contenido forma parte del versículo anterior — diferencia de
-                  numeración.)
+                  {v.verseNumber}. Este versículo no tiene texto independiente en esta
+                  edición; su contenido forma parte del versículo anterior
+                  (diferencia de numeración).
                 </em>
               )}{" "}
             </p>
@@ -232,6 +252,9 @@ export function ReaderClient({
                 {selected ? (
                   <>
                     <p className="font-medium">{refLabel}</p>
+                    <p className="mt-1 whitespace-pre-line text-sm text-muted">
+                      {selectedText}
+                    </p>
                     <div className="mt-2 flex flex-wrap gap-2">
                       <button
                         type="button"
