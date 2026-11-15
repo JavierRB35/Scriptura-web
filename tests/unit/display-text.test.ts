@@ -111,7 +111,7 @@ describe("modernización contextual del antiguo verbo «criar»", () => {
     expect(displayBibleVerse("Y crió Dios al hombre a su imagen; a imagen de Dios lo crió; varón y hembra los crió.", at("Gn", 1, 27)))
       .toBe("Y creó Dios al hombre a su imagen; a imagen de Dios lo creó; varón y hembra los creó.");
     expect(displayBibleVerse("Y quedóse la mujer, y crió su hijo.", at("1S", 1, 23)))
-      .toBe("Y quedóse la mujer, y crio su hijo.");
+      .toBe("Y se quedó la mujer, y crio su hijo.");
     expect(displayBibleVerse("entre los leoncillos crió sus cachorros.", at("Ez", 19, 2)))
       .toBe("entre los leoncillos crio sus cachorros.");
     expect(displayBibleVerse("De la Roca que te crió te olvidaste: te has olvidado del Dios tu criador.", at("Dt", 32, 18)))
