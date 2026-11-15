@@ -4,7 +4,7 @@
 **Repositorio fuente de verdad:** [JavierRB35/Scriptura-web](https://github.com/JavierRB35/Scriptura-web), rama `main`.
 **Documentos relacionados:** [01-ESPECIFICACION-FUNCIONAL.md](01-ESPECIFICACION-FUNCIONAL.md) (D01–D25, especialmente D02, D06, D08, D13, D14, D23), [06-CATALOGO-RECURSOS-GRAFICOS.md](06-CATALOGO-RECURSOS-GRAFICOS.md) (brief operativo de recursos).
 
-> **OBLIGATORIO PARA CUALQUIER DESARROLLADOR O DISEÑADOR:** consultar esta directriz antes de crear o modificar páginas, componentes visuales, recursos gráficos, metadatos y experiencia de lectura. Las decisiones V01–V16 están cerradas. No reabrirlas sin una nueva instrucción expresa del propietario. No convertir el catálogo propuesto en trabajo superfluo ni bloquear funcionalidades por adornos.
+> **OBLIGATORIO PARA CUALQUIER DESARROLLADOR O DISEÑADOR:** consultar esta directriz antes de crear o modificar páginas, componentes visuales, recursos gráficos, metadatos y experiencia de lectura. Las decisiones V01–V17 están cerradas. No reabrirlas sin una nueva instrucción expresa del propietario. No convertir el catálogo propuesto en trabajo superfluo ni bloquear funcionalidades por adornos.
 
 ## 1. Principio rector
 
@@ -12,7 +12,7 @@ Scriptura es una biblioteca bíblica digital editorial contemporánea, pública 
 
 Los textos bíblicos son contenido documental inmutable, separado inequívocamente de opiniones, fuentes secundarias y respuestas de IA. No crear botones, usuarios, reseñas, contadores, comentarios, lecturas o datos ficticios en producción. Respetar permisos y privacidad real a nivel servidor y datos.
 
-## 2. Registro de decisiones visuales aprobadas V01–V16
+## 2. Registro de decisiones visuales aprobadas V01–V17
 
 | ID | Decisión vinculante | Interpretación operativa |
 |---|---|---|
@@ -32,6 +32,7 @@ Los textos bíblicos son contenido documental inmutable, separado inequívocamen
 | V14 | Páginas interiores editoriales equilibradas | Ilustraciones puntuales en cabeceras y destacados; resto limpio y funcional. |
 | V15 | Obras históricas seleccionadas + originales | Colección de arte contextual separada de los recursos de identidad; autoría, procedencia y derechos verificados. |
 | V16 | Ubicación y función de imágenes, no técnica obligatoria | Imágenes generadas con IA o reutilizadas con derechos acreditados. El foco de diseño es dónde aparecen, qué aportan y que nunca interfieran. CERRADO el debate sobre técnica artística y número exacto de escenas futuras. |
+| V17 | Numeración y separación de versículos OBLIGATORIAS | Todo versículo de la lectura bíblica debe exhibir su número real y comenzar en una línea o bloque independiente; queda prohibida la presentación de versículos consecutivos en un mismo párrafo corrido. |
 
 **Precedencia y aclaración:** V16 concreta el alcance de V02: «pictórico» describe el carácter visual aprobado, pero NO obliga al diseñador a óleo, acuarela u otra técnica exclusiva, ni a generar imágenes nuevas cuando exista un recurso licenciado adecuado. Las obras históricas no deben forzarse artificialmente a parecer imágenes de IA. La estética de todas las páginas debe seguir siendo coherente por composición, marcos, espaciado y color.
 
@@ -89,6 +90,19 @@ Los textos bíblicos son contenido documental inmutable, separado inequívocamen
 
 **Administración:** tablas, filtros y mensajes operativos claros, no estética de landing.
 
+## 5.1. Norma de lectura bíblica V17 — OBLIGATORIA Y NO OPCIONAL
+
+**TODOS LOS VERSÍCULOS DEBEN MOSTRAR SU NÚMERO Y UN SALTO DE LÍNEA ENTRE VERSÍCULOS.**
+
+1. **Numeración visible:** anteponer a cada versículo su número canónico según la edición y versificación seleccionadas. No omitir, ocultar ni inventar números.
+2. **Cada versículo empieza en su propia línea/bloque:** cuando se rendericen versículos consecutivos, el siguiente nunca continúa en la misma línea ni en el mismo párrafo corrido del anterior. Cada versículo tiene separación mediante **salto de línea obligatorio**. Si el texto es largo, puede ajustarse dentro de su propio bloque.
+3. **Jerarquía y legibilidad:** el número será visualmente discreto pero inequívocamente legible y accesible. La separación entre versículos debe conservarse en móviles, tabletas y escritorio, también al cambiar tamaño de fuente o modo claro/oscuro. Un salto de línea no implica necesariamente una línea en blanco adicional.
+4. **Integridad de la Biblia:** numeración, saltos y separación son decisiones de presentación. No insertar saltos ni modificar palabras en el contenido original almacenado. Preservar identificadores y selección de versículos individuales/múltiples para enlaces y comentarios.
+5. **Alcance:** aplica al lector bíblico completo y a cualquier vista que presente una secuencia de versículos como texto de lectura (por ejemplo paneles de pasaje o citas extensas); no se puede desactivar mediante preferencias de diseño. No se exige reproducir números adicionales en un simple enlace de referencia que no muestra texto.
+6. **Criterio de aceptación bloqueante:** ninguna pantalla de lectura bíblica puede considerarse terminada si algún versículo visible carece de número correcto, si dos versículos consecutivos comparten un único bloque/párrafo corrido, o si la separación se pierde en móvil. Incluir verificaciones de renderizado y accesibilidad.
+
+**Ejemplo esquemático, NO texto de una edición:** `1 [texto del primer versículo]` seguido en la línea siguiente por `2 [texto del segundo versículo]`; así sucesivamente. La numeración debe ser contenido real y accesible, no una marca puramente decorativa.
+
 ## 6. Reglas de SEO y accesibilidad aplicables al diseño
 
 - SEO público centrado en capítulos, libros, ediciones, fuentes e información pública; los debates, comentarios y perfiles **no son indexables públicamente** según D06/D23.
@@ -109,4 +123,4 @@ La selección/generación puede usar IA y/o obras verificadamente reutilizables;
 
 ## 8. Compatibilidad y prioridad documental
 
-Esta directriz **complementa**, no sustituye, `01-ESPECIFICACION-FUNCIONAL.md` (D01–D25). Ante conflicto manda la seguridad, legislación, privacidad, integridad de textos y especificación funcional. Entre directrices estrictamente gráficas prevalece este documento sobre identidades Android antiguas y propuestas de debate anteriores. V01–V16 constituyen el registro vigente de decisiones visuales; no deducir una V17 ni fabricar nuevos requisitos por cuenta propia.
+Esta directriz **complementa**, no sustituye, `01-ESPECIFICACION-FUNCIONAL.md` (D01–D25). Ante conflicto manda la seguridad, legislación, privacidad, integridad de textos y especificación funcional. Entre directrices estrictamente gráficas prevalece este documento sobre identidades Android antiguas y propuestas de debate anteriores. V01–V17 constituyen el registro vigente de decisiones visuales; no deducir una V17 ni fabricar nuevos requisitos por cuenta propia.
