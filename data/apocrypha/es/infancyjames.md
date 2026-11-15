@@ -363,3 +363,67 @@ Al oír estas palabras, el sacerdote tuvo miedo. Salió y contó a los demás lo
 (1) Yo, Santiago, escribí esta historia en Jerusalén cuando hubo una conmoción por la muerte de Herodes. Me retiré al desierto hasta que cesaron los disturbios en Jerusalén. Glorificaba al Señor Dios, que me concedió la sabiduría necesaria para escribir esta historia.
 
 (2) La gracia esté con todos los que temen al Señor. Amén.
+
+
+---
+
+## Apéndice. Versión breve alternativa de los capítulos 18 a 21
+
+**Testimonio distinto:** el manuscrito más antiguo, el **Papiro Bodmer V** (finales del siglo III o comienzos del IV), presenta una versión mucho más breve de estos cuatro capítulos. Se traduce a continuación sin sustituir la versión extensa anterior. Se conserva su propia numeración de capítulos y apartados.
+
+### Capítulo 18 (versión breve). José encuentra una cueva
+
+(1) José encontró allí una cueva, llevó a María (hasta ella), dejó a sus hijos junto a ella y salió a buscar una comadrona hebrea por los alrededores de Belén.
+
+### Capítulo 19 (versión breve). El nacimiento de Jesús
+
+(1) Y encontró (y) trajo (a una mujer) que bajaba de la montaña. José dijo a la comadrona: «María es mi prometida, pero ha concebido por obra del Espíritu Santo; se crio en el templo del Señor».
+
+La comadrona fue con él. (2) Se detuvieron ante la cueva, y una nube oscura la cubrió con su sombra. La comadrona exclamó: «¡Hoy mi alma se engrandece, porque mis ojos han visto algo maravilloso! ¡Ha nacido la salvación para Israel!».
+
+Inmediatamente la nube se retiró de la cueva y apareció en ella una gran luz, tan intensa que sus ojos no podían soportarla. Poco después la luz disminuyó, hasta que pudieron ver a un recién nacido. El niño se acercó al pecho de su madre María y mamó.
+
+La comadrona exclamó: «¡Qué día tan grande es hoy, que he visto este nuevo milagro!».
+
+(3) La comadrona salió de la cueva y se encontró con Salomé.
+
+Le dijo: «Salomé, Salomé, tengo que contarte algo nunca visto: ¡una virgen ha dado a luz, en contra de su propia naturaleza!».
+
+Salomé respondió: «Vive el Señor mi Dios: si no introduzco mi dedo (y) examino su estado, no creeré que la virgen haya dado a luz».
+
+### Capítulo 20 (versión breve). El examen de Salomé
+
+(1) Salomé entró y colocó a María en posición. Después examinó su estado y gritó: «¡He puesto a prueba al Dios viviente, y ahora mi mano está ardiendo y desprendiéndose de mí!».
+
+(2) Oró al Señor, y la comadrona quedó curada en aquel momento.
+
+(3) Un ángel del Señor apareció ante Salomé y dijo: «Tu oración ha sido escuchada ante el Señor Dios. Ve, toca al niño y recibirás la salvación».
+
+(4) Salomé lo hizo y quedó curada. Mientras adoraba y salía de la cueva, se oyó una voz de un ángel del Señor que decía: «Salomé, Salomé, cuenta las maravillas que has visto hasta que el niño llegue a Jerusalén».
+
+### Capítulo 21 (versión breve). Los magos
+
+(1) José se disponía a partir hacia Judea cuando se produjo una gran conmoción en Belén de Judea. Habían llegado unos magos diciendo: «¿Dónde está el rey de los judíos? Hemos visto su estrella en Oriente y hemos venido a adorarlo».
+
+(2) Al enterarse, Herodes se inquietó; envió a sus servidores y mandó llamar a los magos, quienes le hablaron de la estrella.
+
+(3) Y vieron estrellas en Oriente. Las estrellas guiaron a los magos hasta la cueva, y la estrella se detuvo sobre la cabeza del niño. Cuando los magos lo vieron con su madre María, sacaron de sus bolsas regalos: oro, incienso y mirra.
+
+Un ángel les advirtió y regresaron a su país por otro camino.
+
+## Notas de la traducción de referencia
+
+- **Capítulo 5: «La placa que lleva el sacerdote».** Literalmente, «la hoja del sacerdote», posiblemente un disco metálico que llevaba en la frente, descrito en Éxodo 28:36–38 y 39:30–31. Véase Ronald F. Hock, *The Infancy Gospels of James and Thomas* (Polebridge Press, 1995), p. 39.
+- **Capítulo 8: «Contamine el santuario».** La nota del traductor inglés aclara que el temor se refiere a la menstruación.
+- **Capítulo 10: las jóvenes dedicadas a hilar el velo del templo.** Sobre este grupo selecto, véase Megan Nutzman, «Mary in the Protoevangelium of James: A Jewish Woman in the Temple?», *Greek, Roman, and Byzantine Studies* (2013), vol. 53, pp. 563–570.
+- **Capítulo 11: «Trono».** Otras traducciones vierten la palabra griega como «silla». George Zervos sostiene que el templo era el lugar original de la anunciación en este relato: «An Early Non-Canonical Annunciation Story», *Society of Biblical Literature 1997 Seminar Papers*, vol. 36, pp. 677–679. Véanse también Michael Peppard, *The World’s Oldest Church: Bible, Art, and Ritual at Dura-Europos, Syria* (Yale, 2016), p. 155 y ss.; *Evangelio de Bartolomé* 2.15 y ss.
+- **Capítulo 16: «El agua de la reprensión del Señor».** Tradición relacionada con Números 5:11–31. Véase Nutzman, obra citada, pp. 559–563.
+- **Capítulos 18–21: la versión del Papiro Bodmer V.** El manuscrito griego más antiguo (finales del siglo III o comienzos del IV) ofrece una versión mucho más breve, recogida en el apéndice anterior. Véanse Michel Testuz, *Papyrus Bodmer V: Nativité de Marie* (Bibliotheca Bodmeriana, 1958), pp. 102–113; Thomas A. Wayment, *The Text of the New Testament Apocrypha (100–400 CE)* (Bloomsbury T&T Clark, 2013), pp. 68–70 y 273–276; George Themelis Zervos, «Christmas with Salome», en Amy-Jill Levine y Maria Mayo Robbins (eds.), *A Feminist Companion to Mariology* (T&T Clark, 2005), pp. 77–98.
+- **Capítulo 19: «Si no examino su estado».** La lectura de la versión extensa está bien documentada en varios manuscritos. De Strycker prefiere «si no introduzco el dedo y examino su estado»; otros manuscritos dicen «si no veo», y algunos utilizan «mano» en vez de «dedo». Véanse Émile de Strycker, *La Forme la plus ancienne du Protévangile de Jacques* (Société des Bollandistes, 1961), p. 158; Bart D. Ehrman y Zlatko Pleše, *The Apocryphal Gospels: Texts and Translations* (Oxford University Press, 2011), p. 62; George T. Zervos, «Caught in the Act: Mary and the Adulteress», pp. 26 y ss., http://people.uncw.edu/zervosg/Pr236/New%20236/Caught%20in%20the%20Act%20Final%20-%20Edited.pdf. Zervos argumenta (p. 28) que el paralelismo explícito con Juan 20:25 no puede considerarse con seguridad la lectura original del pasaje.
+- **Capítulo 20: «Salomé la examinó».** La versión extensa sigue los mismos manuscritos utilizados para la lectura del capítulo 19. Otras variantes dicen que Salomé introdujo el dedo en su cuerpo/condición, que introdujo la mano en ella, que examinó su naturaleza/condición o que la observó. Véanse de Strycker, obra citada, p. 160; Ehrman y Pleše, obra citada, p. 62. En correspondencia personal del 11 de octubre de 2018, Samuel Zinner observó que, según el léxico LSJ, el verbo *sēmeioō* en contextos médicos puede significar principalmente «anotar» u «observar»; también, de manera secundaria, «diagnosticar», y en etapas posteriores «examinar», como en Pablo de Egina, *Pragmateia*, libro 6, cap. 96 (siglo VII), en un pasaje sobre la exploración de fracturas costales mediante los dedos.
+- **Capítulo 23: «Tu vida».** En el texto inglés se aclara que la expresión significa literalmente «tu sangre».
+- **Capítulo 24: «Quien lo vengue».** Compárese con 2 Crónicas 24:20–22.
+
+## Nota editorial de Scriptura
+
+Esta traducción reproduce tanto el **relato extenso de 25 capítulos** como la **variante breve de los capítulos 18–21**. Son dos testimonios textuales distintos: por eso algunos detalles no coinciden (por ejemplo, la nube luminosa u oscura, el examen de Salomé y la orden de contar o no contar el prodigio). No se armonizan ni se ocultan estas diferencias. Se conservan las divisiones originales de cada versión y las referencias de las notas. Traducción de trabajo realizada desde el inglés: **pendiente de revisión editorial y de cotejo con las variantes griegas antes de su publicación**.
