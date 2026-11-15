@@ -50,5 +50,14 @@ jobs:
         run: npm run db:migrate && npm run db:seed
       - name: Importar Biblia RV1909 (integridad real en cada CI)
         run: node scripts/import-bible.ts --publish
+      - name: Auditoría editorial preliminar del texto de origen
+        run: node scripts/audit-bible.ts --output auditoria-rv1909.json
+      - name: Conservar informe de auditoría
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: auditoria-editorial-rv1909
+          path: auditoria-rv1909.json
+          if-no-files-found: ignore
       - name: Pruebas de integración (integridad bíblica y reglas de datos)
         run: npm run test:integration
