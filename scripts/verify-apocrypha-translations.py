@@ -134,7 +134,7 @@ def verify(id_: str, work: dict) -> None:
                 "Faltan las páginas 11 a 14" in es,
                 "María: deben señalarse las páginas no conservadas")
     elif id_ == "judas":
-        pages = number_list(es, r"⟦p\. (\d+)⟧")
+        pages = number_list(excerpt(es, "## Introducción", "\n## Notas "), r"⟦p\. (\d+)⟧")
         require(pages == list(range(33, 59)),
                 f"Judas: paginación 33–58 incompleta: {pages}")
     else:
