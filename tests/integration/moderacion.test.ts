@@ -5,7 +5,7 @@
 
 import { beforeAll, describe, expect, it } from "vitest";
 import pg from "pg";
-import { createReport, resolveReport, dismissReport, fileAppeal, decideAppeal, activeRestriction, adminMetrics, recentAuditEvents, listOpenReports, listOpenAppeals } from "@/moderation/service";
+import { createReport, resolveReport, dismissReport, fileAppeal, decideAppeal, activeRestriction, adminMetrics, recentAuditEvents, listOpenAppeals } from "@/moderation/service";
 import type { CurrentUser } from "@/auth/session";
 
 const DATABASE_URL = process.env.DATABASE_URL;

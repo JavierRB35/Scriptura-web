@@ -120,13 +120,32 @@
       restricción→apelación→decisión con verificación de visibilidad por
       políticas RLS.
 
-## Fase 5 — Inteligencia artificial
+## Fase 5 — Inteligencia artificial 🔄 (2026-11-15: asistente de lectura operativo)
 
-- [ ] Biblioteca documental con metadatos y condiciones de uso (§12.3).
-- [ ] Ingesta, troceado, embeddings (pgvector) y recuperación.
-- [ ] Asistente de lectura y asistencia editorial con citas verificables obligatorias.
-- [ ] Interfaz `AiProvider` sustituible; límites, cuotas y registro de consumo.
-- [ ] Batería de pruebas de comportamiento IA (§12.7) satisfactoria.
+- [x] Biblioteca documental con metadatos y condiciones de uso (§12.3):
+      knowledge_sources/documents/chunks con estado editorial; ingesta
+      idempotente por (fuente, título, versión) con troceado por párrafos.
+- [x] Recuperación (§12.2): versículos SIEMPRE del repositorio bíblico
+      autorizado (referencia detectada en cualquier posición de la pregunta
+      + coincidencias léxicas tsvector/GIN); fragmentos por texto completo
+      y por similitud pgvector cuando existan embeddings. Funciona sin
+      proveedor de IA (vía léxica real, no simulada).
+- [x] Proveedor sustituible (§17.5): interfaz OpenAI-compatible
+      (AI_PROVIDER_BASE_URL/API_KEY/MODEL + AI_EMBEDDING_MODEL), claves solo
+      en servidor; modo degradado honesto sin configuración.
+- [x] Asistente de lectura (§12.1, §12.6): /biblia/asistente con
+      consentimiento explícito revocable (user_consents), cuota diaria en
+      system_settings, registro de consumo en ai_usage_events y fuentes
+      entregadas en ai_source_references.
+- [x] Validación de citas (§12.4, §12.7): toda cita debe proceder de las
+      fuentes entregadas (referencia inventada → respuesta rechazada, no
+      mostrada); detección de inyección en preguntas; prompt de sistema fijo
+      que trata las fuentes como dato, no como instrucciones.
+- [ ] Asistente editorial (§12.1): capacidad aprobada pendiente de interfaz;
+      la recuperación fundamentada ya disponible es su base.
+- [ ] Pruebas de comportamiento con proveedor real (§12.7 E2E): la batería
+      unitaria de citas/inyección está en verde; la E2E requiere clave.
+- [ ] 146/146 pruebas en verde; CI valida todo el flujo sin proveedor.
 
 ## Fase 6 — Lecturas diarias por correo
 

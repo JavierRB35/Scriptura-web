@@ -63,3 +63,22 @@ export function parseReference(input: string): ParsedReference | null {
   }
   return ref;
 }
+
+/**
+ * Extrae una referencia mencionada en cualquier parte de un texto libre
+ * (p. ej. «¿Qué significa Juan 3:16?»). Devuelve la última válida encontrada;
+ * null si ninguna lo es. Sin resultados inventados: cada candidato pasa por
+ * parseReference y el catálogo.
+ */
+export function extractReference(text: string): ParsedReference | null {
+  const candidates = text.match(
+    /(?:[1-3]\s)?[A-Za-zÁÉÍÓÚÜÑáéíóúüñ][a-záéíóúüñ]+(?:\sde\s[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+)*\s*\d{1,3}(?:\s*[:.,]\s*\d{1,3}(?:\s*-\s*\d{1,3})?)?/g
+  );
+  if (!candidates) return null;
+  let found: ParsedReference | null = null;
+  for (const candidate of candidates) {
+    const parsed = parseReference(candidate);
+    if (parsed?.chapter) found = parsed;
+  }
+  return found;
+}

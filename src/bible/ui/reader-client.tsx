@@ -7,6 +7,7 @@
 
 import { useMemo, useState, useSyncExternalStore } from "react";
 import { Literata } from "next/font/google";
+import Link from "next/link";
 import { displayBibleVerse } from "@/bible/display-text";
 
 const readerFont = Literata({ subsets: ["latin"], display: "swap" });
@@ -143,6 +144,13 @@ export function ReaderClient({
           <span className="ml-1 text-xs">· ort. actual</span>
         </span>
         <div className="flex items-center gap-1">
+          <Link
+            href="/biblia/asistente"
+            aria-label="Asistente de lectura"
+            className="rounded border border-border px-2 py-1 hover:bg-accent-soft"
+          >
+            ✦ IA
+          </Link>
           <button
             type="button"
             aria-label="Comentarios del capítulo"

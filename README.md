@@ -13,7 +13,7 @@ Plataforma web pública, gratuita e interconfesional para leer la Biblia, compre
 | **Fase 2** — Biblioteca y lectura | ✅ Completada (RV1909 íntegra y publicada) |
 | **Fase 3** — Comunidad | ✅ Completada (comentarios, debates, reputación, aislamiento verificado) |
 | **Fase 4** — Administración y moderación | ✅ Completada (moderación con apelaciones, métricas y auditoría) |
-| **Fase 5** — Inteligencia artificial | ⏳ Siguiente |
+| **Fase 5** — Inteligencia artificial | 🔄 Asistente de lectura operativo (editorial pendiente) |
 | Fases 6–7 | Pendientes |
 
 **Biblia disponible:** Reina-Valera 1909 (dominio público, ebible.org) — 66 libros,
