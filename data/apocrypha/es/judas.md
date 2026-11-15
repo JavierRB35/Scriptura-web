@@ -140,3 +140,38 @@ Jesús dijo: «En verdad te digo que las estrellas llevan todas estas cosas a su
 Jesús] [respondió]: «No me río [de ti, sino] del error de las estrellas, porque estas seis estrellas se extravían junto con esos cinco guerreros, y todas serán destruidas junto con sus creaciones».
 
 Judas preguntó entonces a Jesús: «¿Qué harán los que hayan sido bautizados en tu nombre?».
+
+
+## La entrega de Jesús
+
+Jesús respondió: «En verdad [te] digo que este bautismo ⟦p. 56⟧ [que han recibido en] mi nombre […] destruirá toda la generación del Adán terrenal. Mañana torturarán al que me lleva. En verdad [te] digo que ninguna mano de un ser humano mortal [caerá] sobre mí. En verdad [te] digo, Judas, que quienes ofrecen sacrificios a Saklas […] todo lo que es malo. Pero tú harás más que todos ellos, porque sacrificarás al ser humano que me lleva. Tu cuerno ya se ha alzado, tu ira se ha encendido, tu estrella ha ascendido y tu corazón se ha [extraviado]. ⟦p. 57⟧ En verdad [te digo], tu último [… y] los [… los tronos] del reino han [sido derrotados], los reyes se han debilitado, las generaciones angélicas se han afligido y el mal [que sembraron …] ha sido destruido, [y] el [gobernante] ha sido borrado. [Y] entonces el [fruto] de la gran generación de Adán será exaltado, porque esa generación procedente de los reinos existe desde antes del cielo, de la tierra y de los ángeles. Mira, ya se te ha contado todo. Levanta los ojos y contempla la nube que tiene luz en su interior y las estrellas que la rodean. La estrella que guía el camino es tu estrella».
+
+Judas levantó la mirada y vio la nube luminosa, y entró en ella. Quienes estaban en el suelo oyeron una voz procedente de la nube que decía: ⟦p. 58⟧ «[… la] gran [generación …] y […]». Y Judas no volvió a ver a Jesús.
+
+Inmediatamente se produjo una gran agitación entre [los] judíos, mayor que […]. Sus sumos sacerdotes murmuraban porque él había entrado en la habitación de huéspedes para orar. Pero algunos escribas vigilaban atentamente para detenerlo mientras rezaba, pues tenían miedo del pueblo, ya que todos lo consideraban profeta.
+
+Se acercaron a Judas y le preguntaron: «¿Qué haces aquí? ¿Acaso no eres discípulo de Jesús?».
+
+Él les respondió como querían. Entonces Judas recibió dinero y se lo entregó.
+
+**El Evangelio de Judas**
+
+## Notas de la traducción de referencia
+
+- **Página 33: «Juicio».** También puede traducirse «declaración».
+- **Página 36: «Elementos».** Rodolphe Kasser y Gregor Wurst reconstruyen el término como «discípulos» en *The Gospel of Judas, Critical Edition: Together with the Letter of Peter to Philip, James, and a Book of Allogenes from Codex Tchacos* (National Geographic, 2007), p. 191; compárese con Lance Jenott, *The Gospel of Judas: Coptic Text, Translation, and Historical Interpretation of the 'Betrayer's Gospel'* (Mohr Siebeck, 2011), pp. 54–56 y 193–194.
+- **Página 38: «Recibir».** Kasser y Wurst reconstruyen la palabra como «presentar» (obra citada, p. 195); compárese con Jenott, obra citada, p. 196.
+- **Página 40: «Vuestro ministro».** Kasser y Wurst consideraron inicialmente «el gobernante del mundo» como posible reconstrucción (obra citada, p. 199); Willis Barnstone sigue esa propuesta en *The Restored New Testament: A New Translation with Commentary, Including the Gnostic Gospels Thomas, Mary, and Judas* (W. W. Norton & Company, 2009), p. 600. Karen King opta por «el gobernante del caos» en Elaine Pagels y Karen L. King, *Reading Judas: The Gospel of Judas and the Shaping of Christianity* (Viking, 2007), p. 113. Kasser y Wurst propusieron posteriormente completar la laguna como «el obispo» o «el ministro», por el contexto. Para «vuestro ministro», véase Jenott, obra citada, p. 64. Sobre el verbo «presentar», Meyer y Gaudard traducen «levantarse de», King «estar junto a» y April DeConick «levantarse en favor de», en *The Thirteenth Apostle: What the Gospel of Judas Really Says* (Continuum, 2007; ed. revisada, 2009), p. 78; véase Jenott, pp. 65–66.
+- **Página 44: «Demonio».** Literalmente *daimon*, traducido primero como «espíritu» por Meyer y más tarde como «dios» por King. En la literatura griega general, los *daimones* no eran necesariamente espíritus malignos; en la literatura judía y cristiana sí adquirieron de manera inequívoca ese valor negativo. Véase Birger A. Pearson, «Judas Iscariot in the Gospel of Judas», en April D. DeConick (ed.), *The Codex Judas Papers: Proceedings of the International Congress on the Tchacos Codex held at Rice University, Houston, Texas, March 13–16, 2008* (Brill, 2009), pp. 138–140.
+- **Página 45: «Un techo cubierto de vegetación».** Otras posibilidades son «techo de relámpagos» o «de fuego». Véase Lance Jenott, «The Gospel of Judas 45,6–7 and Enoch's Heavenly Temple», en *The Codex Judas Papers*, obra citada, pp. 471–477.
+- **Página 46: «Mi descendencia no domina a los gobernantes, ¿verdad?».** Sigue las versiones de King, DeConick y Jenott. Meyer y Gaudard traducen «¿Podría ser que mi descendencia estuviera bajo el control de los gobernantes?»; Barnstone, «¿Podría mi descendencia, mi herencia, caer bajo el control de los arcontes, que gobiernan este mundo?».
+- **Página 47 y siguientes: «Autogenerado».** Literalmente, *Autogenes*.
+- **Página 48: «Que un reino llegue a existir».** Kasser y Wurst reconstruyen «Que A[damas] llegue a existir» (obra citada, p. 215); compárese con Jenott, *Judas*, pp. 80–84.
+- **Página 49: «Las doce luminarias andróginas».** Kasser y Wurst proponen «las doce […] 24 […]» (obra citada, p. 217); compárese con Jenott, pp. 86–87.
+- **Página 51: «Elelet».** Véase Jenott, obra citada, pp. 94 y ss.
+- **Página 52: «El primero [es Yaot], llamado el Bueno».** Meyer y Gaudard, King y Barnstone traducen «El primero es Set, llamado el Cristo». Sin embargo, esa reconstrucción es dudosa por el contexto, puesto que el Cristo setiano no aparece normalmente entre los ángeles inferiores. Por eso Mattison sigue la reconstrucción de Jenott «[Ya]ot» en lugar de «[Se]t» y la lectura de DeConick de la abreviatura sagrada *chs* como *chrestos* («bueno») en vez de *christos* («Cristo»). Véase DeConick, obra citada, p. 121.
+- **Página 57: «Fruto».** Kasser y Wurst proponen reconstruir «imagen» en lugar de «fruto» (obra citada, p. 233); véase Jenott, obra citada, pp. 33–34.
+
+## Nota editorial de Scriptura
+
+Se conserva la paginación del Códice Tchacos, **de la página 33 a la 58**, incluidos los indicadores insertos dentro de frases, el cierre narrativo y las trece notas del traductor inglés. Las lagunas siguen visibles; ninguna reconstrucción se presenta como certeza. Los términos «demonio», «el Bueno», «Autogenerado» y «descendencia» reflejan decisiones interpretativas discutidas en las notas. Esta es una traducción de trabajo al español **desde el inglés**, no una traducción directa del copto verificada académicamente, y no está aún publicada en el lector de Scriptura.
