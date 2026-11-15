@@ -246,3 +246,120 @@ Ella le respondió: «Es porque veo ante mis ojos a dos pueblos: uno llora y se 
 (3) Llegaron a la mitad del camino y María le dijo: «José, bájame del asno, porque quien está dentro de mí se esfuerza por salir».
 
 José la bajó y le dijo: «¿Adónde te llevaré y dónde podré refugiarte durante tu parto? Este lugar es un desierto».
+
+
+## Capítulo 18. El tiempo se detiene
+
+(1) José encontró allí una cueva, llevó a María (hasta ella), dejó a sus hijos junto a ella y salió a buscar una comadrona hebrea por los alrededores de Belén.
+
+(2) Yo, José, caminaba y, sin embargo, no caminaba. Levanté los ojos a la bóveda del cielo y la vi inmóvil. Miré al firmamento y quedé asombrado porque incluso las aves del cielo estaban quietas. Miré al suelo y vi un recipiente, y a unos trabajadores reclinados junto a él, con las manos dentro. Masticaban, pero no masticaban; tomaban alimentos, pero no llegaban a tomarlos; se los acercaban a la boca, pero no los llevaban hasta ella. Todos tenían el rostro vuelto hacia arriba.
+
+Vi unas ovejas que estaban siendo conducidas, pero permanecían inmóviles. El pastor había levantado la mano para golpearlas y la mantenía en alto. Miré las aguas torrenciales del río y vi cabritillos con el hocico metido en el agua, pero no bebían.
+
+Y, de repente, todo volvió a ponerse en movimiento.
+
+## Capítulo 19. El nacimiento de Jesús
+
+(1) Entonces vi a una mujer que bajaba de la montaña. Me preguntó: «Hombre, ¿adónde vas?».
+
+Le respondí: «Busco a una comadrona hebrea».
+
+Ella me preguntó: «¿Eres israelita?».
+
+Le respondí: «Sí».
+
+Entonces me dijo: «¿Y quién está dando a luz en la cueva?».
+
+Le respondí: «Mi prometida».
+
+Ella preguntó: «¿No es tu esposa?».
+
+Le dije: «María se crio en el templo del Señor y fue elegida por sorteo para ser mi esposa; sin embargo, no es mi esposa. Ha concebido por obra del Espíritu Santo».
+
+La comadrona dijo: «¿De verdad?».
+
+José le respondió: «Ven y lo verás».
+
+La comadrona fue con él. (2) Se detuvieron ante la cueva y una nube luminosa la cubrió con su sombra. La comadrona exclamó: «¡Hoy mi alma se engrandece, porque mis ojos han visto algo maravilloso! ¡Ha nacido la salvación para Israel!».
+
+Enseguida la nube se retiró de la cueva y apareció en ella una gran luz, tan intensa que sus ojos no podían soportarla. Poco después la luz disminuyó, hasta que pudieron ver a un recién nacido. El niño se acercó al pecho de su madre María y mamó.
+
+La comadrona exclamó: «¡Qué día tan grande es hoy para mí, que he visto este nuevo milagro!».
+
+(3) La comadrona salió de la cueva y se encontró con Salomé.
+
+Le dijo: «Salomé, Salomé, tengo que contarte algo nunca visto: ¡una virgen ha dado a luz, en contra de su propia naturaleza!».
+
+Salomé respondió: «Vive el Señor mi Dios: si no examino su estado, no creeré que la virgen haya dado a luz».
+
+## Capítulo 20. El examen de Salomé
+
+(1) La comadrona entró y dijo: «María, colócate en posición, porque te espera una prueba muy seria».
+
+Salomé la examinó. Entonces lanzó un grito: «¡Ay de mí por mi falta contra la Ley y mi incredulidad! He puesto a prueba al Dios viviente, y ahora mi mano está ardiendo y desprendiéndose de mí».
+
+(2) Cayó de rodillas ante el Señor y dijo: «Dios de mis antepasados, acuérdate de mí, porque desciendo de Abraham, Isaac y Jacob. No hagas de mí un escarmiento ante el pueblo de Israel; devuélveme a los pobres, porque tú sabes, Señor, que he curado a personas en tu nombre y he recibido de ti mi recompensa».
+
+(3) Apareció un ángel del Señor y le dijo: «Salomé, Salomé, el Señor de todo ha escuchado tu oración. Acerca tu mano al niño y levántalo en brazos, y recibirás salvación y alegría».
+
+(4) Salomé se acercó alegremente al niño y lo alzó en brazos, diciendo: «Lo adoro, porque ha nacido un gran rey para Israel». Al instante quedó curada y salió de la cueva, considerada justa.
+
+Entonces se oyó una voz que decía: «Salomé, Salomé, no cuentes las cosas maravillosas que has visto hasta que el niño llegue a Jerusalén».
+
+## Capítulo 21. Los magos
+
+(1) José se disponía a salir hacia Judea cuando se produjo una gran conmoción en Belén de Judea. Habían llegado unos magos preguntando: «¿Dónde está el rey de los judíos? Hemos visto su estrella en Oriente y hemos venido a adorarlo».
+
+(2) Al enterarse, Herodes se inquietó. Envió emisarios a buscar a los magos, convocó a los sumos sacerdotes y les preguntó en su palacio: «¿Qué está escrito acerca del Cristo? ¿Dónde va a nacer?».
+
+Ellos respondieron: «En Belén de Judea, porque así está escrito». Y los dejó marchar (a los sumos sacerdotes).
+
+Interrogó a los magos: «¿Qué señal habéis visto acerca del que ha nacido rey?».
+
+Los magos respondieron: «Vimos una estrella inmensa que resplandecía entre las demás y las oscurecía tanto que ya no podían verse. Así supimos que había nacido un rey para Israel y vinimos a adorarlo».
+
+Herodes les dijo: «Id a buscarlo y, si lo encontráis, avisadme, para que yo también vaya a adorarlo».
+
+(3) Los magos partieron y la estrella que habían visto en Oriente los guio hasta la cueva, donde se detuvo sobre su entrada. Cuando lo vieron con su madre María, sacaron de sus bolsas sus regalos: oro, incienso y mirra.
+
+Un ángel les advirtió que no fueran a Judea y regresaron a su país por otro camino.
+
+## Capítulo 22. La matanza de los niños
+
+(1) Cuando Herodes vio que los magos lo habían engañado, se enfureció. Envió a sus verdugos con la orden de matar a todos los niños de dos años o menos.
+
+(2) Al oír que estaban matando a los niños, María tuvo miedo. Tomó a su hijo, lo envolvió en pañales y lo puso en un pesebre para el ganado.
+
+(3) Cuando Isabel supo que buscaban a Juan, se lo llevó a las montañas y buscó un lugar donde esconderlo, pero no encontró ninguno. Entonces Isabel gimió y dijo: «Montaña de Dios, acoge a una madre con su hijo», porque no podía subir más alto. Inmediatamente la montaña se abrió y los acogió, y una luz brilló para ella a través de la montaña. Un ángel del Señor estaba con ellos y los protegía.
+
+## Capítulo 23. El asesinato de Zacarías
+
+(1) Herodes preguntó por Juan y envió a unos servidores a decir a Zacarías: «¿Dónde escondes a tu hijo?».
+
+Zacarías les respondió: «Soy ministro de Dios y sirvo en su templo. ¿Cómo habría de saber dónde está mi hijo?».
+
+(2) Los servidores se marcharon e informaron a Herodes de todo aquello. Herodes se enfureció y dijo: «¡Su hijo está a punto de convertirse en rey de Israel!».
+
+Volvió a enviar a sus servidores para que le dijeran: «Dime la verdad. ¿Dónde está tu hijo? Sabes que tu vida está en mis manos».
+
+Los servidores se marcharon e informaron de esas palabras a Zacarías.
+
+(3) Zacarías dijo: «Si derramáis mi sangre, seré un mártir de Dios, porque el Señor recibirá mi espíritu, ya que estaréis derramando sangre inocente a la entrada del templo del Señor».
+
+Alrededor del amanecer, Zacarías fue asesinado, y el pueblo de Israel no supo que lo habían matado.
+
+## Capítulo 24. El duelo por Zacarías
+
+(1) A la hora del saludo, los sacerdotes acudieron, pero Zacarías no salió a recibirlos y bendecirlos como de costumbre. Se quedaron esperándolo para saludarlo con una bendición y glorificar al Dios Altísimo.
+
+(2) Como tardaba tanto, todos se asustaron. Uno de ellos reunió valor para entrar en el santuario y vio sangre coagulada junto al altar del Señor. Se oyó una voz: «Zacarías ha sido asesinado y su sangre no será borrada hasta que llegue quien lo vengue».
+
+Al oír estas palabras, el sacerdote tuvo miedo. Salió y contó a los demás lo que había visto y oído. (3) Ellos reunieron valor, entraron y contemplaron lo sucedido. Los paneles del templo clamaron y los sacerdotes se rasgaron las vestiduras de arriba abajo. No encontraron el cadáver, pero vieron que su sangre se había convertido en piedra. Sintieron miedo, salieron y anunciaron a todo el pueblo que Zacarías había sido asesinado. Al enterarse, todas las tribus del pueblo guardaron luto por él y lloraron durante tres días y tres noches.
+
+(4) Después de tres días, los sacerdotes se reunieron en consejo para decidir quién sustituiría a Zacarías. La suerte recayó sobre Simeón, porque el Espíritu Santo le había anunciado que no moriría antes de ver al Cristo en carne.
+
+## Capítulo 25. Conclusión
+
+(1) Yo, Santiago, escribí esta historia en Jerusalén cuando hubo una conmoción por la muerte de Herodes. Me retiré al desierto hasta que cesaron los disturbios en Jerusalén. Glorificaba al Señor Dios, que me concedió la sabiduría necesaria para escribir esta historia.
+
+(2) La gracia esté con todos los que temen al Señor. Amén.
