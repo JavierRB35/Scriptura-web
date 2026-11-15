@@ -2,6 +2,8 @@
 
 **Incorporación:** 15 de noviembre de 2026. **Estado editorial:** asociación documental preparada; no se han habilitado páginas, ni traducciones, ni lectores públicos. Referencias de textos ingleses: [data/apocrypha/README.md](../../data/apocrypha/README.md).
 
+> **Comprobación de archivos (15-11-2026):** el manifiesto de imágenes `data/apocrypha/images-manifest.json` y `public/images/apocrypha/thomas.webp` **no estaban presentes en GitHub** durante la implementación de la Biblioteca. Esta documentación describe asociaciones y licencias previstas, pero **no acredita que las seis imágenes estén descargadas**. La Biblioteca funciona sin portadas hasta confirmar sus archivos y derechos. No introducir rutas de imágenes inexistentes en el manifiesto editorial.
+
 ## Regla de integración
 
 Se usarán seis imágenes libres, **una por evangelio**, asociadas por el identificador persistente `gospel_id` al mismo identificador del manifiesto textual `data/apocrypha/manifest.json`.
