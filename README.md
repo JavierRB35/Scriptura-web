@@ -36,6 +36,7 @@ La aplicación original Android ([JavierRB35/Scriptura](https://github.com/Javie
 | [`docs/04-PLAN-EJECUCION.md`](docs/04-PLAN-EJECUCION.md) | Plan por fases con estado de avance (registro de continuidad) |
 | [`docs/05-DIRECTRIZ-IDENTIDAD-VISUAL.md`](docs/05-DIRECTRIZ-IDENTIDAD-VISUAL.md) | **Directriz visual vinculante V01–V16**: marca, tipografía, colores, ubicación de imágenes, UX, accesibilidad y SEO |
 | [`docs/06-CATALOGO-RECURSOS-GRAFICOS.md`](docs/06-CATALOGO-RECURSOS-GRAFICOS.md) | Inventario inicial de 20 recursos maestros, formatos, ubicación, temas y prompts para diseñador |
+| [`docs/08-INVENTARIO-ARCAISMOS.md`](docs/08-INVENTARIO-ARCAISMOS.md) | Arcaísmos encontrados en la RV1909, recuentos y criterios para una adaptación léxica controlada |
 
 ## Reglas esenciales (resumen)
 

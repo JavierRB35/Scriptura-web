@@ -331,13 +331,15 @@ Los textos bíblicos importados deberán mantenerse fieles a su edición.
 No permitir:
 
 - Correcciones automáticas mediante IA.
-- Modernización de expresiones antiguas.
+- Modernización de expresiones antiguas **dentro de la edición original**, o mediante reglas generales sin cotejo.
 - Sustitución de palabras.
 - Mezcla de traducciones dentro de un mismo pasaje sin indicación explícita.
 - Completar versículos mediante modelos generativos.
 - Modificaciones silenciosas de textos publicados.
 
 Si se detecta un error de transcripción, su corrección exigirá una nueva revisión trazable de la edición o de la importación.
+
+**Aclaración editorial posterior — 15-11-2026:** se permite una **capa de lectura adaptada**, diferenciada y etiquetada, con normalizaciones ortográficas y cambios léxicos cotejados individualmente por versículo para mejorar la comprensión; **no** se alteran los registros de la edición RV1909. Los cambios de significado potencial se justifican en un inventario versionado y con pruebas; los candidatos no verificados se conservan. Una modernización integral solo podrá anunciarse cuando se haya revisado y validado por completo y figure como adaptación editorial propia, no como transcripción literal RV1909. Véase `docs/08-INVENTARIO-ARCAISMOS.md`.
 
 ## 5.4. Metadatos obligatorios
 

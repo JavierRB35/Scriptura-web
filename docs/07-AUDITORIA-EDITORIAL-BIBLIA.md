@@ -89,3 +89,10 @@ Consulta de la base de datos real (31.102 versículos): **12.926** versículos c
 - Pruebas en `tests/unit/display-text.test.ts` y `tests/unit/reader-render.test.ts` comprueban los ejemplos, las exclusiones, las versales, la estructura y la inmutabilidad de la fuente.
 
 **Fundamento normativo:** RAE, *Principales novedades de la Ortografía de la lengua española* (2010, formas como «crio» y «rio»); RAE, *Libro de estilo* (formas «fue», «fui», «dio», «vio»); FundéuRAE, [«dio», «vio» o «fue» se escriben sin tilde](https://www.fundeu.es/recomendacion/dio-vio-o-fue-se-escriben-sin-tilde/). Este ajuste no constituye una revisión filológica integral de los 31.102 versículos.
+
+## Revisión léxica específica y búsqueda de arcaísmos — 15-11-2026
+
+- La regla ortográfica global `crió→crio`, descrita más arriba en el registro histórico de avances, queda **sustituida**: en 25 versículos del texto original, «crió» presenta dos acepciones. Se han cotejado las 25 referencias, y la presentación usa «creó» en 18 pasajes de creación y «crio» en 7 pasajes de cría o producción. Se conserva en todo momento la fuente RV1909, y solo se cambia el texto mostrado en `src/bible/lexical-revisions.ts` y `src/bible/display-text.ts`.
+- Génesis 1:1: fuente «EN el principio crió Dios los cielos y la tierra.» → lectura «En el principio creó Dios los cielos y la tierra.». No se sustituye «el principio» por «un principio», por diferencia de significado.
+- La búsqueda de otras formas antiguas produjo ejemplos reales de «mas», «empero», «díjole», «mancebos», «aqueste», «vianda», «menester» y futuro de subjuntivo. Se documentan las frecuencias, usos y riesgos en [el inventario verificable](08-INVENTARIO-ARCAISMOS.md); no se han aplicado sustituciones masivas.
+- La especificación §5.3 ahora diferencia expresamente la edición original inmutable de la capa de lectura editorial adaptada, siempre identificada y basada en cotejo individual.

@@ -1,0 +1,82 @@
+# Arcaísmos en la Reina-Valera 1909 — Inventario de trabajo
+
+**Fecha:** 15-11-2026. **Estado:** búsqueda terminológica inicial, no revisión integral certificada.
+**Fuente:** 31.102 versículos importados de eBible `spaRV1909`, consulta sobre `bible_verses.text_content` de ScripturaWeb.
+
+## Principios editoriales
+
+El original RV1909, sus referencias y sus huellas de integridad no se modifican. Las adaptaciones aparecen únicamente en la **capa de lectura** y deben identificarse como tales; no son una nueva traducción. Un equivalente orientativo no autoriza sustituir palabras en toda la Biblia. Se requiere cotejo por versículo en vocablos polisémicos, tiempos verbales y fórmulas religiosas. Ninguna modernización debe añadir hechos o alterar doctrinas.
+
+## Resultados medidos
+
+Recuento por **versículos que contienen cada expresión exacta** (insensible a mayúsculas, con límites de palabra); no número total de apariciones dentro de esos versículos. Una misma referencia puede contener varios candidatos.
+
+| Forma en el texto | Versículos | Alternativa contemporánea, sujeta a contexto |
+|---|---:|---|
+| mas | 2.544 | pero — sigue siendo correcta, registro literario |
+| he aquí | 1.145 | mira, aquí está, te anuncio — fórmula bíblica de distintos valores |
+| empero | 402 | sin embargo, pero |
+| cualquiera | 228 | cualquier persona, quienquiera — no es arcaísmo siempre |
+| fuere | 203 | sea, fuese, será — futuro de subjuntivo, riesgo gramatical |
+| hubiere | 179 | haya, hubiera — futuro de subjuntivo, riesgo gramatical |
+| díjole | 176 | le dijo |
+| díjoles | 103 | les dijo |
+| díjome | 80 | me dijo |
+| en derredor | 71 | alrededor |
+| mancebos | 58 | jóvenes (comprobar matiz) |
+| menester | 51 | necesidad, falta, necesario, según construcción |
+| mancebo | 24 | joven, a veces servidor |
+| aquesta | 22 | esta |
+| aqueste | 18 | este |
+| respondióle | 18 | le respondió |
+| echóse | 18 | se echó |
+| vianda | 16 | comida, alimento; a veces alimento sólido |
+| viandas | 14 | comidas, alimentos |
+| quedóse | 13 | se quedó |
+| hacimiento de gracias | 12 | acción de gracias, agradecimiento |
+| aposento | 10 | estancia, habitación, dependencia |
+| aquestas | 7 | estas |
+| llamóle | 5 | le llamó |
+| aquestos | 4 | estos |
+| allegóse | 3 | se acercó, se adhirió, según contexto |
+
+No se han detectado apariciones exactas de «agora» ni de «allende» en el corpus publicado. No inventar incidencias.
+
+## Muestras reales para revisión
+
+- 1 Corintios 1:16: «mas no sé si he bautizado algún otro» — *mas* es correcto, pero hoy literario.
+- 1 Corintios 1:24: «Empero á los llamados…» — requiere revisar el valor adversativo.
+- 1 Crónicas 21:11: «Y viniendo Gad á David, díjole…» — el pronombre enclítico hoy se antepone: *le dijo*.
+- 1 Juan 2:13: «Os escribo á vosotros, mancebos…» — posible *jóvenes*.
+- 1 Crónicas 28:7: «como aqueste día» — posible *este día*.
+- 1 Timoteo 4:3: «con hacimiento de gracias» — posible *con acción de gracias*.
+- 1 Corintios 3:2: «Os dí á beber leche, y no vianda» — contexto de alimento sólido; una sustitución genérica por *comida* puede perder matiz.
+- 1 Crónicas 22:9: «enemigos en derredor» — locución hoy poco frecuente.
+
+## Primer caso semántico resuelto: «crió»
+
+**25 versículos cotejados:** el verbo histórico *criar* significa unas veces **crear** y otras **criar / producir**.
+
+**18 referencias de creación → «creó»:** `1Tm 4:3-4`, `Col 3:10`, `Dt 4:32; 32:18`, `Ef 3:9`, `Gn 1:1,21,27; 5:1-2`, `Hb 3:4`, `Is 40:26,28; 41:20; 45:18`, `Jb 26:13`, `Mc 13:19`.
+
+**7 referencias de crianza/producción → «crio»:** `1S 1:23`, `1Tm 5:10`, `Ex 16:20`, `Ez 19:2`, `Hch 7:21`, `Is 49:21; 51:18`. Algunos giros (p. ej. «crio gusanos») requieren todavía una revisión estilística posterior.
+
+La fuente de Génesis 1:1 sigue diciendo «EN el principio crió Dios los cielos y la tierra.»; la lectura muestra «En el principio creó Dios los cielos y la tierra.». No sustituir «en el principio» por «en un principio»: no son equivalentes exactos.
+
+**Aplicación verificable:** `src/bible/lexical-revisions.ts` solo cambia estos 25 versículos por referencia exacta; `src/bible/display-text.ts` conserva la política general de no reescribir palabras por conjetura. `tests/integration/bible.test.ts` coteja los 25 casos en la importación real de CI.
+
+## Priorización de la siguiente revisión
+
+1. Pronombres enclíticos con verbo conjugado: *díjole*, *díjoles*, *díjome*, *respondióle*, *llamóle*.
+2. Demostrativos: *aqueste, aquesta, aquestos, aquestas*.
+3. Léxico contextual: *mancebo, vianda, menester, aposento, en derredor*.
+4. Estudio posterior de fórmulas y gramática (*he aquí, mas, empero, fuere, hubiere*) por riesgo de alterar significado o énfasis.
+
+Estas son **propuestas de revisión**, no cambios implementados ni pasajes ya modernizados.
+
+## Fuentes de contraste
+
+- Texto íntegro de dominio público: https://ebible.org/spaRV1909/.
+- Cuervo, *Diccionario de construcción y régimen* (1886-1893), «Criar, crear»: https://lalengua.es/d/cuervo/criar.
+- Alemany, *Diccionario de la lengua española* (1917), «Criar»: https://lalengua.es/d/alemany/criar.
+- Estudio de lexicografía histórica, Universidad de Jaén: https://revistaselectronicas.ujaen.es/index.php/RILEX/article/download/6191/5725?inline=1.
