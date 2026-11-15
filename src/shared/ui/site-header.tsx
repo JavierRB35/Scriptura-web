@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { getCurrentUser } from "@/auth/session";
 import { LogoutButton } from "./logout-button";
+import { ThemeToggle } from "./theme-toggle";
 
 const NAV = [
   { href: "/", label: "Inicio" },
@@ -36,6 +37,7 @@ export async function SiteHeader() {
           </ul>
         </nav>
         <div className="flex items-center gap-2 text-sm">
+          <ThemeToggle />
           {user ? (
             <>
               <span className="hidden text-muted sm:inline">

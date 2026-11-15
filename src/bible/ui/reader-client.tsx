@@ -1,0 +1,203 @@
+"use client";
+
+// Lector bíblico interactivo: selección de versículos, panel contextual
+// (esqueleto honesto: los comentarios llegan en Fase 3), tamaño de letra.
+// La preferencia de tamaño vive en localStorage vía useSyncExternalStore
+// (sin efectos con setState, compatible con hidratación).
+
+import { useMemo, useState, useSyncExternalStore } from "react";
+import type { VerseRow } from "@/bible/queries";
+
+interface Props {
+  slug: string;
+  bookName: string;
+  bookCode: string;
+  chapter: number;
+  editionAbbr: string;
+  verses: VerseRow[];
+  initialRange: { start: number; end: number } | null;
+}
+
+const FONT_KEY = "scriptura-font";
+const FONT_EVENT = "scriptura-font-change";
+
+function subscribeFont(cb: () => void) {
+  window.addEventListener(FONT_EVENT, cb);
+  window.addEventListener("storage", cb);
+  return () => {
+    window.removeEventListener(FONT_EVENT, cb);
+    window.removeEventListener("storage", cb);
+  };
+}
+
+function verseClickLogic(
+  prev: { start: number; end: number } | null,
+  n: number
+): { start: number; end: number } | null {
+  if (!prev) return { start: n, end: n };
+  if (prev.start === n && prev.end === n) return null; // deseleccionar
+  if (n < prev.start) return { start: n, end: prev.end };
+  if (n > prev.end) return { start: prev.start, end: n };
+  return { start: n, end: n };
+}
+
+export function ReaderClient({
+  slug,
+  bookName,
+  chapter,
+  editionAbbr,
+  verses,
+  initialRange,
+}: Props) {
+  const [selected, setSelected] = useState(initialRange);
+  const [copied, setCopied] = useState(false);
+
+  const fontScale = useSyncExternalStore(
+    subscribeFont,
+    () => {
+      const n = Number(localStorage.getItem(FONT_KEY));
+      return Number.isFinite(n) && n >= 80 && n <= 180 ? n : 100;
+    },
+    () => 100
+  );
+
+  function changeFont(delta: number) {
+    const current = Number(localStorage.getItem(FONT_KEY)) || 100;
+    const next = Math.min(180, Math.max(80, current + delta));
+    localStorage.setItem(FONT_KEY, String(next));
+    window.dispatchEvent(new Event(FONT_EVENT));
+  }
+
+  const refLabel = useMemo(
+    () =>
+      selected
+        ? `${bookName} ${chapter}:${
+            selected.start === selected.end ? selected.start : `${selected.start}-${selected.end}`
+          }`
+        : null,
+    [selected, bookName, chapter]
+  );
+
+  const selectedText = useMemo(() => {
+    if (!selected) return "";
+    return verses
+      .filter((v) => v.verseNumber >= selected.start && v.verseNumber <= selected.end)
+      .map((v) => `${v.verseNumber} ${v.text}`)
+      .join(" ");
+  }, [selected, verses]);
+
+  async function copyLink() {
+    if (!selected) return;
+    const url = `${window.location.origin}/biblia/${slug}/${chapter}?v=${selected.start}-${selected.end}`;
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {
+      // portapapeles no disponible: no se simula éxito
+    }
+  }
+
+  return (
+    <div>
+      {/* Barra de herramientas de lectura */}
+      <div className="sticky top-0 z-10 -mx-4 mb-6 flex items-center justify-between gap-2 border-b border-border bg-background/95 px-4 py-2 text-sm backdrop-blur">
+        <span className="text-muted">
+          {editionAbbr} · Capítulo {chapter}
+        </span>
+        <div className="flex items-center gap-1">
+          <button
+            type="button"
+            aria-label="Reducir tamaño de letra"
+            onClick={() => changeFont(-10)}
+            className="rounded border border-border px-2 py-1 hover:bg-accent-soft"
+          >
+            A−
+          </button>
+          <button
+            type="button"
+            aria-label="Aumentar tamaño de letra"
+            onClick={() => changeFont(10)}
+            className="rounded border border-border px-2 py-1 hover:bg-accent-soft"
+          >
+            A+
+          </button>
+        </div>
+      </div>
+
+      {/* Texto bíblico */}
+      <article className="max-w-2xl leading-loose" style={{ fontSize: `${fontScale}%` }}>
+        {verses.map((v) => {
+          const inRange =
+            selected && v.verseNumber >= selected.start && v.verseNumber <= selected.end;
+          return (
+            <p
+              key={v.verseKey}
+              id={`v${v.verseNumber}`}
+              className={
+                inRange
+                  ? "-mx-1 cursor-pointer rounded bg-accent-soft px-1 transition-colors"
+                  : "-mx-1 cursor-pointer px-1 transition-colors hover:bg-accent-soft/50"
+              }
+              onClick={() => setSelected((prev) => verseClickLogic(prev, v.verseNumber))}
+            >
+              {v.text ? (
+                <>
+                  <sup
+                    className="mr-1 select-none font-medium text-accent"
+                    aria-label={`versículo ${v.verseNumber}`}
+                  >
+                    {v.verseNumber}
+                  </sup>
+                  {v.text}
+                </>
+              ) : (
+                <em className="text-muted">
+                  {" "}
+                  {v.verseNumber}. (Este versículo no tiene texto en esta edición; su
+                  contenido forma parte del versículo anterior — diferencia de
+                  numeración.)
+                </em>
+              )}{" "}
+            </p>
+          );
+        })}
+      </article>
+
+      {/* Panel contextual desplegable (esqueleto Fase 2, §6.3) */}
+      {selected && (
+        <aside
+          aria-label="Panel contextual del pasaje"
+          className="fixed inset-x-0 bottom-0 z-20 border-t border-border bg-surface shadow-lg lg:static lg:mt-8 lg:max-w-2xl lg:rounded-xl lg:border lg:shadow-none"
+        >
+          <div className="mx-auto flex max-w-2xl items-start justify-between gap-3 px-4 py-3">
+            <div>
+              <p className="font-medium">{refLabel}</p>
+              <p className="mt-1 line-clamp-2 text-sm text-muted">{selectedText}</p>
+              <p className="mt-2 text-sm text-muted">
+                Los comentarios y reflexiones sobre pasajes llegarán con la comunidad
+                (Fase 3).
+              </p>
+            </div>
+            <div className="flex shrink-0 flex-col gap-2">
+              <button
+                type="button"
+                onClick={copyLink}
+                className="rounded bg-accent px-3 py-1.5 text-sm font-medium text-white hover:opacity-90"
+              >
+                {copied ? "¡Copiado!" : "Copiar enlace"}
+              </button>
+              <button
+                type="button"
+                onClick={() => setSelected(null)}
+                className="rounded border border-border px-3 py-1.5 text-sm hover:bg-accent-soft"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </aside>
+      )}
+    </div>
+  );
+}

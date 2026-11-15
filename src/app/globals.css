@@ -26,7 +26,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not(.light) {
     --background: #16150f;
     --foreground: #ece7db;
     --accent: #7fbfa4;
@@ -35,6 +35,17 @@
     --surface: #1e1d16;
     --border: #333026;
   }
+}
+
+/* Modo oscuro manual (clase aplicada por el conmutador/script del layout). */
+html.dark {
+  --background: #16150f;
+  --foreground: #ece7db;
+  --accent: #7fbfa4;
+  --accent-soft: #22352c;
+  --muted: #a39c8d;
+  --surface: #1e1d16;
+  --border: #333026;
 }
 
 body {

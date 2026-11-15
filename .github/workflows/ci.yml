@@ -46,5 +46,7 @@ jobs:
         run: npm run typecheck
       - name: Pruebas unitarias
         run: npm run test:unit
-      - name: Pruebas de integración (migraciones + esquema)
+      - name: Importar Biblia RV1909 (integridad real en cada CI)
+        run: node scripts/import-bible.ts --publish
+      - name: Pruebas de integración (migraciones + integridad bíblica)
         run: npm run test:integration

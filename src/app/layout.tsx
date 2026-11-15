@@ -31,6 +31,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        {/* Tema sin parpadeo: aplica la preferencia guardada antes del primer
+            renderizado visible. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{var m=localStorage.getItem('scriptura-theme')||'system';var d=m==='dark'||(m==='system'&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',d);if(m==='light'){document.documentElement.classList.add('light');}}catch(e){}})();",
+          }}
+        />
         {/* La cabecera consulta la sesión (cookies): se transmite en streaming
             para no bloquear el prerenderizado estático del armazón. */}
         <Suspense fallback={<div className="h-[57px] border-b border-border bg-surface" />}>

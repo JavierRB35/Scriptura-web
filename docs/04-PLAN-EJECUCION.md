@@ -42,15 +42,31 @@
 - [x] Verificación E2E de autenticación contra Supabase real (usuario técnico de
       prueba creado y eliminado tras la comprobación).
 
-## Fase 2 — Biblioteca y lectura
+## Fase 2 — Biblioteca y lectura ✅ (2026-11-15)
 
-- [ ] Importador reproducible USFM/OSIS con verificación de licencia, validación de cantidades y huellas de integridad.
-- [ ] Importación íntegra y verificada de **Reina-Valera 1909** (ebible.org, dominio público) con metadatos completos (§5.4).
-- [ ] Catálogo de libros/cánones (datos semilla desde la auditoría).
-- [ ] Lectura: navegación libro/capítulo, URLs estables, anterior/siguiente, tamaño de letra, claro/oscuro, responsive.
-- [ ] Búsqueda textual y por referencia.
-- [ ] Selección contextual de versículos validada en servidor; panel desplegable (esqueleto).
-- [ ] Pruebas de integridad bíblica (§22.5) satisfactorias.
+- [x] Importador reproducible USFM (`scripts/import-bible.ts`): descarga o fichero
+      local, huella SHA-256 del zip y del contenido, validación de 66 libros ·
+      1.189 capítulos · 31.102 versículos, capítulos por libro según tabla canónica,
+      numeración secuencial, importación transaccional idempotente y registro de
+      lotes con errores/advertencias (§5.5).
+- [x] Importación íntegra y verificada de **Reina-Valera 1909** (ebible.org, dominio
+      público) con metadatos completos (§5.4). Los 18 versículos sin texto en esta
+      edición (numeración inglesa, p. ej. Jon 1:17→2:1) se conservan con texto vacío
+      y se registran como advertencias (§5.2), explicados con honestidad en el lector.
+- [x] Catálogo de libros/cánones (sembrado en Fase 1).
+- [x] Lectura: URLs estables `/biblia/[libro]/[capitulo]`, índice y rejilla de
+      capítulos con recuentos reales, anterior/siguiente entre libros (ventana
+      LAG/LEAD sobre la rejilla real de la edición), tamaño de letra persistente,
+      modo claro/oscuro/auto con conmutador (§6.1).
+- [x] Búsqueda textual (ILIKE, orden canónico) y por referencia (parser propio:
+      «Jn 3,16», «1 Corintios 13:1-7», prefijos inequívocos; sin inventar resultados).
+- [x] Selección contextual de versículos con panel desplegable (esqueleto honesto:
+      copia de enlace profundo `?v=inicio-fin` validado en servidor; los comentarios
+      llegarán con la comunidad en Fase 3).
+- [x] Pruebas de integridad bíblica (§22.5) satisfactorias: 51/51 pruebas totales,
+      incluidas 6 de integridad (textos de control Gn 1:1 / Jn 3:16 / Sal 23:1 /
+      Ap 22:21, caracteres del español, numeración secuencial, 18 vacíos declarados);
+      la CI importa la Biblia real y verifica la integridad en cada push.
 
 ## Fase 3 — Comunidad
 
