@@ -1,6 +1,6 @@
 # DIRECTRIZ OBLIGATORIA — GITHUB COMO ÚNICA FUENTE DE VERDAD
 
-**El repositorio GitHub [JavierRB35/ScripturaWeb](https://github.com/JavierRB35/ScripturaWeb), rama principal `main`, constituye la ÚNICA FUENTE DE VERDAD del proyecto Scriptura Web.**
+**El repositorio GitHub [JavierRB35/Scriptura-web](https://github.com/JavierRB35/Scriptura-web), rama principal `main`, constituye la ÚNICA FUENTE DE VERDAD del proyecto Scriptura Web.**
 
 Esta directriz es obligatoria para cualquier desarrollador, agente de IA o herramienta que intervenga en el proyecto.
 
@@ -24,6 +24,6 @@ Esta directriz es obligatoria para cualquier desarrollador, agente de IA o herra
 
 **Todo trabajo comienza leyendo GitHub y termina actualizando GitHub.**
 
-Ningún avance podrá considerarse definitivamente incorporado al proyecto mientras no esté integrado, versionado y verificable en `JavierRB35/ScripturaWeb`.
+Ningún avance podrá considerarse definitivamente incorporado al proyecto mientras no esté integrado, versionado y verificable en `JavierRB35/Scriptura-web`.
 
 **GitHub es el punto único de entrada, salida, continuidad y trazabilidad de todo el desarrollo de Scriptura Web.**

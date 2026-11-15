@@ -5,7 +5,7 @@
 
 ## Fase 0 — Auditoría y preparación ✅ (2026-11-15)
 
-- [x] Verificar repositorios (`Scriptura` existe y auditable; `ScripturaWeb` creado vacío como destino).
+- [x] Verificar repositorios (`Scriptura` existe y auditable; `ScripturaWeb` (renombrado luego a `Scriptura-web`) creado vacío como destino).
 - [x] Auditoría del repositorio original → `03-AUDITORIA-FASE0.md`.
 - [x] Selección de arquitectura → `02-ARQUITECTURA.md`.
 - [x] Base documental del repositorio: directriz, especificación funcional, decisiones D01–D25 (en la especificación), auditoría, plan.

@@ -29,7 +29,7 @@
 | Catálogo geográfico y licencias | `tools/build_geography_catalog.py`, `docs/GEOGRAFIA_CAPITULOS.md`, `docs/OPENBIBLE-LICENSE.txt` | Biblioteca documental IA / futuro atlas |
 | Fichas de contexto histórico (100) | `assets/contexto_*.json`, `HistoricalContextStore.java` | Biblioteca documental IA |
 | Identidad visual (paleta, estilos) | `res/values/scriptura_colors.xml`, `scriptura_styles.xml`, `docs/IDENTIDAD_VISUAL_V2.md` | Base del diseño editorial web |
-| Prácticas de trazabilidad y QA | Estructura del README, informes en `docs/`, tests unitarios de lógica | Convenciones de ScripturaWeb |
+| Prácticas de trazabilidad y QA | Estructura del README, informes en `docs/`, tests unitarios de lógica | Convenciones de Scriptura-web |
 
 ### ADAPTAR (reimplementar el criterio en la plataforma web)
 
@@ -50,7 +50,7 @@
 
 ## 4. Riesgos identificados
 
-1. **Contenido Navarra:** no debe migrar a ScripturaWeb en ninguna forma (texto, notas, introducciones). El repositorio original no lo contiene; esta prohibición queda registrada aquí de forma permanente.
+1. **Contenido Navarra:** no debe migrar a Scriptura-web en ninguna forma (texto, notas, introducciones). El repositorio original no lo contiene; esta prohibición queda registrada aquí de forma permanente.
 2. **Textos del leccionario (CEE):** propiedad de la Conferencia Episcopal Española; `lecturasdeldia.org` no es fuente oficial. El servicio de correo usará textos reproducibles (RV1909, dominio público, con atribución) y referencias con enlaces legítimos, sin pretender jamás la traducción litúrgica oficial (§13.3).
 3. **Claves de IA:** en la web deben residir como secretos de entorno del servidor, nunca en el cliente (diferencia crítica respecto a la app, donde vivían en el Keystore del dispositivo).
 4. **Scraping frágil:** la extracción HTML de terceros puede romperse; el nuevo calendario litúrgico será dato propio versionado en base de datos.
