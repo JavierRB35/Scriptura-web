@@ -1,4 +1,4 @@
-// Cabecera con las cinco secciones principales (D13) y estado de sesión real.
+// Cabecera con las secciones principales y estado real de sesión.
 
 import Image from "next/image";
 import Link from "next/link";
@@ -9,6 +9,7 @@ import { ThemeToggle } from "./theme-toggle";
 const NAV = [
   { href: "/", label: "Inicio" },
   { href: "/biblia", label: "Biblia" },
+  { href: "/biblioteca", label: "Biblioteca" },
   { href: "/debates", label: "Debates" },
   { href: "/comunidad", label: "Comunidad" },
   { href: "/mi-espacio", label: "Mi espacio" },
@@ -76,7 +77,7 @@ export async function SiteHeader() {
         </div>
       </div>
       <nav aria-label="Principal móvil" className="border-t border-border xl:hidden">
-        <ul className="mx-auto grid max-w-[1240px] grid-cols-5 items-stretch gap-0.5 px-1 py-1 text-[clamp(.72rem,3vw,.875rem)] sm:px-7 lg:px-9">
+        <ul className="mx-auto grid max-w-[1240px] grid-cols-3 items-stretch sm:grid-cols-6 gap-0.5 px-1 py-1 text-[clamp(.72rem,3vw,.875rem)] sm:px-7 lg:px-9">
           {NAV.map((item) => (
             <li key={item.href} className="min-w-0">
               <Link href={item.href} className="flex min-h-11 min-w-0 items-center justify-center rounded-lg px-0.5 py-2 text-center leading-tight text-muted hover:bg-accent-soft hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-2">
