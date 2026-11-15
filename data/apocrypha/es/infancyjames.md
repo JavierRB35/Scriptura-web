@@ -1,8 +1,8 @@
 # Protoevangelio de Santiago
 
-**Traducción española de trabajo — Scriptura.** Versión preparada a partir de la traducción inglesa de Mark M. Mattison (dominio público), https://www.gospels.net/infancyjames, basada principalmente en el texto crítico griego de Émile de Strycker. Original inglés: \`data/apocrypha/en/infancyjames.txt\`.
+**Traducción española de trabajo — Scriptura.** Versión preparada a partir de la traducción inglesa de Mark M. Mattison (dominio público), https://www.gospels.net/infancyjames, basada principalmente en el texto crítico griego de Émile de Strycker. Original inglés: `data/apocrypha/en/infancyjames.txt`.
 
-**Criterios editoriales:** se mantienen los 25 capítulos y sus párrafos numerados \`(1)\`, \`(2)\`…; también se conserva íntegra en el apéndice la **versión breve alternativa de los capítulos 18–21** del Papiro Bodmer V. Los títulos de capítulos son ayudas editoriales. Corchetes \`[ ]\` indicarían restituciones y paréntesis \`( )\` inserciones editoriales, según corresponda. No se equiparan estos párrafos a los versículos de la Biblia canónica.
+**Criterios editoriales:** se mantienen los 25 capítulos y sus párrafos numerados `(1)`, `(2)`…; también se conserva íntegra en el apéndice la **versión breve alternativa de los capítulos 18–21** del Papiro Bodmer V. Los títulos de capítulos son ayudas editoriales. Corchetes `[ ]` indicarían restituciones y paréntesis `( )` inserciones editoriales, según corresponda. No se equiparan estos párrafos a los versículos de la Biblia canónica.
 
 ## Capítulo 1. La aflicción de Joaquín
 
