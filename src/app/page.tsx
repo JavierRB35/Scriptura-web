@@ -36,32 +36,32 @@ export default function Home() {
       <div className="mx-auto w-full max-w-[1240px] px-5 sm:px-8 lg:px-10">
         <section
           aria-labelledby="scriptura-portada"
-          className="grid grid-cols-1 items-center gap-10 pb-16 pt-14 sm:pt-20 lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] lg:gap-14 lg:pb-24 lg:pt-24"
+          className="grid grid-cols-1 items-start gap-9 pb-12 pt-9 sm:gap-10 sm:pt-12 lg:grid-cols-[minmax(0,1.06fr)_minmax(0,0.94fr)] lg:gap-12 lg:pb-16 lg:pt-12"
         >
           <div className="min-w-0">
-            <p className="mb-7 flex items-center gap-3 text-xs font-bold uppercase tracking-[.2em] text-accent">
+            <p className="mb-4 flex items-center gap-3 text-xs font-bold uppercase tracking-[.16em] text-accent sm:mb-5">
               <span aria-hidden="true" className="h-px w-8 bg-[#B58647]" />
               Escrituras · Lectura · Diálogo
             </p>
 
             <h1
               id="scriptura-portada"
-              className="max-w-[690px] text-[clamp(2.75rem,5.3vw,5rem)] font-normal leading-[1.16] tracking-[-.045em]"
+              className="max-w-[690px] text-[clamp(2.45rem,3.7vw,3.65rem)] font-normal leading-[1.2] tracking-[-.04em]"
               style={serif}
             >
               La Biblia en el centro.{" "}
               <span className="italic text-accent">
-                El espacio para descubrir otras perspectivas.
+                Descubre otras perspectivas.
               </span>
             </h1>
 
-            <p className="mt-7 max-w-[570px] text-[1.1rem] leading-[1.85] text-muted sm:text-[1.17rem]">
+            <p className="mt-5 max-w-[540px] text-[1.02rem] leading-[1.68] text-muted sm:text-[1.1rem]">
               Una biblioteca abierta para leer y comprender las Escrituras con
               tranquilidad. La comunidad de reflexión y las herramientas de
               acompañamiento se incorporarán conforme estén verificadas.
             </p>
 
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
                 href="/biblia"
                 className="inline-flex min-h-12 items-center justify-center gap-4 rounded-lg bg-[#1F5C45] px-7 py-3.5 text-center text-base font-semibold text-white shadow-[0_10px_24px_rgba(31,92,69,.15)] transition-colors hover:bg-[#174B38] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
@@ -77,7 +77,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <p className="mt-7 max-w-[540px] border-l-2 border-[#B58647] pl-4 text-sm leading-[1.75] text-muted">
+            <p className="mt-5 max-w-[540px] border-l-2 border-[#B58647] pl-4 text-[.86rem] leading-[1.6] text-muted">
               <strong className="font-semibold text-foreground">
                 Lectura ya disponible:
               </strong>{" "}
@@ -86,7 +86,7 @@ export default function Home() {
             </p>
           </div>
 
-          <figure className="min-w-0 overflow-hidden rounded-2xl border border-border bg-surface shadow-[0_24px_56px_rgba(31,92,69,.12)]">
+          <figure className="min-w-0 overflow-hidden rounded-2xl border border-border bg-surface shadow-[0_20px_44px_rgba(31,92,69,.10)]">
             <div className="relative aspect-video w-full overflow-hidden bg-accent-soft">
               <Image
                 src="/images/approved/IMG-04.webp"
@@ -97,14 +97,14 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
-            <figcaption className="px-5 py-5 sm:px-7 sm:py-6">
+            <figcaption className="px-5 py-4 sm:px-6 sm:py-5">
               <p className="text-xs font-bold uppercase tracking-[.16em] text-accent">
                 Biblioteca bíblica · Reina-Valera 1909
               </p>
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 Texto íntegro disponible para lectura y búsqueda por referencias.
               </p>
-              <div className="mt-5 grid grid-cols-3 gap-3 border-t border-border pt-5">
+              <div className="mt-4 grid grid-cols-3 gap-3 border-t border-border pt-4">
                 <div>
                   <p className="text-xl font-medium text-foreground sm:text-2xl" style={serif}>66</p>
                   <p className="mt-1 text-xs text-muted">libros</p>
@@ -124,7 +124,7 @@ export default function Home() {
 
         <section
           aria-labelledby="scriptura-experiencia"
-          className="border-t border-border py-16 sm:py-20"
+          className="border-t border-border py-12 sm:py-16"
         >
           <div className="max-w-3xl">
             <p className="text-xs font-bold uppercase tracking-[.2em] text-accent">
@@ -144,7 +144,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
             <article className="overflow-hidden rounded-xl border border-[#C4D5CA] bg-accent-soft p-7 sm:p-8">
               <div className="relative -mx-7 -mt-7 mb-7 aspect-video overflow-hidden bg-accent-soft sm:-mx-8 sm:-mt-8">
                 <Image
@@ -156,7 +156,7 @@ export default function Home() {
                 />
               </div>
               <p className="text-sm font-semibold text-accent">01 · Disponible</p>
-              <h3 className="mt-9 text-[1.55rem] font-normal leading-[1.3]" style={serif}>
+              <h3 className="mt-5 text-[1.45rem] font-normal leading-[1.3]" style={serif}>
                 Leer con claridad
               </h3>
               <p className="mt-3 text-[.98rem] leading-[1.75] text-muted">
@@ -165,7 +165,7 @@ export default function Home() {
               </p>
               <Link
                 href="/biblia"
-                className="mt-6 inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="mt-4 inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 Abrir la biblioteca →
               </Link>
@@ -182,7 +182,7 @@ export default function Home() {
                 />
               </div>
               <p className="text-sm font-semibold text-muted">02 · En desarrollo</p>
-              <h3 className="mt-9 text-[1.55rem] font-normal leading-[1.3]" style={serif}>
+              <h3 className="mt-5 text-[1.45rem] font-normal leading-[1.3]" style={serif}>
                 Reflexionar en comunidad
               </h3>
               <p className="mt-3 text-[.98rem] leading-[1.75] text-muted">
@@ -202,7 +202,7 @@ export default function Home() {
                 />
               </div>
               <p className="text-sm font-semibold text-muted">03 · En desarrollo</p>
-              <h3 className="mt-9 text-[1.55rem] font-normal leading-[1.3]" style={serif}>
+              <h3 className="mt-5 text-[1.45rem] font-normal leading-[1.3]" style={serif}>
                 Comprender con fuentes
               </h3>
               <p className="mt-3 text-[.98rem] leading-[1.75] text-muted">
@@ -235,7 +235,7 @@ export default function Home() {
             </p>
             <Link
               href="/informacion"
-              className="mt-6 inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="mt-4 inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               Información y fuentes →
             </Link>
