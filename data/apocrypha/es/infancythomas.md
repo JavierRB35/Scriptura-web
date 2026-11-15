@@ -1,8 +1,8 @@
 # Evangelio de la infancia de Tomás
 
-**Traducción española de trabajo — Scriptura.** Basada en la traducción inglesa de Mark M. Mattison, liberada al dominio público: https://www.gospels.net/infancythomas. Original inglés archivado en \`data/apocrypha/en/infancythomas.txt\`. La edición sigue principalmente el manuscrito griego *Hagios Sabas* 259. Los capítulos 17 y 18 proceden de manuscritos griegos posteriores porque faltan en ese testimonio.
+**Traducción española de trabajo — Scriptura.** Basada en la traducción inglesa de Mark M. Mattison, liberada al dominio público: https://www.gospels.net/infancythomas. Original inglés archivado en `data/apocrypha/en/infancythomas.txt`. La edición sigue principalmente el manuscrito griego *Hagios Sabas* 259. Los capítulos 17 y 18 proceden de manuscritos griegos posteriores porque faltan en ese testimonio.
 
-**Convenciones:** se conservan la numeración de **19 capítulos** y sus subdivisiones \`(1)\`, \`(2)\`…, sin inventar números de versículos. \`( )\` indica inserciones editoriales, \`/ \` una revisión editorial, \`< >\` una palabra ilegible y \`[ ]\` una laguna textual. Los títulos de capítulos son editoriales.
+**Convenciones:** se conservan la numeración de **19 capítulos** y sus subdivisiones `(1)`, `(2)`…, sin inventar números de versículos. `( )` indica inserciones editoriales, `/ ` una revisión editorial, `< >` una palabra ilegible y `[ ]` una laguna textual. Los títulos de capítulos son editoriales.
 
 ## Capítulo 1. Prólogo
 
@@ -234,7 +234,7 @@ Jesús progresaba en sabiduría, madurez y gracia ante Dios y ante las personas.
 - **Capítulo 1.** El prólogo probablemente no es original. En el resto de este evangelio casi nunca se llama a Jesús «Señor» ni «Cristo» (salvo quizá en el capítulo 9); normalmente se lo llama «Jesús» o «el niño Jesús».
 - **Capítulos 3 y 4.** Es probable que las maldiciones queden sin efecto en 8.2 y que los niños vuelvan a la vida.
 - **Capítulo 5, «se dijeron acerca de un niño de cinco años».** Se sigue la reconstrucción de Reidar Aasgaard, *The Childhood of Jesus: Decoding the Apocryphal Infancy Gospel of Thomas* (James Clarke & Co., 2010), p. 221. Tony Burke deja esas palabras sin traducir en *De Infantia Iesu Evangelium Thomae Graece* (Brepols, 2010), p. 306.
-- **Capítulo 6, «yo, que fui creado antes que este mundo».** Puede aludir a la Sabiduría de Proverbios 8:22 (correspondencia con Samuel Zinner del 18 de diciembre de 2018). Aasgaard (obra citada, pp. 142 y 236) traduce la expresión como «Yo, y aquel <que existió> antes de que este mundo fuera creado». El símbolo \`<…>\` reproduce una palabra ininteligible del griego. Véase Burke, obra citada, pp. 318–319.
+- **Capítulo 6, «yo, que fui creado antes que este mundo».** Puede aludir a la Sabiduría de Proverbios 8:22 (correspondencia con Samuel Zinner del 18 de diciembre de 2018). Aasgaard (obra citada, pp. 142 y 236) traduce la expresión como «Yo, y aquel <que existió> antes de que este mundo fuera creado». El símbolo `<…>` reproduce una palabra ininteligible del griego. Véase Burke, obra citada, pp. 318–319.
 - **Capítulo 9, «Zenón, Zenón», porque así se llamaba.** Posible alusión a alguno de los filósofos conocidos con ese nombre (correspondencia con Samuel Zinner del 18 de diciembre de 2018). En recensiones griegas posteriores, Jesús no ordena a Zenón que vuelva a «dormirse». «No, señor»: *kyrios* también puede significar «Señor» o «Maestro», opciones que eligen otras traducciones.
 - **Capítulo 13, «llamado el (…)».** Parece que se omitieron una o varias palabras del manuscrito *Hagios Sabas* 259.
 - **Capítulo 15, «aquel otro maestro quedó también a salvo».** Se refiere al segundo maestro, el del capítulo 14.
