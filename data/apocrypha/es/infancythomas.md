@@ -117,3 +117,130 @@ Todos lo vieron y quedaron asombrados.
 Jesús volvió a decirle: «¡Duérmete!».
 
 Los padres del niño alabaron a Dios y adoraron al niño Jesús.
+
+
+## Capítulo 10. Jesús cura a un leñador
+
+**Nota de posición:** en el manuscrito *Hagios Sabas* 259, este episodio aparece después del capítulo 16; se mantiene aquí la numeración de la edición inglesa de referencia.
+
+(1) En otra ocasión, un joven estaba partiendo leña en trozos iguales. Se abrió la planta del pie con el hacha, perdió mucha sangre y murió.
+
+(2) Se produjo un gran revuelo y Jesús acudió corriendo. Se abrió paso entre la multitud, sujetó el pie herido y al instante quedó curado. Después dijo al joven: «Ve y sigue partiendo la leña».
+
+(3) Las multitudes lo vieron y quedaron maravilladas. Decían: «Ha salvado a muchas almas de la muerte y seguirá salvándolas todos los días de su vida».
+
+## Capítulo 11. Jesús transporta agua en su manto
+
+(1) El niño Jesús tenía unos siete años y su madre María lo envió a buscar agua. Había una gran multitud alrededor de la cisterna y alguien golpeó el cántaro, que se rompió.
+
+(2) Jesús extendió el manto que llevaba, lo llenó de agua y lo llevó hasta su madre. María vio la señal que Jesús había realizado. Lo besó y dijo: «Señor, Dios mío, bendice a nuestro hijo», porque temían que alguien lo hechizara.
+
+## Capítulo 12. El milagro de la cosecha
+
+(1) Llegada la época de la siembra, José sembró semillas y el niño Jesús sembró una medida de trigo.
+
+(2) Su padre cosechó cien grandes medidas y repartió generosamente entre los pobres y los huérfanos. Pero José recogió la cosecha de las semillas de Jesús.
+
+## Capítulo 13. El milagro de la cama
+
+(1) Jesús tenía entonces unos ocho años. Su padre era carpintero y fabricaba arados y yugos. Un hombre rico le encargó una cama para que la hiciera muy grande y adecuada. Pero uno de los maderos, llamado el (…), era más corto y no tenía la longitud (correcta). José se entristeció porque no sabía qué hacer.
+
+El niño se acercó a su padre y le dijo: «Pon las dos tablas en el suelo y alinea sus extremos por tu lado».
+
+(2) José hizo exactamente lo que le dijo. El niño Jesús se colocó en el otro extremo, agarró la tabla corta y la estiró hasta que quedó igual de larga que la otra.
+
+Dijo entonces a su padre: «No te entristezcas. Haz ahora lo que quieras».
+
+José lo abrazó y lo besó, diciendo: «Bendito soy, porque Dios me ha dado este hijo».
+
+## Capítulo 14. El segundo maestro
+
+(1) José vio la sabiduría y la inteligencia de Jesús. No quería que desconociera las letras, así que lo confió a otro maestro.
+
+El maestro le escribió el alfabeto (a Jesús) y le dijo: «Di alfa».
+
+(2) El niño respondió: «Dime tú primero qué es beta y yo te diré qué es alfa».
+
+El maestro se irritó y lo golpeó. Jesús lo maldijo, y el maestro cayó al suelo y murió.
+
+(3) El niño regresó a casa con sus padres. José llamó a su madre (la de Jesús) y le ordenó que no lo dejara (a Jesús) salir de casa, para evitar que murieran quienes lo provocasen.
+
+## Capítulo 15. El tercer maestro
+
+(1) Pasados algunos días, otro maestro volvió a decir a José, el padre de Jesús: «Ven, hermano, entrégamelo en la escuela para que, con palabras amables, pueda enseñarle las letras».
+
+José respondió: «Si tienes valor, hermano, llévatelo y que regreséis a salvo».
+
+El maestro tomó al niño de la mano y se lo llevó lleno de miedo y preocupación. El niño fue de buena gana.
+
+(2) Cuando entró en la escuela, Jesús encontró un libro sobre el atril. Lo tomó, pero no leyó lo que estaba escrito en él, porque no procedía de la Ley de Dios. Abrió entonces la boca y pronunció palabras tan impresionantes que el maestro que estaba sentado enfrente lo escuchó con mucho gusto y lo animó a seguir hablando. La multitud que presenciaba la escena quedó maravillada por sus palabras santas.
+
+(3) José corrió apresuradamente a la escuela, sospechando que aquel maestro ya había padecido lo mismo que el anterior. Pero el maestro dijo a José: «Para que lo sepas, hermano, yo recibí a tu hijo como discípulo, pero está lleno de una gran gracia y sabiduría. Por eso, hermano, llévatelo sano y salvo a tu casa».
+
+(4) Jesús dijo al maestro: «Como has hablado correctamente y has dado un testimonio verdadero, también será salvado por ti el que fue derribado». Inmediatamente aquel otro maestro quedó también a salvo. José tomó al niño y se lo llevó a su casa.
+
+## Capítulo 16. Jesús cura a Santiago de la mordedura de una serpiente
+
+(1) Santiago fue al bosque para recoger y atar unas ramas con las que pudieran preparar el pan. Jesús lo acompañó. Mientras recogían las ramas, una serpiente terrible mordió a Santiago en una mano.
+
+(2) Santiago cayó al suelo y estaba a punto de morir. El niño Jesús corrió hasta él y sopló sobre la mordedura. Inmediatamente la herida quedó curada, la bestia fue destruida y Santiago se salvó.
+
+**Advertencia sobre los testimonios:** los capítulos 17 y 18 no aparecen en el manuscrito *Hagios Sabas* 259. Se incluyen a continuación, siguiendo la edición inglesa, a partir de otros manuscritos griegos posteriores. No deben presentarse como si formaran parte de ese testimonio antiguo.
+
+## Capítulo 17. Jesús cura a un bebé
+
+(1) Después de estos sucesos, un bebé que vivía cerca de la casa de José enfermó y murió. Su madre lloraba desconsoladamente.
+
+Jesús oyó el gran lamento y el alboroto y acudió corriendo. Encontró muerto al niño, le tocó el pecho y dijo: «Te digo, pequeño, no mueras. Vive y quédate con tu madre».
+
+El bebé abrió enseguida los ojos y se echó a reír. Jesús dijo a la madre: «Toma a tu hijo, dale leche y acuérdate de mí».
+
+(2) La multitud que presenciaba aquello quedó asombrada y decía: «¡De verdad este niño es un dios o un ángel, porque cada palabra suya se convierte en un hecho!».
+
+Jesús se marchó de nuevo a jugar con los demás niños.
+
+## Capítulo 18. Jesús cura a un constructor
+
+(1) Algún tiempo después, se estaba construyendo un edificio. Hubo un gran alboroto y Jesús se levantó y fue allí.
+
+Al ver a un hombre tendido en el suelo, muerto, Jesús lo tomó de la mano y le dijo: «Te digo, hombre, levántate y vuelve a tu trabajo». El hombre se levantó inmediatamente y lo adoró.
+
+(2) La multitud lo vio y quedó maravillada: «Este niño viene del cielo, porque ha salvado a muchas almas de la muerte y seguirá salvándolas todos los días de su vida».
+
+## Capítulo 19. Jesús en el templo
+
+(1) Cuando Jesús tenía doce años, sus padres fueron, como de costumbre, a Jerusalén para la fiesta de la Pascua. Pero al regresar, Jesús se quedó en Jerusalén sin que sus padres lo supieran.
+
+(2) Creyendo que iba entre los compañeros de viaje, caminaron durante un día y lo buscaron entre sus parientes y conocidos. Como no lo encontraron, regresaron a Jerusalén para seguir buscándolo.
+
+Después de tres días lo encontraron en el templo, sentado entre los maestros, escuchándolos y haciéndoles preguntas. Quienes lo oían se sorprendían de la manera en que interrogaba a los ancianos y explicaba los puntos principales de la Ley, los enigmas y las parábolas de los profetas.
+
+(3) Su madre le dijo: «Hijo, ¿qué nos has hecho? Mira, te hemos estado buscando llenos de angustia y tristeza».
+
+Jesús respondió: «¿Por qué me buscabais? ¿No sabíais que debo estar en el lugar de mi Padre?».
+
+(4) Los escribas y los fariseos preguntaron a María: «¿Eres tú la madre de este niño?».
+
+Ella respondió: «Lo soy».
+
+Y le dijeron: «Dichosa tú, pues el Señor Dios ha bendecido el fruto de tu vientre. Nunca hemos visto tanta sabiduría, alabanza y gloria de la virtud».
+
+(5) Jesús se levantó, siguió a su madre y fue obediente a sus padres. Ella conservaba todas estas cosas y las meditaba en su corazón.
+
+Jesús progresaba en sabiduría, madurez y gracia ante Dios y ante las personas. A él sea la [gloria…].
+
+## Notas de la traducción de referencia
+
+- **Capítulo 1.** El prólogo probablemente no es original. En el resto de este evangelio casi nunca se llama a Jesús «Señor» ni «Cristo» (salvo quizá en el capítulo 9); normalmente se lo llama «Jesús» o «el niño Jesús».
+- **Capítulos 3 y 4.** Es probable que las maldiciones queden sin efecto en 8.2 y que los niños vuelvan a la vida.
+- **Capítulo 5, «se dijeron acerca de un niño de cinco años».** Se sigue la reconstrucción de Reidar Aasgaard, *The Childhood of Jesus: Decoding the Apocryphal Infancy Gospel of Thomas* (James Clarke & Co., 2010), p. 221. Tony Burke deja esas palabras sin traducir en *De Infantia Iesu Evangelium Thomae Graece* (Brepols, 2010), p. 306.
+- **Capítulo 6, «yo, que fui creado antes que este mundo».** Puede aludir a la Sabiduría de Proverbios 8:22 (correspondencia con Samuel Zinner del 18 de diciembre de 2018). Aasgaard (obra citada, pp. 142 y 236) traduce la expresión como «Yo, y aquel <que existió> antes de que este mundo fuera creado». El símbolo \`<…>\` reproduce una palabra ininteligible del griego. Véase Burke, obra citada, pp. 318–319.
+- **Capítulo 9, «Zenón, Zenón», porque así se llamaba.** Posible alusión a alguno de los filósofos conocidos con ese nombre (correspondencia con Samuel Zinner del 18 de diciembre de 2018). En recensiones griegas posteriores, Jesús no ordena a Zenón que vuelva a «dormirse». «No, señor»: *kyrios* también puede significar «Señor» o «Maestro», opciones que eligen otras traducciones.
+- **Capítulo 13, «llamado el (…)».** Parece que se omitieron una o varias palabras del manuscrito *Hagios Sabas* 259.
+- **Capítulo 15, «aquel otro maestro quedó también a salvo».** Se refiere al segundo maestro, el del capítulo 14.
+- **Capítulos 17 y 18.** La transcripción griega de referencia se encuentra en Constantin von Tischendorf, *Evangelia Apocrypha*, 2.ª ed. (Leipzig: Mendelssohn, 1876), pp. 140–157, reproducido en Rick Brannan, *Greek Apocryphal Gospels, Fragments & Agrapha: Texts and Transcriptions* (Lexham Press, 2013); véase también Bart D. Ehrman y Zlatko Pleše, *The Apocryphal Gospels: Texts and Translations* (Oxford University Press, 2011).
+- **Capítulo 18, «se estaba construyendo un edificio».** Tony Burke considera posible que se omitiera por accidente una línea que explicaba cómo cayó el trabajador. Otros manuscritos cuentan que «cierto constructor» cayó y murió. Véase Burke, obra citada, p. 384, nota 1, y pp. 444–445.
+
+## Nota editorial de Scriptura
+
+Se conservan los **19 capítulos** con su numeración interna, las lagunas, los términos ilegibles y las intervenciones editoriales. Se señalan expresamente tanto la posición distinta del capítulo 10 en el manuscrito griego como la procedencia secundaria de los capítulos 17–18. El texto español es una traducción de trabajo desde el inglés y requiere cotejo crítico con los testimonios griegos antes de publicarse.
