@@ -3,7 +3,7 @@
 import "server-only";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
-import archive from "../../../data/apocrypha/manifest.json";
+import archive from "../../data/apocrypha/manifest.json";
 
 interface LibraryMetadata {
   order?: number;
