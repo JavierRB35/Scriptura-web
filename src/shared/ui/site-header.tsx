@@ -18,17 +18,17 @@ export async function SiteHeader() {
 
   return (
     <header className="border-b border-border bg-surface">
-      <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3">
-        <Link href="/" className="flex items-baseline gap-2">
-          <span className="text-lg font-semibold tracking-tight text-accent">Scriptura</span>
+      <div className="mx-auto flex max-w-[1240px] items-center justify-between gap-3 px-5 py-3.5 sm:px-8 lg:px-10">
+        <Link href="/" className="shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+          <span className="text-xl font-semibold tracking-[-.03em] text-accent">Scriptura</span>
         </Link>
-        <nav aria-label="Principal" className="hidden sm:block">
-          <ul className="flex items-center gap-1 text-sm">
+        <nav aria-label="Principal" className="hidden xl:block">
+          <ul className="flex items-center gap-0.5 text-sm">
             {NAV.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="rounded px-3 py-1.5 text-muted transition-colors hover:bg-accent-soft hover:text-foreground"
+                  className="whitespace-nowrap rounded-lg px-3 py-2 text-muted transition-colors hover:bg-accent-soft hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                   {item.label}
                 </Link>
@@ -36,23 +36,23 @@ export async function SiteHeader() {
             ))}
           </ul>
         </nav>
-        <div className="flex items-center gap-2 text-sm">
+        <div className="flex shrink-0 items-center gap-1.5 text-sm sm:gap-2">
           <ThemeToggle />
           {user ? (
             <>
-              <span className="hidden text-muted sm:inline">
+              <span className="hidden text-muted xl:inline">
                 {user.alias}
               </span>
               <LogoutButton />
             </>
           ) : (
             <>
-              <Link href="/entrar" className="rounded px-3 py-1.5 text-muted hover:text-foreground">
+              <Link href="/entrar" className="whitespace-nowrap rounded-lg px-2.5 py-2 text-muted hover:text-foreground">
                 Entrar
               </Link>
               <Link
                 href="/registro"
-                className="rounded bg-accent px-3 py-1.5 font-medium text-white transition-opacity hover:opacity-90"
+                className="whitespace-nowrap rounded-lg bg-[#1F5C45] px-3 py-2 font-semibold text-white transition-colors hover:bg-[#174B38] sm:px-4"
               >
                 Crear cuenta
               </Link>
@@ -60,11 +60,11 @@ export async function SiteHeader() {
           )}
         </div>
       </div>
-      <nav aria-label="Principal móvil" className="border-t border-border sm:hidden">
-        <ul className="flex overflow-x-auto px-2 py-1 text-sm">
+      <nav aria-label="Principal móvil" className="border-t border-border xl:hidden">
+        <ul className="mx-auto flex max-w-[1240px] items-center justify-between gap-1 overflow-x-auto px-3 py-1.5 text-sm sm:px-7 lg:px-9">
           {NAV.map((item) => (
             <li key={item.href} className="shrink-0">
-              <Link href={item.href} className="block rounded px-3 py-1.5 text-muted">
+              <Link href={item.href} className="block whitespace-nowrap rounded-lg px-2.5 py-2 text-muted hover:bg-accent-soft hover:text-foreground sm:px-3">
                 {item.label}
               </Link>
             </li>
