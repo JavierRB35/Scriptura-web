@@ -1,14 +1,22 @@
 "use client";
 
-// Lector bíblico interactivo: selección de versículos, panel contextual
-// (esqueleto honesto: los comentarios llegan en Fase 3), tamaño de letra.
-// La preferencia de tamaño vive en localStorage vía useSyncExternalStore
-// (sin efectos con setState, compatible con hidratación).
+// Lector bíblico interactivo (§6.3, §7): selección de versículos, panel
+// contextual con dos vistas — Pasaje (enlace profundo, favorito) y
+// Comentarios (publicar, responder, valorar). Todo pasa por server actions
+// que validan sesión y pasaje en el servidor.
 
 import { useMemo, useState, useSyncExternalStore } from "react";
 import { Literata } from "next/font/google";
-import type { VerseRow } from "@/bible/queries";
 import { displayBibleVerse } from "@/bible/display-text";
+
+const readerFont = Literata({ subsets: ["latin"], display: "swap" });
+import type { VerseRow } from "@/bible/queries";
+import type { CommentView } from "@/community/service";
+import {
+  publicarComentario,
+  alternarLike,
+  alternarFavorito,
+} from "@/community/actions";
 
 interface Props {
   slug: string;
@@ -16,12 +24,12 @@ interface Props {
   bookCode: string;
   chapter: number;
   editionAbbr: string;
+  editionId: string;
   verses: VerseRow[];
   initialRange: { start: number; end: number } | null;
+  user: { id: string; alias: string } | null;
+  comments: CommentView[];
 }
-
-// Misma intención tipográfica de la lectura Android: cuerpo de libro, no UI.
-const readerFont = Literata({ subsets: ["latin"], display: "swap" });
 
 const FONT_KEY = "scriptura-font";
 const FONT_EVENT = "scriptura-font-change";
@@ -40,7 +48,7 @@ function verseClickLogic(
   n: number
 ): { start: number; end: number } | null {
   if (!prev) return { start: n, end: n };
-  if (prev.start === n && prev.end === n) return null; // deseleccionar
+  if (prev.start === n && prev.end === n) return null;
   if (n < prev.start) return { start: n, end: prev.end };
   if (n > prev.end) return { start: prev.start, end: n };
   return { start: n, end: n };
@@ -54,8 +62,11 @@ export function ReaderClient({
   editionAbbr,
   verses,
   initialRange,
+  user,
+  comments,
 }: Props) {
   const [selected, setSelected] = useState(initialRange);
+  const [panel, setPanel] = useState<"none" | "pasaje" | "comentarios">("none");
   const [copied, setCopied] = useState(false);
 
   const fontScale = useSyncExternalStore(
@@ -74,45 +85,55 @@ export function ReaderClient({
     window.dispatchEvent(new Event(FONT_EVENT));
   }
 
-  const refLabel = useMemo(
-    () =>
-      selected
-        ? `${bookName} ${chapter}:${
-            selected.start === selected.end ? selected.start : `${selected.start}-${selected.end}`
-          }`
-        : null,
-    [selected, bookName, chapter]
-  );
+  const refLabel = selected
+    ? `${bookName} ${chapter}:${
+        selected.start === selected.end ? selected.start : `${selected.start}-${selected.end}`
+      }`
+    : null;
 
-  const selectedText = useMemo(() => {
-    if (!selected) return "";
-    return verses
-      .filter((v) => v.verseNumber >= selected.start && v.verseNumber <= selected.end)
-      .map((v) => `${v.verseNumber} ${displayBibleVerse(v.text, { bookCode, chapter, verseNumber: v.verseNumber })}`)
-      .join("\n");
-  }, [selected, verses, bookCode, chapter]);
+  const backPath = `/biblia/${slug}/${chapter}`;
+
+  const shownComments = useMemo(() => {
+    if (!selected) return comments;
+    const inRange = comments.filter(
+      (c) => c.verseStart <= selected.end && c.verseEnd >= selected.start
+    );
+    return inRange.length > 0 ? inRange : comments;
+  }, [comments, selected]);
+
+  const roots = shownComments.filter((c) => !c.parentId);
+  const repliesOf = (id: string) => shownComments.filter((c) => c.parentId === id);
 
   async function copyLink() {
     if (!selected) return;
-    const url = `${window.location.origin}/biblia/${slug}/${chapter}?v=${selected.start}-${selected.end}`;
+    const url = `${window.location.origin}${backPath}?v=${selected.start}-${selected.end}`;
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
     } catch {
-      // portapapeles no disponible: no se simula éxito
+      /* portapapeles no disponible */
     }
   }
 
   return (
     <div>
       {/* Barra de herramientas de lectura */}
-      <div className="sticky top-0 z-10 -mx-4 mb-4 flex items-center justify-between gap-2 border-b border-border bg-background/95 px-4 py-2 text-sm backdrop-blur">
-        <span className="min-w-0 text-muted" title="Texto original de 1909 conservado; lectura con ortografía actualizada">
-          {editionAbbr} · <span className="sm:hidden">Cap. {chapter}</span><span className="hidden sm:inline">Capítulo {chapter}</span>
-          <span className="ml-1 text-xs">· ort. actual</span>
+      <div className="sticky top-0 z-10 -mx-4 mb-6 flex items-center justify-between gap-2 border-b border-border bg-background/95 px-4 py-2 text-sm backdrop-blur">
+        <span className="text-muted">
+          {editionAbbr} · Capítulo {chapter} · {comments.length} reflex.
         </span>
         <div className="flex items-center gap-1">
+          <button
+            type="button"
+            aria-label="Comentarios del capítulo"
+            onClick={() =>
+              setPanel((p) => (p === "comentarios" ? (selected ? "pasaje" : "none") : "comentarios"))
+            }
+            className={`rounded border border-border px-2 py-1 ${panel === "comentarios" ? "bg-accent text-white" : "hover:bg-accent-soft"}`}
+          >
+            💬 {comments.length}
+          </button>
           <button
             type="button"
             aria-label="Reducir tamaño de letra"
@@ -132,98 +153,293 @@ export function ReaderClient({
         </div>
       </div>
 
-      {/* V17: cada versículo tiene número visible y párrafo propio.
-          La edición RV1909 se conserva literalmente en la base de datos.
-          La capitular se aplica solo al primer versículo y solo con CSS;
-          las versales y tildes históricas seleccionadas se actualizan en
-          pantalla mediante displayBibleVerse, no en el texto canónico.
-          Android separaba los versículos con \n\n: aquí se respeta el
-          ritmo de lectura con espacio vertical, sin alterar la base. */}
-      <article
-        aria-label={`Texto bíblico de ${bookName} ${chapter}`}
-        className={`${readerFont.className} mx-auto max-w-[44rem] space-y-2 pb-5 sm:space-y-3`}
-        style={{ fontSize: `${19 * fontScale / 100}px` }}
-      >
+      {/* Texto bíblico */}
+      <article className={`${readerFont.className} max-w-2xl space-y-2 leading-loose`} style={{ fontSize: `${fontScale}%` }}>
         {verses.map((v) => {
           const inRange =
-            Boolean(selected && v.verseNumber >= selected.start && v.verseNumber <= selected.end);
-          const selectVerse = () => setSelected((prev) => verseClickLogic(prev, v.verseNumber));
+            selected && v.verseNumber >= selected.start && v.verseNumber <= selected.end;
           return (
-            <div
+            <p
               key={v.verseKey}
               id={`v${v.verseNumber}`}
-              data-verse-number={v.verseNumber}
               className={
                 inRange
-                  ? "grid scroll-mt-24 grid-cols-[2.4rem_minmax(0,1fr)] gap-x-2 rounded-lg bg-accent-soft px-1 py-1.5 transition-colors sm:px-2"
-                  : "grid scroll-mt-24 grid-cols-[2.4rem_minmax(0,1fr)] gap-x-2 rounded-lg px-1 py-1.5 transition-colors hover:bg-accent-soft/50 sm:px-2"
+                  ? "-mx-1 cursor-pointer rounded bg-accent-soft px-1 transition-colors"
+                  : "-mx-1 cursor-pointer px-1 transition-colors hover:bg-accent-soft/50"
               }
+              onClick={() => {
+                setSelected((prev) => verseClickLogic(prev, v.verseNumber));
+                setPanel((p) => (p === "none" ? "pasaje" : p));
+              }}
             >
-              <button
-                type="button"
-                onClick={selectVerse}
-                aria-label={`Seleccionar versículo ${v.verseNumber}`}
-                aria-pressed={inRange}
-                className="flex min-h-10 w-full items-start justify-center rounded-md pt-[.25em] text-[.8em] font-semibold leading-[1.7] text-accent tabular-nums transition-colors hover:bg-accent-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-              >
-                {v.verseNumber}
-              </button>
-              <p
-                className={`min-w-0 cursor-pointer leading-[1.7] text-foreground ${
-                  v.verseNumber === 1 && v.text
-                    ? "first-letter:float-left first-letter:mr-2 first-letter:mt-[.1em] first-letter:text-[2.85em] first-letter:font-semibold first-letter:leading-[.78] first-letter:text-accent"
-                    : ""
-                }`}
-                onClick={selectVerse}
-              >
-                {v.text ? (
-                  displayBibleVerse(v.text, { bookCode, chapter, verseNumber: v.verseNumber })
-                ) : (
-                  <em className="text-muted">
-                    (Este versículo no tiene texto independiente en esta edición; su
-                    contenido forma parte del anterior por diferencias de numeración.)
-                  </em>
-                )}
-              </p>
-            </div>
+              {v.text ? (
+                <>
+                  <sup
+                    className="mr-1 select-none font-medium text-accent"
+                    aria-label={`versículo ${v.verseNumber}`}
+                  >
+                    {v.verseNumber}
+                  </sup>
+                  {displayBibleVerse(v.text, { bookCode, chapter, verseNumber: v.verseNumber })}
+                </>
+              ) : (
+                <em className="text-muted">
+                  {v.verseNumber}. (Este versículo no tiene texto en esta edición; su
+                  contenido forma parte del versículo anterior — diferencia de
+                  numeración.)
+                </em>
+              )}{" "}
+            </p>
           );
         })}
       </article>
 
-      {/* Panel contextual desplegable (esqueleto Fase 2, §6.3) */}
-      {selected && (
+      {/* Panel contextual desplegable (§6.3) */}
+      {panel !== "none" && (
         <aside
-          aria-label="Panel contextual del pasaje"
-          className="fixed inset-x-0 bottom-0 z-20 border-t border-border bg-surface shadow-lg lg:static lg:mt-8 lg:max-w-2xl lg:rounded-xl lg:border lg:shadow-none"
+          aria-label="Panel contextual"
+          className="fixed inset-x-0 bottom-0 z-20 max-h-[70vh] overflow-y-auto border-t border-border bg-surface shadow-lg lg:static lg:mt-8 lg:max-h-none lg:max-w-2xl lg:rounded-xl lg:border lg:shadow-none"
         >
-          <div className="mx-auto flex max-w-2xl items-start justify-between gap-3 px-4 py-3">
-            <div>
-              <p className="font-medium">{refLabel}</p>
-              <p className="mt-1 line-clamp-2 whitespace-pre-line text-sm text-muted">{selectedText}</p>
-              <p className="mt-2 text-sm text-muted">
-                Los comentarios y reflexiones sobre pasajes llegarán con la comunidad
-                (Fase 3).
-              </p>
-            </div>
-            <div className="flex shrink-0 flex-col gap-2">
+          <div className="mx-auto flex max-w-2xl items-center justify-between px-4 pt-3">
+            <div className="flex gap-2 text-sm">
               <button
                 type="button"
-                onClick={copyLink}
-                className="rounded bg-accent px-3 py-1.5 text-sm font-medium text-white hover:opacity-90"
+                onClick={() => setPanel("pasaje")}
+                className={`rounded px-2 py-1 ${panel === "pasaje" ? "bg-accent text-white" : "text-muted hover:bg-accent-soft"}`}
               >
-                {copied ? "¡Copiado!" : "Copiar enlace"}
+                Pasaje
               </button>
               <button
                 type="button"
-                onClick={() => setSelected(null)}
-                className="rounded border border-border px-3 py-1.5 text-sm hover:bg-accent-soft"
+                onClick={() => setPanel("comentarios")}
+                className={`rounded px-2 py-1 ${panel === "comentarios" ? "bg-accent text-white" : "text-muted hover:bg-accent-soft"}`}
               >
-                Cerrar
+                Comentarios ({comments.length})
               </button>
             </div>
+            <button
+              type="button"
+              onClick={() => setPanel("none")}
+              className="rounded border border-border px-2 py-1 text-sm hover:bg-accent-soft"
+            >
+              Cerrar
+            </button>
+          </div>
+
+          <div className="mx-auto max-w-2xl px-4 py-3">
+            {panel === "pasaje" && (
+              <div>
+                {selected ? (
+                  <>
+                    <p className="font-medium">{refLabel}</p>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      <button
+                        type="button"
+                        onClick={copyLink}
+                        className="rounded bg-accent px-3 py-1.5 text-sm font-medium text-white hover:opacity-90"
+                      >
+                        {copied ? "¡Copiado!" : "Copiar enlace"}
+                      </button>
+                      {user && (
+                        <form action={alternarFavorito}>
+                          <input type="hidden" name="bookCode" value={bookCode} />
+                          <input type="hidden" name="chapter" value={chapter} />
+                          <input type="hidden" name="verseStart" value={selected.start} />
+                          <input type="hidden" name="verseEnd" value={selected.end} />
+                          <input type="hidden" name="back" value={backPath} />
+                          <button
+                            type="submit"
+                            className="rounded border border-border px-3 py-1.5 text-sm hover:bg-accent-soft"
+                          >
+                            ★ Guardar pasaje
+                          </button>
+                        </form>
+                      )}
+                    </div>
+                    <p className="mt-3 text-sm text-muted">
+                      Selecciona uno o varios versículos para reflexionar sobre ellos.
+                    </p>
+                  </>
+                ) : (
+                  <p className="text-sm text-muted">
+                    Toca un versículo para seleccionarlo; toca otro contiguo para
+                    ampliar el pasaje.
+                  </p>
+                )}
+              </div>
+            )}
+
+            {panel === "comentarios" && (
+              <div className="space-y-4">
+                {user ? (
+                  selected ? (
+                    <form action={publicarComentario} className="rounded-lg border border-border p-3">
+                      <p className="text-sm font-medium">
+                        Reflexionar sobre {bookName} {chapter}:
+                        {selected.start === selected.end
+                          ? selected.start
+                          : `${selected.start}-${selected.end}`}
+                      </p>
+                      <input type="hidden" name="bookCode" value={bookCode} />
+                      <input type="hidden" name="chapter" value={chapter} />
+                      <input type="hidden" name="verseStart" value={selected.start} />
+                      <input type="hidden" name="verseEnd" value={selected.end} />
+                      <textarea
+                        name="body"
+                        required
+                        minLength={1}
+                        maxLength={4000}
+                        rows={3}
+                        placeholder="Comparte una reflexión sobre este pasaje…"
+                        className="mt-2 w-full rounded border border-border bg-background px-3 py-2 outline-none focus:border-accent"
+                      />
+                      <button
+                        type="submit"
+                        className="mt-2 rounded bg-accent px-4 py-1.5 text-sm font-medium text-white hover:opacity-90"
+                      >
+                        Publicar
+                      </button>
+                    </form>
+                  ) : (
+                    <p className="text-sm text-muted">
+                      Selecciona un versículo o pasaje para publicar tu reflexión.
+                    </p>
+                  )
+                ) : (
+                  <p className="text-sm text-muted">
+                    <a href="/entrar" className="underline underline-offset-2">
+                      Entra en tu cuenta
+                    </a>{" "}
+                    para leer y publicar reflexiones. La Biblia es pública; la
+                    comunidad, exclusiva de miembros.
+                  </p>
+                )}
+
+                {roots.map((c) => (
+                  <CommentItem
+                    key={c.id}
+                    comment={c}
+                    replies={repliesOf(c.id)}
+                    user={user}
+                    backPath={backPath}
+                    bookCode={bookCode}
+                    chapter={chapter}
+                  />
+                ))}
+                {roots.length === 0 && user && (
+                  <p className="text-sm text-muted">
+                    Todavía no hay reflexiones {selected ? "sobre este pasaje" : "en este capítulo"}.
+                    Puedes iniciar la conversación.
+                  </p>
+                )}
+              </div>
+            )}
           </div>
         </aside>
       )}
     </div>
+  );
+}
+
+function CommentItem({
+  comment,
+  replies,
+  user,
+  backPath,
+  bookCode,
+  chapter,
+}: {
+  comment: CommentView;
+  replies: CommentView[];
+  user: { id: string; alias: string } | null;
+  backPath: string;
+  bookCode: string;
+  chapter: number;
+}) {
+  const [replying, setReplying] = useState(false);
+  const range =
+    comment.verseStart === comment.verseEnd
+      ? `${comment.verseStart}`
+      : `${comment.verseStart}-${comment.verseEnd}`;
+  const fecha = new Date(comment.createdAt).toLocaleDateString("es-ES", {
+    day: "numeric",
+    month: "short",
+  });
+
+  return (
+    <article className="rounded-lg border border-border p-3">
+      <header className="flex items-baseline justify-between gap-2 text-sm">
+        <span className="font-medium">{comment.authorAlias}</span>
+        <span className="text-muted">
+          v.{range} · {fecha}
+        </span>
+      </header>
+      <p className="mt-1 whitespace-pre-wrap leading-7">{comment.body}</p>
+
+      {user && (
+        <div className="mt-2 flex items-center gap-2 text-sm">
+          <form action={alternarLike}>
+            <input type="hidden" name="commentId" value={comment.id} />
+            <input type="hidden" name="back" value={backPath} />
+            <button
+              type="submit"
+              className={`rounded border border-border px-2 py-0.5 ${comment.likedByMe ? "bg-accent text-white" : "hover:bg-accent-soft"}`}
+            >
+              ♥ {comment.likeCount}
+            </button>
+          </form>
+          {comment.parentId === null && (
+            <button
+              type="button"
+              onClick={() => setReplying((r) => !r)}
+              className="rounded border border-border px-2 py-0.5 hover:bg-accent-soft"
+            >
+              Responder {comment.replyCount > 0 ? `(${comment.replyCount})` : ""}
+            </button>
+          )}
+        </div>
+      )}
+
+      {replying && user && comment.parentId === null && (
+        <form action={publicarComentario} className="mt-2">
+          <input type="hidden" name="parentId" value={comment.id} />
+          <input type="hidden" name="bookCode" value={bookCode} />
+          <input type="hidden" name="chapter" value={chapter} />
+          <input type="hidden" name="verseStart" value={comment.verseStart} />
+          <input type="hidden" name="verseEnd" value={comment.verseEnd} />
+          <textarea
+            name="body"
+            required
+            minLength={1}
+            maxLength={4000}
+            rows={2}
+            placeholder={`Responder a ${comment.authorAlias}…`}
+            className="mt-2 w-full rounded border border-border bg-background px-3 py-2 outline-none focus:border-accent"
+          />
+          <button
+            type="submit"
+            className="mt-2 rounded bg-accent px-3 py-1 text-sm font-medium text-white hover:opacity-90"
+          >
+            Responder
+          </button>
+        </form>
+      )}
+
+      {replies.length > 0 && (
+        <div className="mt-3 space-y-2 border-l-2 border-border pl-3">
+          {replies.map((r) => (
+            <CommentItem
+              key={r.id}
+              comment={r}
+              replies={[]}
+              user={user}
+              backPath={backPath}
+              bookCode={bookCode}
+              chapter={chapter}
+            />
+          ))}
+        </div>
+      )}
+    </article>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getCurrentUser, currentUserHasRole } from "@/auth/session";
 
@@ -30,9 +31,22 @@ export default async function AdminPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
       <h1 className="text-3xl font-semibold tracking-tight">Administración</h1>
-      <p className="mt-3 text-muted">
-        Panel en construcción (Fase 4): gestión editorial, moderación, métricas y
-        auditoría operarán desde aquí.
+      <ul className="mt-6 space-y-3">
+        <li>
+          <Link
+            href="/admin/debates"
+            className="block rounded-xl border border-border bg-surface p-5 hover:border-accent"
+          >
+            <span className="text-lg font-medium">Debates</span>
+            <p className="mt-1 text-sm text-muted">
+              Revisar propuestas de la comunidad, aceptar y publicar, o rechazar con
+              motivo.
+            </p>
+          </Link>
+        </li>
+      </ul>
+      <p className="mt-6 text-sm text-muted">
+        Moderación, métricas y auditoría llegarán con la Fase 4.
       </p>
     </div>
   );

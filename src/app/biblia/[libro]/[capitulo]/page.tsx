@@ -4,6 +4,8 @@ import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { BOOK_BY_SLUG, slugOf } from "@/bible/slug";
 import { getPublishedEdition, getChapter } from "@/bible/queries";
+import { getCurrentUser } from "@/auth/session";
+import { listChapterComments } from "@/community/service";
 import { ReaderClient } from "@/bible/ui/reader-client";
 
 interface Props {
@@ -80,15 +82,27 @@ async function ChapterBody({ params, searchParams }: Props) {
         {chapter.bookName} {chapter.chapterNumber}
       </h1>
 
-      <ReaderClient
-        slug={libro}
-        bookName={chapter.bookName}
-        bookCode={chapter.bookCode}
-        chapter={chapter.chapterNumber}
-        editionAbbr={edition.abbreviation}
-        verses={chapter.verses}
-        initialRange={initialRange}
-      />
+      {/* Comentarios solo para miembros: sin sesión no se consultan (§4.1, §18.7). */}
+      {await (async () => {
+        const user = await getCurrentUser();
+        const comments = user
+          ? await listChapterComments(user, book.code, chapterNumber, edition.id)
+          : [];
+        return (
+          <ReaderClient
+            slug={libro}
+            bookName={chapter.bookName}
+            bookCode={chapter.bookCode}
+            chapter={chapter.chapterNumber}
+            editionAbbr={edition.abbreviation}
+            editionId={edition.id}
+            verses={chapter.verses}
+            initialRange={initialRange}
+            user={user ? { id: user.id, alias: user.alias } : null}
+            comments={comments}
+          />
+        );
+      })()}
 
       {/* Navegación anterior/siguiente */}
       <nav

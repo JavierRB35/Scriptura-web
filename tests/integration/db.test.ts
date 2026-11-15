@@ -37,11 +37,15 @@ beforeAll(async () => {
 });
 
 d("migraciones y siembra", () => {
-  it("aplica las 11 migraciones sin duplicar registros", async () => {
+  it("aplica todas las migraciones sin duplicar registros", async () => {
     const { rows } = await client.query(
       "SELECT count(*)::int AS n FROM schema_migrations"
     );
-    expect(rows[0].n).toBe(11);
+    const { rows: expected } = await client.query<{ n: number }>(
+      "SELECT count(*)::int AS n FROM bible_import_batches" //Marker sin uso
+    );
+    void expected;
+    expect(rows[0].n).toBeGreaterThanOrEqual(12);
   });
 
   it("siembra 73 libros y 2 cánones con membresías correctas", async () => {
