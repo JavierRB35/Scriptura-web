@@ -5,6 +5,7 @@ import { parseReference } from "@/bible/reference";
 import { slugOf } from "@/bible/slug";
 import { BOOK_BY_CODE } from "@/bible/catalog";
 import { getPublishedEdition, searchVerses } from "@/bible/queries";
+import { displayBibleVerse } from "@/bible/display-text";
 
 export const metadata: Metadata = { title: "Buscar en la Biblia" };
 
@@ -109,7 +110,9 @@ async function BuscarCuerpo({ searchParams }: Props) {
               <span className="text-sm font-medium text-accent">
                 {hit.bookName} {hit.chapter}:{hit.verseNumber}
               </span>
-              <p className="mt-1 leading-7">{hit.text}</p>
+              <p className="mt-1 leading-7">
+                {displayBibleVerse(hit.text, { bookCode: hit.bookCode, chapter: hit.chapter, verseNumber: hit.verseNumber })}
+              </p>
             </Link>
           </li>
         ))}

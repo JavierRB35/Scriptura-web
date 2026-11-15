@@ -59,3 +59,17 @@ El informe contiene procedencia, huella SHA-256 del ZIP, cantidades y referencia
 - **Referencia de diseño Android:** `JavierRB35/Scriptura`, `BibleStore.java`, concatenaba cada versículo con `numero + "  " + texto + "\\n\\n"`. La web respeta su separación legible sin usar el contenido textual de la edición de Navarra.
 - **Ortografía y mayúsculas:** la fuente de `spaRV1909` (eBible.org) tiene literalmente «EN el principio crió Dios los cielos y la tierra.» en Génesis 1:1, y utiliza grafías históricas como «fué», «vió» y «á». No son alteraciones de la importación. Mantenerlas evita publicar una adaptación silenciosa como si fuera RV1909. Toda modernización requiere crear una edición diferenciada o una revisión autorizada y trazable; **no** usar automáticamente el texto sujeto a derechos de Scriptura Android.
 - **Verificación:** prueba unitaria de HTML del lector `tests/unit/reader-render.test.ts` (números visibles, bloques y grafía original) y prueba de integración `tests/integration/bible.test.ts` (alias, 31 versículos y secuencia de Génesis 1). GitHub Actions de `main` completó lint, tipos, pruebas unitarias e integración correctamente en el commit `9422a866`; Vercel notificó despliegue correcto. La inspección visual en el dispositivo del usuario sigue siendo necesaria y no se atribuye a CI.
+## Auditoría de mayúsculas consecutivas — 15-11-2026
+
+Inspección de **los 31.102 versículos reales** de la base publicada mediante expresiones regulares sobre `bible_verses.text_content`:
+
+- **1.268 versículos** presentan al menos una secuencia de dos o más letras mayúsculas consecutivas.
+- **1.188** son versículos 1 del capítulo, por la convención tipográfica histórica de comenzar en versales (p. ej. «EN», «PABLO», «Y POR»). De los 1.189 comienzos, uno no tiene esta marca.
+- Los **80 restantes** incluyen inscripciones («EL VERBO DE DIOS», «MENE, MENE...»), el nombre divino («JAH», «JEHOVÁ»), los acrósticos de Salmos 119 y un comienzo narrativo adicional en Lucas 1:5 («HUBO...»).
+- No se hallaron secuencias camelCase dentro de palabras mediante la comprobación `[[:lower:]][[:upper:]]` (0 versículos).
+
+**Cotejo de fuente:** el original en eBible conserva «EN» (Génesis 1:1), «PABLO» (1 Corintios 1:1) y «JEHOVÁ» en el arranque de Salmos 23:1. No son corrupciones ni justifican editar la Biblia importada.
+
+**Tratamiento aplicado:** `src/bible/display-text.ts` normaliza únicamente la **visualización** de las versales tipográficas iniciales del capítulo, los inicios tras los encabezamientos de salmos y Lucas 1:5, sin alterar el registro bíblico persistido, sus huellas de integridad, la edición, la grafía histórica, la puntuación ni los números de versículo. Se conserva la capitalización deliberada en el resto de los pasajes. El lector y los resultados de búsqueda emplean la misma función, con pruebas de regresión en `tests/unit/display-text.test.ts`.
+
+**Garantía editorial:** ante cualquier duda se conserva el texto de la fuente; este ajuste no es una corrección de traducción ni una modernización ortográfica.

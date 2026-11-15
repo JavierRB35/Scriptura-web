@@ -8,6 +8,7 @@
 import { useMemo, useState, useSyncExternalStore } from "react";
 import { Literata } from "next/font/google";
 import type { VerseRow } from "@/bible/queries";
+import { displayBibleVerse } from "@/bible/display-text";
 
 interface Props {
   slug: string;
@@ -48,6 +49,7 @@ function verseClickLogic(
 export function ReaderClient({
   slug,
   bookName,
+  bookCode,
   chapter,
   editionAbbr,
   verses,
@@ -86,9 +88,9 @@ export function ReaderClient({
     if (!selected) return "";
     return verses
       .filter((v) => v.verseNumber >= selected.start && v.verseNumber <= selected.end)
-      .map((v) => `${v.verseNumber} ${v.text}`)
+      .map((v) => `${v.verseNumber} ${displayBibleVerse(v.text, { bookCode, chapter, verseNumber: v.verseNumber })}`)
       .join("\n");
-  }, [selected, verses]);
+  }, [selected, verses, bookCode, chapter]);
 
   async function copyLink() {
     if (!selected) return;
@@ -131,6 +133,7 @@ export function ReaderClient({
 
       {/* V17: cada versículo tiene número visible y párrafo propio.
           La edición RV1909 mantiene exactamente su ortografía histórica.
+          Las versales decorativas del inicio se normalizan solo al mostrar.
           Android separaba los versículos con \n\n: aquí se respeta el
           ritmo de lectura con espacio vertical, sin alterar la base. */}
       <article
@@ -167,7 +170,7 @@ export function ReaderClient({
                 onClick={selectVerse}
               >
                 {v.text ? (
-                  v.text
+                  displayBibleVerse(v.text, { bookCode, chapter, verseNumber: v.verseNumber })
                 ) : (
                   <em className="text-muted">
                     (Este versículo no tiene texto independiente en esta edición; su
