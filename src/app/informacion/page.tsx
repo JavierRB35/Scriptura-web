@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = { title: "Información y fuentes" };
 
@@ -49,7 +50,7 @@ export default function InformacionPage() {
         <div>
           <h2 className="font-semibold">Biblioteca de textos antiguos</h2>
           <p className="mt-2 text-muted">
-            La sección <a href="/biblioteca" className="font-medium text-accent underline underline-offset-2">Biblioteca</a>{" "}
+            La sección <Link href="/biblioteca" className="font-medium text-accent underline underline-offset-2">Biblioteca</Link>{" "}
             ofrece seis evangelios extracanonicos, separados de los libros de la
             Biblia canónica. Sus versiones españolas son traducciones de trabajo
             realizadas a partir de las traducciones inglesas de dominio público
