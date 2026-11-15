@@ -2,18 +2,16 @@
  * Normalización tipográfica limitada a la visualización de la RV1909.
  *
  * La fuente publicada es inmutable: esta función NO modifica los registros ni
- * sustituye palabras ni signos. Reduce las versales decorativas al comienzo
- * de un capítulo y normaliza un repertorio cerrado de tildes históricas
- * conforme a la ortografía actual, sin modificar la fuente de RV1909.
+ * altera el original. Reduce versales, adapta tildes inequívocas y aplica
+ * unas pocas revisiones léxicas cotejadas por versículo («crió»).
+ * La lectura presentada es una adaptación parcial, no RV1909 literal.
  *
  * Las inscripciones, el acróstico de Salmos 119 y los nombres divinos que
  * aparecen dentro de otros versículos se conservan sin cambios.
  */
-interface VerseLocation {
-  bookCode: string;
-  chapter: number;
-  verseNumber: number;
-}
+import { modernizeCriarInContext, type VerseReference } from "./lexical-revisions";
+
+type VerseLocation = VerseReference;
 
 // Nombres propios comprobados en los inicios de capítulos de la RV1909.
 // Se mantienen con inicial mayúscula cuando siguen a «Y», «E» o «A».
@@ -36,9 +34,9 @@ const SINGLE_LETTER_CONNECTOR = /(?:^|[.:]\s*)[¿¡]?[A-ZÀ-ÖØ-Þ]\s+$/u;
 const MODERN_SPELLING: Readonly<Record<string, string>> = {
   "á": "a", "é": "e", "ó": "o", "ú": "u",
   "fué": "fue", "fuí": "fui", "dió": "dio", "vió": "vio",
-  "fé": "fe", "tí": "ti", "crió": "crio", "rió": "rio",
+  "fé": "fe", "tí": "ti", "rió": "rio",
 };
-const HISTORICAL_WORD = /(^|[^\p{L}])(á|é|ó|ú|fué|fuí|dió|vió|fé|tí|crió|rió)(?=$|[^\p{L}])/giu;
+const HISTORICAL_WORD = /(^|[^\p{L}])(á|é|ó|ú|fué|fuí|dió|vió|fé|tí|rió)(?=$|[^\p{L}])/giu;
 
 export function modernizeHistoricalSpelling(text: string): string {
   return text.replace(HISTORICAL_WORD, (_match, prefix: string, word: string) => {
@@ -78,5 +76,5 @@ export function displayBibleVerse(text: string, location: VerseLocation): string
     });
   }
 
-  return modernizeHistoricalSpelling(visibleText);
+  return modernizeHistoricalSpelling(modernizeCriarInContext(visibleText, location));
 }

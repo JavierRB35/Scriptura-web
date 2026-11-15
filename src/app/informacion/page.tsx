@@ -51,9 +51,11 @@ export default function InformacionPage() {
           <p className="mt-2 text-muted">
             En el lector se muestran con ortografía actual algunas grafías históricas
             de la Reina-Valera 1909: por ejemplo, «á» pasa a «a», «fué» a «fue»
-            y «crió» a «crio». Es una adaptación ortográfica acotada de la
-            presentación, no una nueva traducción. El texto fuente de 1909 se
-            conserva íntegro y no se sustituyen palabras ni expresiones antiguas.
+            y, según el contexto documentado, «crió» a «creó» o «crio».
+            Se estudian asimismo expresiones antiguas para mejorar la lectura,
+            pero no se sustituyen sin cotejo editorial. Es una adaptación
+            parcial, no una nueva traducción. La fuente de 1909 permanece
+            íntegra y accesible.
           </p>
         </div>
 

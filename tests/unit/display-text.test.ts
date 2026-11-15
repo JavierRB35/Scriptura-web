@@ -8,7 +8,7 @@ const at = (bookCode: string, chapter: number, verseNumber: number) => ({
 describe("normalización de mayúsculas decorativas en la lectura", () => {
   it("normaliza solo el arranque verificado del capítulo", () => {
     expect(displayBibleVerse("EN el principio crió Dios los cielos y la tierra.", at("Gn", 1, 1)))
-      .toBe("En el principio crio Dios los cielos y la tierra.");
+      .toBe("En el principio creó Dios los cielos y la tierra.");
     expect(displayBibleVerse("PABLO, llamado á ser apóstol.", at("1Co", 1, 1)))
       .toBe("Pablo, llamado a ser apóstol.");
     expect(displayBibleVerse("ASÍ que, hermanos...", at("1Co", 2, 1)))
@@ -78,7 +78,7 @@ describe("lectura con ortografía actual y original inmutable", () => {
     ["é", "e"], ["É", "E"], ["ú", "u"],
     ["fué", "fue"], ["Fué", "Fue"], ["FUÉ", "FUE"],
     ["fuí", "fui"], ["dió", "dio"], ["vió", "vio"],
-    ["fé", "fe"], ["tí", "ti"], ["crió", "crio"], ["rió", "rio"],
+    ["fé", "fe"], ["tí", "ti"], ["rió", "rio"],
   ])("normaliza solamente la palabra completa %s", (original, expected) => {
     expect(modernizeHistoricalSpelling(original)).toBe(expected);
     expect(modernizeHistoricalSpelling("palabra" + original)).toBe("palabra" + original);
@@ -99,5 +99,29 @@ describe("lectura con ortografía actual y original inmutable", () => {
     expect(displayBibleVerse("", at("Jon", 2, 1))).toBe("");
     expect(displayBibleVerse("Y escribe a SMIRNA.", at("Ap", 2, 8)))
       .toBe("Y escribe a SMIRNA.");
+  });
+});
+
+
+describe("modernización contextual del antiguo verbo «criar»", () => {
+  it("distingue creación de crianza, sin modernización indiscriminada", () => {
+    expect(displayBibleVerse("EN el principio crió Dios los cielos y la tierra.", at("Gn", 1, 1)))
+      .toBe("En el principio creó Dios los cielos y la tierra.");
+    expect(displayBibleVerse("Y crió Dios al hombre a su imagen; a imagen de Dios lo crió; varón y hembra los crió.", at("Gn", 1, 27)))
+      .toBe("Y creó Dios al hombre a su imagen; a imagen de Dios lo creó; varón y hembra los creó.");
+    expect(displayBibleVerse("Y quedóse la mujer, y crió su hijo.", at("1S", 1, 23)))
+      .toBe("Y quedóse la mujer, y crio su hijo.");
+    expect(displayBibleVerse("entre los leoncillos crió sus cachorros.", at("Ez", 19, 2)))
+      .toBe("entre los leoncillos crio sus cachorros.");
+    expect(displayBibleVerse("De la Roca que te crió te olvidaste: te has olvidado del Dios tu criador.", at("Dt", 32, 18)))
+      .toBe("De la Roca que te creó te olvidaste: te has olvidado del Dios tu creador.");
+  });
+
+  it("preserva las referencias no cotejadas y la fuente original", () => {
+    expect(displayBibleVerse("Él crió algo.", at("Jn", 1, 3))).toBe("Él crió algo.");
+    expect(modernizeHistoricalSpelling("crió")).toBe("crió");
+    const source = "EN el principio crió Dios los cielos y la tierra.";
+    displayBibleVerse(source, at("Gn", 1, 1));
+    expect(source).toBe("EN el principio crió Dios los cielos y la tierra.");
   });
 });

@@ -5,6 +5,7 @@
 import { beforeAll, describe, expect, it } from "vitest";
 import pg from "pg";
 import { CHAPTER_VERSES_SQL } from "@/bible/verse-query";
+import { displayBibleVerse } from "@/bible/display-text";
 
 const DATABASE_URL = process.env.DATABASE_URL;
 const d = describe.skipIf(!DATABASE_URL);
@@ -99,6 +100,32 @@ d("integridad de la edición publicada (RV1909)", () => {
           AND (v.text_content LIKE '%ñ%' OR v.text_content LIKE '%É%' OR v.text_content LIKE '%¿%')`
     );
     expect(rows[0].n).toBeGreaterThan(1000);
+  });
+
+  it("contrasta las 25 referencias con «crió» frente al texto original", async () => {
+    const { rows } = await client.query<{
+      bookCode: string; chapter: number; verseNumber: number; text: string;
+    }>(
+      "SELECT b.code AS \"bookCode\", ch.chapter_number AS chapter, " +
+      "v.verse_number AS \"verseNumber\", v.text_content AS text " +
+      "FROM bible_verses v " +
+      "JOIN bible_chapters ch ON ch.id = v.chapter_id " +
+      "JOIN biblical_books b ON b.id = ch.book_id " +
+      "JOIN bible_editions e ON e.id = ch.edition_id " +
+      "WHERE e.identifier = 'spaRV1909' " +
+      "AND v.text_content ~* '(^|[^[:alpha:]])crió([^[:alpha:]]|$)'"
+    );
+    expect(rows).toHaveLength(25);
+    for (const verse of rows) {
+      const visible = displayBibleVerse(verse.text, verse);
+      expect(visible).not.toMatch(/(?<!\p{L})crió(?!\p{L})/iu);
+    }
+    const genesis = rows.find((v) =>
+      v.bookCode === "Gn" && v.chapter === 1 && v.verseNumber === 1
+    );
+    expect(genesis?.text).toBe("EN el principio crió Dios los cielos y la tierra.");
+    expect(genesis && displayBibleVerse(genesis.text, genesis))
+      .toBe("En el principio creó Dios los cielos y la tierra.");
   });
 
   it("la numeración de versículos es secuencial en todos los capítulos", async () => {
