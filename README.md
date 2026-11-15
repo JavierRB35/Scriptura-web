@@ -20,7 +20,7 @@ Plataforma web pública, gratuita e interconfesional para leer la Biblia, compre
 1.189 capítulos, 31.102 versículos, importación reproducible y verificada. Lector,
 búsqueda textual y por referencia en `/biblia`.
 
-**Biblioteca documental de apócrifos:** seis evangelios extracanonicos traducidos íntegramente al español como borradores de trabajo, con originales ingleses de dominio público y numeración histórica preservada. **6/6 traducidos, 0 pendientes; 6 revisiones editoriales pendientes.** No están publicados en el lector web. Véanse [`data/apocrypha/README.md`](data/apocrypha/README.md) y [`docs/10-TRADUCCIONES-APOCRIFOS.md`](docs/10-TRADUCCIONES-APOCRIFOS.md).
+**Biblioteca de textos antiguos:** disponible en **`/biblioteca`**, con lectura de los seis evangelios extracanonicos traducidos al español y fichas de procedencia. Las seis versiones son **borradores completos, pendientes de revisión editorial**; esta condición está visible en la web. Catálogo extensible por manifiesto, sin crear rutas manuales. Véanse [`data/apocrypha/README.md`](data/apocrypha/README.md) y [`docs/11-BIBLIOTECA-WEB.md`](docs/11-BIBLIOTECA-WEB.md).
 
 **Despliegue técnico (protegido, sin apertura pública del producto):**
 https://scriptura-web-eight.vercel.app — despliegue automático desde `main`.
@@ -43,6 +43,7 @@ La aplicación original Android ([JavierRB35/Scriptura](https://github.com/Javie
 | [`docs/08-INVENTARIO-ARCAISMOS.md`](docs/08-INVENTARIO-ARCAISMOS.md) | Arcaísmos encontrados en la RV1909, recuentos y criterios para una adaptación léxica controlada |
 | [`docs/09-IMAGENES-EVANGELIOS-APOCRIFOS.md`](docs/09-IMAGENES-EVANGELIOS-APOCRIFOS.md) | Catálogo visual, asociaciones y derechos; verificar archivos efectivos antes de usar |
 | [`docs/10-TRADUCCIONES-APOCRIFOS.md`](docs/10-TRADUCCIONES-APOCRIFOS.md) | Inventario de seis traducciones, control de numeración, manuscritos y estado de revisión |
+| [`docs/11-BIBLIOTECA-WEB.md`](docs/11-BIBLIOTECA-WEB.md) | Rutas públicas de Biblioteca, lector genérico y protocolo de incorporación de obras futuras |
 
 ## Reglas esenciales (resumen)
 
