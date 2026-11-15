@@ -29,6 +29,8 @@ La aplicación original Android ([JavierRB35/Scriptura](https://github.com/Javie
 | [`docs/02-ARQUITECTURA.md`](docs/02-ARQUITECTURA.md) | Arquitectura técnica vigente |
 | [`docs/03-AUDITORIA-FASE0.md`](docs/03-AUDITORIA-FASE0.md) | Auditoría de la app original y clasificación REUTILIZAR/ADAPTAR/RECONSTRUIR |
 | [`docs/04-PLAN-EJECUCION.md`](docs/04-PLAN-EJECUCION.md) | Plan por fases con estado de avance (registro de continuidad) |
+| [`docs/05-DIRECTRIZ-IDENTIDAD-VISUAL.md`](docs/05-DIRECTRIZ-IDENTIDAD-VISUAL.md) | **Directriz visual vinculante V01–V16**: marca, tipografía, colores, ubicación de imágenes, UX, accesibilidad y SEO |
+| [`docs/06-CATALOGO-RECURSOS-GRAFICOS.md`](docs/06-CATALOGO-RECURSOS-GRAFICOS.md) | Inventario inicial de 20 recursos maestros, formatos, ubicación, temas y prompts para diseñador |
 
 ## Reglas esenciales (resumen)
 
@@ -38,6 +40,7 @@ La aplicación original Android ([JavierRB35/Scriptura](https://github.com/Javie
 4. **Gratuita y financiada por el propietario**: sin pagos ni donaciones.
 5. **Pruebas reales**: una función está completada solo con código operativo, persistencia real, permisos correctos y pruebas satisfactorias.
 6. Modificaciones menores y seguras directamente en `main`; ramas/PR solo cuando el riesgo lo justifique.
+7. **Diseño y recursos:** respetar decisiones V01–V16 de `docs/05-DIRECTRIZ-IDENTIDAD-VISUAL.md` y briefs de `docs/06-CATALOGO-RECURSOS-GRAFICOS.md`; ninguna imagen decorativa dentro de capítulos bíblicos.
 
 ## Desarrollo
 
