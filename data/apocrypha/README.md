@@ -1,34 +1,39 @@
-# Fuentes de evangelios extracanonicos — archivo editorial
+# Archivo documental de evangelios extracanonicos — Scriptura
 
-**Estado:** textos fuente en inglés, sin traducir y **NO publicados** en la web. Archivo exclusivamente documental, separado de la Biblia RV1909 y de la base de datos.
+**Estado:** **6/6 traducciones españolas completas como borradores**; conservados los 6 originales ingleses de dominio público; **0 obras pendientes de traducir**. Las seis traducciones españolas requieren **revisión editorial y filológica independiente** antes de una eventual publicación. No están incorporadas a la base de datos ni al lector web público. Se encuentran separadas de la Biblia canónica Reina-Valera 1909.
 
-## Seis textos aprobados para archivo
+## Textos archivados y traducciones
 
-| Archivo | Obra | Fuente primaria | Traductor |
+| Obra | Original de referencia inglés | Traducción española de trabajo | División original |
 |---|---|---|---|
-| `en/thomas.txt` | Evangelio de Tomás (dichos) | https://www.gospels.net/thomas | Mark M. Mattison |
-| `en/mary.txt` | Evangelio de María | https://www.gospels.net/mary | Mark M. Mattison |
-| `en/judas.txt` | Evangelio de Judas | https://www.gospels.net/judas | Mark M. Mattison |
-| `en/peter.txt` | Evangelio de Pedro | https://www.gospels.net/peter | Mark M. Mattison |
-| `en/infancyjames.txt` | Protoevangelio de Santiago | https://www.gospels.net/infancyjames | Mark M. Mattison |
-| `en/infancythomas.txt` | Evangelio de la infancia de Tomás | https://www.gospels.net/infancythomas | Mark M. Mattison |
+| Evangelio de Tomás | [en/thomas.txt](en/thomas.txt) | [es/thomas.md](es/thomas.md) | 114 dichos |
+| Evangelio de María | [en/mary.txt](en/mary.txt) | [es/mary.md](es/mary.md) | Páginas 7–10 y 15–19 (lagunas 1–6 y 11–14) |
+| Evangelio de Pedro | [en/peter.txt](en/peter.txt) | [es/peter.md](es/peter.md) | 60 unidades numeradas |
+| Protoevangelio de Santiago | [en/infancyjames.txt](en/infancyjames.txt) | [es/infancyjames.md](es/infancyjames.md) | 25 capítulos y variante breve 18–21 |
+| Evangelio de la infancia de Tomás | [en/infancythomas.txt](en/infancythomas.txt) | [es/infancythomas.md](es/infancythomas.md) | 19 capítulos; 17–18 de testigos tardíos |
+| Evangelio de Judas | [en/judas.txt](en/judas.txt) | [es/judas.md](es/judas.md) | Páginas 33–58 |
 
-**Derechos:** el responsable de https://www.gospels.net/ declara que las traducciones que publica están dedicadas al dominio público y pueden copiarse, reutilizarse o modificarse con cualquier fin. Cada página incluida contiene la declaración individual:
+## Fuente y derechos
 
-> The following translation has been committed to the public domain and may be freely copied and used, changed or unchanged, for any purpose.
+Traducciones inglesas del investigador y traductor **Mark M. Mattison** publicadas en [Gospels.net](https://www.gospels.net/). El sitio y cada edición declaran explícitamente que las traducciones se han entregado al **dominio público** y pueden copiarse, modificarse y utilizarse libremente.
 
-Esta declaración **cubre las traducciones de Mark M. Mattison disponibles en las seis páginas**, no versiones españolas de otros autores, aparatos críticos externos ni las ediciones impresas de terceros.
+- https://www.gospels.net/thomas
+- https://www.gospels.net/mary
+- https://www.gospels.net/peter
+- https://www.gospels.net/infancyjames
+- https://www.gospels.net/infancythomas
+- https://www.gospels.net/judas
 
-## Trazabilidad e integridad
+La declaración de Mattison **no cubre automáticamente otras traducciones, imágenes ni estudios académicos de terceros**. La fuente declarada de cada texto inglés es copta o griega, según la edición. Las versiones españolas de Scriptura son traducciones **del inglés**, no del manuscrito original.
 
-- `manifest.json`: URL exacta, autor de traducción, estado editorial, fecha de archivo, tamaño y SHA-256 del HTML recibido y del texto archivado.
-- `en/*.txt`: transcripción obtenida por extracción técnica de la edición inglesa web, **sin traducción, paráfrasis ni modernización editorial**. Se normaliza el marcado HTML a párrafos y saltos de línea. No confundir con una edición diplomática de manuscritos antiguos.
-- Se conservan lagunas textuales indicadas por los editores, numeraciones internas, versiones alternativas y notas de traducción.
-- `scripts/import-apocrypha.py`: importación reproducible que falla si faltan las páginas, la declaración de derechos, los indicadores finales o la cobertura de 114 dichos de Tomás / 25 capítulos de Santiago / 19 capítulos de la infancia de Tomás.
-- Los originales permanecen **inmutables como referencia de traducción**. Las futuras traducciones españolas deberán guardarse por separado, con responsable, revisiones y cotejo de pasajes difíciles.
+## Trazabilidad de la colección
 
-## Próximo paso editorial
+- [manifest.json](manifest.json): fuente, licencia, idioma, traductor, fecha inicial del archivo inglés, hash SHA-256 del texto original y referencia SHA de cada traducción española.
+- [scripts/import-apocrypha.py](../../scripts/import-apocrypha.py): extracción reproducible de los originales ingleses y comprobación de integridad. Su ejecución **no es una orden de reemplazar traducciones españolas**.
+- [scripts/verify-apocrypha-translations.py](../../scripts/verify-apocrypha-translations.py): verificación estructural de las seis traducciones y correspondencia con sus originales; incluida en CI.
+- [docs/10-TRADUCCIONES-APOCRIFOS.md](../../docs/10-TRADUCCIONES-APOCRIFOS.md): registro de la tarea cerrada, convenciones de numeración, variantes y criterios para publicación posterior.
+- [docs/09-IMAGENES-EVANGELIOS-APOCRIFOS.md](../../docs/09-IMAGENES-EVANGELIOS-APOCRIFOS.md): asociación de recursos visuales y sus fichas de procedencia, cuya disponibilidad efectiva deberá verificarse antes de integrarlos.
 
-Traducir **uno a uno** al español contemporáneo, manteniendo la estructura del original, referencias, notas sobre lagunas y trazabilidad de cambios. El orden inicial recomendado es: Tomás, María, Pedro, Santiago, infancia de Tomás y Judas. Antes de publicar cada traducción se revisarán íntegramente su fidelidad, derechos y metadatos.
+**No inventar numeración de versículos:** conservar dichos, capítulos/apartados, unidades numeradas o páginas del manuscrito según la obra. Las lagunas y variantes son parte esencial del texto histórico y deben seguir visibles.
 
-**Importante:** estos textos son literatura extracanonica y nunca se mezclarán silenciosamente con los 66 libros de la edición bíblica publicada. Este archivo no añade funcionalidades web, rutas, tablas ni comentarios ficticios.
+**Publicación diferida:** hasta completar la revisión editorial no crear fichas web que simulen un libro publicado, ni mezclar pasajes apócrifos con los 66 libros de la Biblia RV1909.
