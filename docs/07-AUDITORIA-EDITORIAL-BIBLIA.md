@@ -96,3 +96,7 @@ Consulta de la base de datos real (31.102 versículos): **12.926** versículos c
 - Génesis 1:1: fuente «EN el principio crió Dios los cielos y la tierra.» → lectura «En el principio creó Dios los cielos y la tierra.». No se sustituye «el principio» por «un principio», por diferencia de significado.
 - La búsqueda de otras formas antiguas produjo ejemplos reales de «mas», «empero», «díjole», «mancebos», «aqueste», «vianda», «menester» y futuro de subjuntivo. Se documentan las frecuencias, usos y riesgos en [el inventario verificable](08-INVENTARIO-ARCAISMOS.md); no se han aplicado sustituciones masivas.
 - La especificación §5.3 ahora diferencia expresamente la edición original inmutable de la capa de lectura editorial adaptada, siempre identificada y basada en cotejo individual.
+
+## Tanda léxica 2 — 15-11-2026
+
+Se han cotejado 441 referencias (53 con demostrativos reforzados y 389 con enclisis, solapamiento de una). Se incorporan listas cerradas de referencias en `src/bible/archaic-display.ts` y pruebas sobre el texto RV1909 importado. Los cambios son solo de lectura, sin mutación de la fuente ni modernización global. «llamóle» se mantiene sin modificar por requerir revisión de género y referente. Ver `docs/08-INVENTARIO-ARCAISMOS.md`.

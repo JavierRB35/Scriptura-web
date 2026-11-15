@@ -80,3 +80,17 @@ Estas son **propuestas de revisión**, no cambios implementados ni pasajes ya mo
 - Cuervo, *Diccionario de construcción y régimen* (1886-1893), «Criar, crear»: https://lalengua.es/d/cuervo/criar.
 - Alemany, *Diccionario de la lengua española* (1917), «Criar»: https://lalengua.es/d/alemany/criar.
 - Estudio de lexicografía histórica, Universidad de Jaén: https://revistaselectronicas.ujaen.es/index.php/RILEX/article/download/6191/5725?inline=1.
+
+## Tanda contextual 2 — demostrativos y enclisis (15-11-2026)
+
+Inventario contrastado con `bible_verses.text_content` de la edición RV1909: **53** versículos con demostrativos `aqueste` (18), `aquesta` (22), `aquestos` (4), `aquestas` (7), `aquesto` (2); se presentan respectivamente como `este`, `esta`, `estos`, `estas`, `esto`.
+
+También se han cotejado **389** versículos que contienen formas personales con pronombre pospuesto: `díjole` (176) → `le dijo`, `díjoles` (103) → `les dijo`, `díjome` (80) → `me dijo`, `respondióle` (18) → `le respondió`, `quedóse` (13) → `se quedó`. Hay 390 apariciones en 389 versículos porque 2 Samuel 13:20 contiene dos formas. Uno de los versículos con demostrativos también contiene enclisis: **441 versículos únicos** en el lote.
+
+**Aplicación controlada:** `src/bible/archaic-display.ts` contiene el inventario explícito de referencias en listas cerradas. La función solo actúa sobre esos pasajes. La capa de visualización de `src/bible/display-text.ts` utiliza dicha transformación; se conserva la cadena original en PostgreSQL, sin importar ni escribir una nueva edición. `tests/integration/bible.test.ts` comprueba la presencia exacta de 441 pasajes, las transformaciones y el mantenimiento del original.
+
+Ejemplos: 1 Crónicas 28:7 «aqueste día» → «este día»; Daniel 4:28 «Todo aquesto» → «Todo esto»; 1 Crónicas 21:11 «díjole» → «le dijo»; 1 Samuel 1:23 «quedóse» → «se quedó».
+
+**Exclusión intencional:** `llamóle` (5 versículos) necesita cotejar si hoy corresponde `lo llamó`, `la llamó` o `le llamó`, según el referente. Tampoco se modernizan `mas`, `empero`, `he aquí`, `fuere` ni `hubiere` por sustitución ciega.
+
+**Fundamentos lingüísticos:** Atlas Histórico del Español, «La variación entre las formas tipo este y aqueste» (Universitat de les Illes Balears): https://atlashistorico.uib.es/cap/Enrique-Arias1 ; FundéuRAE, «verbos con pronombre añadido, acentuación»: https://www.fundeu.es/recomendacion/verbos-con-encliticos-acentuacion/ . Esta modernización parcial **no constituye una revisión completa del corpus**.

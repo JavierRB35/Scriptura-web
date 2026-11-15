@@ -68,6 +68,13 @@
       Ap 22:21, caracteres del español, numeración secuencial, 18 vacíos declarados);
       la CI importa la Biblia real y verifica la integridad en cada push.
 
+## Ampliación editorial de lectura (2026-11-15)
+
+- [x] Cotejo de «crió» en 25 referencias con dos sentidos históricos.
+- [x] Primera tanda de demostrativos y enclíticos: 441 versículos únicos revisados, sin alterar el texto de origen; pruebas de integridad en CI.
+- [ ] Evaluar «llamóle» y después las demás expresiones polisémicas con intervención editorial verificable.
+- [ ] Auditar exhaustivamente todo el corpus antes de etiquetar una adaptación como completa.
+
 ## Fase 3 — Comunidad
 
 - [ ] Perfiles, alias únicos, preferencias de privacidad (historial privado por defecto).

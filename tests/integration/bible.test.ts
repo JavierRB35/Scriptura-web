@@ -128,6 +128,34 @@ d("integridad de la edición publicada (RV1909)", () => {
       .toBe("En el principio creó Dios los cielos y la tierra.");
   });
 
+  it("contrasta 441 referencias adaptadas sin reescribir el original", async () => {
+    const { rows } = await client.query<{ bookCode: string; chapter: number; verseNumber: number; text: string }>(
+      "SELECT b.code AS \"bookCode\", ch.chapter_number AS chapter, " +
+      "v.verse_number AS \"verseNumber\", v.text_content AS text FROM bible_verses v " +
+      "JOIN bible_chapters ch ON ch.id=v.chapter_id JOIN biblical_books b ON b.id=ch.book_id " +
+      "JOIN bible_editions e ON e.id=ch.edition_id WHERE e.identifier='spaRV1909' " +
+      "AND v.text_content ~* '(^|[^[:alpha:]])(aqueste|aquesta|aquestos|aquestas|aquesto|díjole|díjoles|díjome|respondióle|quedóse)([^[:alpha:]]|$)'"
+    );
+    expect(rows).toHaveLength(441);
+    let demonstratives = 0;
+    let enclitics = 0;
+    for (const verse of rows) {
+      const visible = displayBibleVerse(verse.text, verse);
+      const dem = /(?<!\p{L})(aqueste|aquesta|aquestos|aquestas|aquesto)(?!\p{L})/iu.test(verse.text);
+      const enclitic = /(?<!\p{L})(díjole|díjoles|díjome|respondióle|quedóse)(?!\p{L})/iu.test(verse.text);
+      if (dem) {
+        demonstratives++;
+        expect(visible).not.toMatch(/(?<!\p{L})(aqueste|aquesta|aquestos|aquestas|aquesto)(?!\p{L})/iu);
+      }
+      if (enclitic) {
+        enclitics++;
+        expect(visible).not.toMatch(/(?<!\p{L})(díjole|díjoles|díjome|respondióle|quedóse)(?!\p{L})/iu);
+      }
+      expect(visible).not.toBe(verse.text);
+    }
+    expect(demonstratives).toBe(53);
+    expect(enclitics).toBe(389);
+  });
   it("la numeración de versículos es secuencial en todos los capítulos", async () => {
     const { rows } = await client.query<{ bad: number }>(
       `WITH seq AS (

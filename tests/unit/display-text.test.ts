@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { displayBibleVerse, modernizeHistoricalSpelling } from "../../src/bible/display-text";
+import { adaptReviewedArchaisms } from "../../src/bible/archaic-display";
 
 const at = (bookCode: string, chapter: number, verseNumber: number) => ({
   bookCode, chapter, verseNumber,
@@ -123,5 +124,50 @@ describe("modernización contextual del antiguo verbo «criar»", () => {
     const source = "EN el principio crió Dios los cielos y la tierra.";
     displayBibleVerse(source, at("Gn", 1, 1));
     expect(source).toBe("EN el principio crió Dios los cielos y la tierra.");
+  });
+});
+
+
+describe("tanda contextual de arcaísmos cotejados", () => {
+  it("actualiza el género, número y mayúsculas de los demostrativos", () => {
+    expect(displayBibleVerse("como aqueste día.", { bookCode: "1Cro", chapter: 28, verseNumber: 7 }))
+      .toBe("como este día.");
+    expect(displayBibleVerse("de aquesta tierra.", { bookCode: "2Cro", chapter: 20, verseNumber: 7 }))
+      .toBe("de esta tierra.");
+    expect(displayBibleVerse("Aquestos los hijos.", { bookCode: "1Cro", chapter: 7, verseNumber: 33 }))
+      .toBe("Estos los hijos.");
+    expect(displayBibleVerse("Aquesta es la ley.", { bookCode: "Lv", chapter: 14, verseNumber: 57 }))
+      .toBe("Esta es la ley.");
+    expect(displayBibleVerse("Todo aquesto vino.", { bookCode: "Dn", chapter: 4, verseNumber: 28 }))
+      .toBe("Todo esto vino.");
+    expect(displayBibleVerse("de aquestas ciudades.", { bookCode: "Jos", chapter: 11, verseNumber: 14 }))
+      .toBe("de estas ciudades.");
+  });
+
+  it("antepone el pronombre al verbo finito sin alterar persona", () => {
+    expect(displayBibleVerse("Y viniendo Gad a David, díjole:", at("1Cro", 21, 11)))
+      .toBe("Y viniendo Gad a David, le dijo:");
+    expect(displayBibleVerse("Y díjoles: Vosotros sois principales.", at("1Cro", 15, 12)))
+      .toBe("Y les dijo: Vosotros sois principales.");
+    expect(displayBibleVerse("Díjome que vivirás.", at("2R", 8, 14)))
+      .toBe("Me dijo que vivirás.");
+    expect(displayBibleVerse("Y respondióle Faraón: ¿Por qué?", at("1R", 11, 22)))
+      .toBe("Y le respondió Faraón: ¿Por qué?");
+    expect(displayBibleVerse("Y quedóse la mujer.", at("1S", 1, 23)))
+      .toBe("Y se quedó la mujer.");
+  });
+
+  it("admite dos transformaciones en el mismo versículo", () => {
+    const original = "Refirióle su mujer aquestas cosas, y quedóse como una piedra.";
+    expect(displayBibleVerse(original, at("1S", 25, 37)))
+      .toBe("Refirióle su mujer estas cosas, y se quedó como una piedra.");
+    expect(original).toContain("aquestas cosas");
+  });
+
+  it("no toca referencias sin cotejar ni «llamóle»", () => {
+    expect(adaptReviewedArchaisms("Aqueste hombre díjole.", at("Jn", 1, 1)))
+      .toBe("Aqueste hombre díjole.");
+    expect(displayBibleVerse("Y llamóle Peres.", at("1Cro", 7, 16)))
+      .toBe("Y llamóle Peres.");
   });
 });

@@ -10,6 +10,7 @@
  * aparecen dentro de otros versículos se conservan sin cambios.
  */
 import { modernizeCriarInContext, type VerseReference } from "./lexical-revisions";
+import { adaptReviewedArchaisms } from "./archaic-display";
 
 type VerseLocation = VerseReference;
 
@@ -76,5 +77,5 @@ export function displayBibleVerse(text: string, location: VerseLocation): string
     });
   }
 
-  return modernizeHistoricalSpelling(modernizeCriarInContext(visibleText, location));
+  return modernizeHistoricalSpelling(adaptReviewedArchaisms(modernizeCriarInContext(visibleText, location), location));
 }
