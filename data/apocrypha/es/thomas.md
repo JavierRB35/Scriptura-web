@@ -205,3 +205,236 @@ Jesús dijo: «Los fariseos y los estudiosos han tomado las llaves del conocimie
 ## Dicho 40. La vid
 
 Jesús dijo: «Se ha plantado una vid fuera del Padre. Como está mal alimentada, será arrancada de raíz y destruida».
+
+
+## Dicho 41. Tener más y tener menos
+
+Jesús dijo: «A quien tenga algo en sus manos se le dará más, pero a quien no tenga nada se le quitará incluso lo poco que tenga».
+
+## Dicho 42. Estar de paso
+
+Jesús dijo: «Sed personas de paso».
+
+## Dicho 43. El árbol y su fruto
+
+Sus discípulos le dijeron: «¿Quién eres tú para decirnos estas cosas?».
+
+«No comprendéis quién soy a partir de lo que os digo. Os habéis vuelto como aquellos judíos que aman el árbol pero odian su fruto, o aman el fruto pero odian el árbol».
+
+## Dicho 44. La blasfemia
+
+Jesús dijo: «A quien blasfeme contra el Padre se le perdonará, y a quien blasfeme contra el Hijo se le perdonará; pero a quien blasfeme contra el Espíritu Santo no se le perdonará, ni en la tierra ni en el cielo».
+
+## Dicho 45. El bien y el mal
+
+Jesús dijo: «No se vendimian uvas de los espinos ni se recogen higos de los cardos, porque estos no producen fruto. [Una persona buena] saca cosas buenas de su tesoro, y una persona [mala] saca cosas malas de su tesoro perverso. Habla mal porque su corazón está lleno de maldad».
+
+## Dicho 46. Más grande que Juan el Bautista
+
+Jesús dijo: «Desde Adán hasta Juan el Bautista, no ha nacido nadie tan superior a Juan el Bautista que él no deba apartar la mirada. Pero os digo que quien de vosotros se haga como un niño pequeño conocerá el Reino y llegará a ser más grande que Juan».
+
+## Dicho 47. Las parábolas de las lealtades divididas, el vino nuevo y el remiendo nuevo
+
+Jesús dijo: «Nadie puede montar dos caballos ni tensar dos arcos a la vez. Tampoco puede un siervo seguir a dos señores, porque respetará a uno y despreciará al otro.
+
+»Nadie bebe vino añejo y desea inmediatamente beber vino nuevo. No se echa vino nuevo en odres viejos, porque reventarían. Tampoco se echa vino añejo en odres nuevos, porque se estropearía.
+
+»No se cose un remiendo de tela nueva a un abrigo viejo, porque acabaría rasgándose».
+
+## Dicho 48. La unidad (1)
+
+Jesús dijo: «Si dos hacen las paces entre sí en una misma casa, le dirán a la montaña: “¡Apártate!”, y se apartará».
+
+## Dicho 49. Los elegidos (2)
+
+Jesús dijo: «Dichosos los que son uno solo, los elegidos, porque encontraréis el Reino. De allí habéis venido y allí regresaréis».
+
+## Dicho 50. Nuestro origen y nuestra identidad
+
+Jesús dijo: «Si os preguntan: “¿De dónde venís?”, decidles: “Hemos venido de la luz, del lugar donde la luz surgió por sí misma, se [estableció] a sí misma y apareció en su imagen”.
+
+»Si os preguntan: “¿Sois vosotros?”, responded: “Somos sus hijos y hemos sido elegidos por nuestro Padre viviente”.
+
+»Si os preguntan: “¿Cuál es la señal de vuestro Padre en vosotros?”, responded: “Es el movimiento y el reposo”».
+
+## Dicho 51. El mundo nuevo
+
+Sus discípulos le dijeron: «¿Cuándo descansarán los muertos y cuándo llegará el mundo nuevo?».
+
+Él les dijo: «Aquello que buscáis ya ha llegado, pero no lo sabéis».
+
+## Dicho 52. Veinticuatro profetas
+
+Sus discípulos le dijeron: «Veinticuatro profetas han hablado en Israel, y todos hablaron de ti».
+
+Él les dijo: «Habéis ignorado al Viviente que está ante vosotros y os habéis puesto a hablar de los muertos».
+
+## Dicho 53. La verdadera circuncisión
+
+Sus discípulos le dijeron: «¿Es útil la circuncisión o no?».
+
+Él les dijo: «Si fuera útil, los padres tendrían hijos que nacerían ya circuncidados. Pero la verdadera circuncisión en el espíritu ha resultado provechosa en todos los sentidos».
+
+## Dicho 54. Los pobres
+
+Jesús dijo: «Dichosos los pobres, porque vuestro es el Reino de los cielos».
+
+## Dicho 55. El discipulado (1)
+
+Jesús dijo: «Quien no odie a su padre y a su madre no puede convertirse en discípulo mío, y quien no odie a sus hermanos y hermanas ni cargue con su cruz como yo, no es digno de mí».
+
+## Dicho 56. El mundo es un cadáver
+
+Jesús dijo: «Quien ha conocido el mundo ha encontrado un cadáver. De quien ha encontrado un cadáver, el mundo no es digno».
+
+## Dicho 57. La parábola de la cizaña
+
+Jesús dijo: «El Reino de mi Padre puede compararse con alguien que tenía semilla [buena]. Su enemigo llegó de noche y sembró cizaña entre la buena semilla. Aquella persona no dejó que nadie arrancara la cizaña, y les dijo: “No sea que, al arrancar la cizaña, arranquéis también el trigo. El día de la cosecha, la cizaña se distinguirá claramente. Entonces la arrancarán y la quemarán”».
+
+## Dicho 58. Encontrar la vida
+
+Jesús dijo: «Dichosa la persona que ha pasado por grandes dificultades. Ha encontrado la vida».
+
+## Dicho 59. El Viviente
+
+Jesús dijo: «Buscad al Viviente mientras estéis vivos. Si morís y después intentáis buscarlo, no podréis hacerlo».
+
+## Dicho 60. No convertirse en cadáver
+
+Vieron a un samaritano que llevaba un cordero a Judea. Jesús dijo a sus discípulos: «¿Qué creéis que va a hacer con ese cordero?».
+
+Ellos le dijeron: «Va a matarlo y comérselo».
+
+Él les dijo: «Mientras esté vivo, no se lo comerá, sino después de matarlo, cuando se convierta en cadáver».
+
+Ellos dijeron: «No puede hacerlo de otra manera».
+
+Él les dijo: «Buscad también vosotros un lugar de descanso, para que no os convirtáis en cadáveres y os devoren».
+
+## Dicho 61. Jesús y Salomé
+
+Jesús dijo: «Dos descansarán en un diván. Uno morirá; el otro vivirá».
+
+Salomé dijo: «¿Quién eres tú, señor, para subir a mi diván y comer de mi mesa como si vinieras de parte de alguien?».
+
+Jesús le dijo: «Yo soy el que existe en igualdad. Se me ha dado parte de lo que pertenece a mi Padre».
+
+«Soy tu discípula».
+
+«Por eso te digo: si alguien es /igual\, estará lleno de luz; pero si está dividido, estará lleno de oscuridad».
+
+## Dicho 62. Los misterios
+
+Jesús dijo: «Revelo mis misterios a [quienes son dignos de mis] misterios. No dejes que tu mano izquierda sepa lo que hace tu derecha».
+
+## Dicho 63. La parábola del rico insensato
+
+Jesús dijo: «Había un hombre rico que tenía mucho dinero. Se dijo: “Utilizaré mi dinero para sembrar, cosechar y plantar, y llenaré mis graneros de frutos para que no me falte nada”. Eso pensaba para sus adentros, pero murió aquella misma noche. ¡Quien tenga oídos para oír, que oiga!».
+
+## Dicho 64. La parábola de la cena
+
+Jesús dijo: «Alguien estaba preparando una comida para sus invitados. Cuando la cena estuvo lista, envió a su siervo a llamar a los convidados.
+
+»El siervo fue al primero y le dijo: “Mi señor te invita”.
+
+»Él respondió: “Unos comerciantes me deben dinero y vendrán esta noche. Tengo que ir a darles instrucciones. Discúlpame por no asistir a la cena”.
+
+»El siervo fue a otro y le dijo: “Mi señor te invita”.
+
+»Este respondió: “Acabo de comprar una casa y me necesitan durante todo el día. No tendré tiempo”.
+
+»El siervo fue a otro y le dijo: “Mi señor te invita”.
+
+»Este respondió: “Un amigo mío se casa y voy a preparar la comida. No puedo ir. Discúlpame por no asistir a la cena”.
+
+»El siervo fue a otro y le dijo: “Mi señor te invita”.
+
+»Este respondió: “Acabo de comprar una finca y voy a cobrar las rentas. No puedo ir. Discúlpame”.
+
+»El siervo regresó y le dijo a su señor: “Los invitados a la cena se han excusado”.
+
+»El señor dijo a su siervo: “Sal a los caminos y trae a cuantos encuentres para que puedan cenar”.
+
+»Los compradores y los comerciantes no [entrarán] en los lugares de mi Padre».
+
+## Dicho 65. La parábola de los arrendatarios
+
+Dijo: «Un [acreedor] era dueño de una viña. Se la arrendó a unos trabajadores para que la cultivaran y él pudiera recoger sus frutos.
+
+»Envió a su siervo para que los arrendatarios le entregaran los frutos de la viña. Ellos apresaron al siervo, lo golpearon y casi lo mataron.
+
+»El siervo regresó y se lo contó a su señor. Este dijo: “Quizá no los conocía”. Envió a otro siervo, pero los arrendatarios también lo golpearon.
+
+»Entonces el dueño envió a su hijo, pensando: “Quizá respeten a mi hijo”.
+
+»Pero como sabían que era el heredero de la viña, los arrendatarios lo apresaron y lo mataron. ¡Quien tenga oídos para oír, que oiga!».
+
+## Dicho 66. La piedra angular rechazada
+
+Jesús dijo: «Mostradme la piedra que rechazaron los constructores. Esa es la piedra angular».
+
+## Dicho 67. No basta con conocer
+
+Jesús dijo: «Quien lo sabe todo, pero carece de algo en sí mismo, carece de todo».
+
+## Dicho 68. La persecución
+
+Jesús dijo: «Dichosos vosotros cuando os odien y persigan, y no se encontrará ningún lugar donde hayáis sido perseguidos».
+
+## Dicho 69. Los perseguidos
+
+Jesús dijo: «Dichosos los perseguidos en su propio corazón. Ellos han conocido verdaderamente al Padre. Dichosos los hambrientos, para que se sacien sus vientres».
+
+## Dicho 70. La salvación está dentro
+
+Jesús dijo: «Si dais a luz lo que lleváis dentro, aquello que está en vuestro interior os salvará. Si no tenéis eso dentro de [vosotros], aquello que no tenéis dentro [os] matará».
+
+## Dicho 71. La destrucción del templo
+
+Jesús dijo: «Destruiré [esta] casa, y nadie podrá reconstruirla […]».
+
+## Dicho 72. No soy quien reparte
+
+[Alguien le dijo]: «Di a mis hermanos que repartan nuestra herencia conmigo».
+
+Él le respondió: «¿Quién me ha nombrado encargado de repartir?».
+
+Se volvió hacia sus discípulos y les dijo: «¿De verdad soy yo quien reparte?».
+
+## Dicho 73. Trabajadores para la cosecha
+
+Jesús dijo: «La cosecha es realmente abundante, pero los trabajadores son pocos. Rogad, pues, al Señor que envíe trabajadores a la cosecha».
+
+## Dicho 74. El pozo vacío
+
+Dijo: «Señor, muchos se reúnen alrededor del pozo, pero no hay nada que beber».
+
+## Dicho 75. La cámara nupcial
+
+Jesús dijo: «Muchos esperan a la puerta, pero quienes son uno solo entrarán en la cámara nupcial».
+
+## Dicho 76. La parábola de la perla
+
+Jesús dijo: «El Reino del Padre puede compararse con un comerciante que tenía mercancías y encontró una perla. Aquel comerciante era sabio: vendió sus mercancías y compró para sí aquella única perla.
+
+»Buscad también vosotros el tesoro que no perece, sino que perdura, donde no llegan las polillas para comérselo ni los gusanos para destruirlo».
+
+## Dicho 77. Jesús es el Todo
+
+Jesús dijo: «Yo soy la luz que está sobre todas las cosas. Yo soy el Todo. Todo ha venido de mí y todo se despliega hacia mí.
+
+»Partid un leño: allí estoy. Levantad la piedra y allí me encontraréis».
+
+## Dicho 78. Al desierto
+
+Jesús dijo: «¿Qué salisteis a ver al desierto? ¿Una caña agitada por el viento? ¿A una [persona] vestida con ropas lujosas, [como vuestros] gobernantes y poderosos? Ellos (llevan) ropas [lujosas], pero no pueden conocer la verdad».
+
+## Dicho 79. Escuchar el mensaje
+
+Una mujer de entre la multitud le dijo: «Dichoso el vientre que te llevó y los pechos que te alimentaron».
+
+Él le dijo a [ella]: «Dichosos quienes han escuchado el mensaje del Padre y lo han guardado, porque llegarán días en que diréis: “Dichoso el vientre que no concibió y los pechos que no dieron leche”».
+
+## Dicho 80. El mundo es un cuerpo
+
+Jesús dijo: «Quien ha conocido el mundo ha encontrado el cuerpo; pero, de quien ha encontrado el cuerpo, el mundo no es digno».
