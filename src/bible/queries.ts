@@ -5,6 +5,7 @@ import "server-only";
 import { connection } from "next/server";
 import { query } from "@/shared/db";
 import type { ParsedReference } from "./reference";
+import { CHAPTER_VERSES_SQL } from "./verse-query";
 
 export interface EditionInfo {
   id: string;
@@ -119,12 +120,7 @@ export async function getChapter(
   const head = rows[0];
 
   const verses = await query<VerseRow>(
-    `SELECT v.verse_number, v.verse_key, v.text_content AS text
-       FROM bible_verses v
-       JOIN bible_chapters ch ON ch.id = v.chapter_id
-      WHERE ch.edition_id = $1 AND ch.book_id = (SELECT id FROM biblical_books WHERE code = $2)
-        AND ch.chapter_number = $3
-      ORDER BY v.verse_number`,
+    CHAPTER_VERSES_SQL,
     [editionId, bookCode, chapterNumber]
   );
 
