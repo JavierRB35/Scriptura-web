@@ -1,0 +1,28 @@
+# Dependencias
+node_modules/
+.pnp
+.pnp.js
+
+# Compilación
+.next/
+out/
+build/
+dist/
+
+# Variables de entorno y secretos (nunca versionar)
+.env
+.env.*
+!.env.example
+
+# Pruebas y cobertura
+coverage/
+playwright-report/
+test-results/
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+*.swp
