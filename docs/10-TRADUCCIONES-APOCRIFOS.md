@@ -1,6 +1,6 @@
 # Archivo editorial — seis evangelios extracanonicos traducidos al español
 
-**Última actualización:** 15 de noviembre de 2026. **Estado:** **6 de 6 traducciones españolas completas como borrador de trabajo; 0 pendientes de traducir**. **6 pendientes de revisión editorial/filológica independiente**. Ninguna está publicada todavía en el lector web ni en la base de datos. **Fuente de verdad:** GitHub `main` y `data/apocrypha/manifest.json`.
+**Última actualización:** 15 de noviembre de 2026. **Estado:** **6 de 6 traducciones españolas completas como borrador de trabajo; 0 pendientes de traducir**. **6 pendientes de revisión editorial/filológica independiente**. Están disponibles en la **Biblioteca web** `/biblioteca` como borradores provisionales, sin importarse a la base de datos ni al lector bíblico canónico. **Fuente de verdad:** GitHub `main` y `data/apocrypha/manifest.json`.
 
 ## Inventario cerrado (6/6)
 
@@ -50,4 +50,4 @@ La instrucción anterior de «detenerse hasta recibir “adelante” o “contin
 
 ## Próximo hito, distinto de traducir
 
-Revisión lingüística y textual profesional de los seis borradores y, posteriormente, decisión de publicación editorial de las versiones españolas como una biblioteca claramente diferenciada de la Biblia canónica. Hasta ese hito, el estado autorizado es **archivo documental en GitHub, no publicación en el sitio**.
+Revisión lingüística y textual profesional de los seis borradores y, posteriormente, decisión de publicación editorial de las versiones españolas como una biblioteca claramente diferenciada de la Biblia canónica. Por nueva instrucción del propietario se permite la **lectura en `/biblioteca` como borrador provisional**, con advertencias editoriales visibles y sin indexación de buscadores. No equivale a una edición crítica aprobada; el estado de revisión sigue pendiente. Véase [Biblioteca web](11-BIBLIOTECA-WEB.md).
