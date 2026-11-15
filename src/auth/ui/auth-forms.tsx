@@ -32,19 +32,24 @@ export function LoginForm() {
     e.preventDefault();
     setError(null);
     setPending(true);
-    const form = new FormData(e.currentTarget);
-    const supabase = createClient();
-    const { error } = await supabase.auth.signInWithPassword({
-      email: String(form.get("email") ?? ""),
-      password: String(form.get("password") ?? ""),
-    });
-    setPending(false);
-    if (error) {
-      setError("Correo o contraseña incorrectos.");
-      return;
+    try {
+      const form = new FormData(e.currentTarget);
+      const supabase = createClient();
+      const { error } = await supabase.auth.signInWithPassword({
+        email: String(form.get("email") ?? ""),
+        password: String(form.get("password") ?? ""),
+      });
+      if (error) {
+        setError("Correo o contraseña incorrectos.");
+        return;
+      }
+      router.push(redirectTo);
+      router.refresh();
+    } catch {
+      setError("El acceso no está disponible en este momento.");
+    } finally {
+      setPending(false);
     }
-    router.push(redirectTo);
-    router.refresh();
   }
 
   return (
@@ -98,40 +103,43 @@ export function RegisterForm() {
     e.preventDefault();
     setError(null);
     setPending(true);
-    const form = new FormData(e.currentTarget);
-    const email = String(form.get("email") ?? "");
-    const password = String(form.get("password") ?? "");
-    const password2 = String(form.get("password2") ?? "");
+    try {
+      const form = new FormData(e.currentTarget);
+      const email = String(form.get("email") ?? "");
+      const password = String(form.get("password") ?? "");
+      const password2 = String(form.get("password2") ?? "");
 
-    if (password !== password2) {
-      setPending(false);
-      setError("Las contraseñas no coinciden.");
-      return;
-    }
-    if (password.length < 8) {
-      setPending(false);
-      setError("La contraseña debe tener al menos 8 caracteres.");
-      return;
-    }
+      if (password !== password2) {
+        setError("Las contraseñas no coinciden.");
+        return;
+      }
+      if (password.length < 8) {
+        setError("La contraseña debe tener al menos 8 caracteres.");
+        return;
+      }
 
-    const supabase = createClient();
-    const { error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        emailRedirectTo: `${window.location.origin}/auth/callback`,
-      },
-    });
-    setPending(false);
-    if (error) {
-      setError(
-        error.message === "User already registered"
-          ? "Ya existe una cuenta con ese correo."
-          : "No se pudo completar el registro. Revisa el correo e inténtalo de nuevo."
-      );
-      return;
+      const supabase = createClient();
+      const { error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          emailRedirectTo: `${window.location.origin}/auth/callback`,
+        },
+      });
+      if (error) {
+        setError(
+          error.message === "User already registered"
+            ? "Ya existe una cuenta con ese correo."
+            : "No se pudo completar el registro. Revisa el correo e inténtalo de nuevo."
+        );
+        return;
+      }
+      setSent(true);
+    } catch {
+      setError("El registro no está disponible en este momento.");
+    } finally {
+      setPending(false);
     }
-    setSent(true);
   }
 
   if (sent) {
@@ -194,18 +202,23 @@ export function RecoverForm() {
     e.preventDefault();
     setError(null);
     setPending(true);
-    const form = new FormData(e.currentTarget);
-    const supabase = createClient();
-    const { error } = await supabase.auth.resetPasswordForEmail(
-      String(form.get("email") ?? ""),
-      { redirectTo: `${window.location.origin}/auth/callback?next=/mi-espacio` }
-    );
-    setPending(false);
-    if (error) {
-      setError("No se pudo iniciar la recuperación. Inténtalo de nuevo.");
-      return;
+    try {
+      const form = new FormData(e.currentTarget);
+      const supabase = createClient();
+      const { error } = await supabase.auth.resetPasswordForEmail(
+        String(form.get("email") ?? ""),
+        { redirectTo: `${window.location.origin}/auth/callback?next=/mi-espacio` }
+      );
+      if (error) {
+        setError("No se pudo iniciar la recuperación. Inténtalo de nuevo.");
+        return;
+      }
+      setSent(true);
+    } catch {
+      setError("La recuperación no está disponible en este momento.");
+    } finally {
+      setPending(false);
     }
-    setSent(true);
   }
 
   if (sent) {

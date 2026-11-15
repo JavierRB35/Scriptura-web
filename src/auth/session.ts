@@ -3,6 +3,7 @@
 
 import "server-only";
 import { createClient } from "./supabase-server";
+import { authConfigured } from "./config";
 import { query } from "@/shared/db";
 
 export type Role = "admin" | "editor" | "moderator";
@@ -17,8 +18,10 @@ export interface CurrentUser {
   roles: Role[];
 }
 
-/** Usuario autenticado con su perfil; null si no hay sesión válida. */
+/** Usuario autenticado con su perfil; null si no hay sesión válida o la
+ *  autenticación no está configurada. */
 export async function getCurrentUser(): Promise<CurrentUser | null> {
+  if (!authConfigured()) return null;
   const supabase = await createClient();
   const {
     data: { user },
@@ -55,6 +58,7 @@ export async function getCurrentUser(): Promise<CurrentUser | null> {
 
 /** ¿El usuario actual tiene el rol indicado? Comprobación en base de datos. */
 export async function currentUserHasRole(role: Role): Promise<boolean> {
+  if (!authConfigured()) return false;
   const supabase = await createClient();
   const {
     data: { user },
