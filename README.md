@@ -9,7 +9,7 @@ Plataforma web pública, gratuita e interconfesional para leer la Biblia, compre
 | Fase | Estado |
 |---|---|
 | **Fase 0** — Auditoría y preparación | ✅ Completada |
-| **Fase 1** — Infraestructura y persistencia | ⏳ Siguiente |
+| **Fase 1** — Infraestructura y persistencia | 🔄 En curso (pendiente despliegue y credenciales) |
 | Fases 2–7 | Pendientes |
 
 La aplicación original Android ([JavierRB35/Scriptura](https://github.com/JavierRB35/Scriptura)) fue auditada como origen de datos y criterios; **no** es código reutilizable para la web y su contenido de la Biblia de Navarra está excluido permanentemente del nuevo proyecto.
@@ -35,7 +35,27 @@ La aplicación original Android ([JavierRB35/Scriptura](https://github.com/Javie
 
 ## Desarrollo
 
-Por determinar en Fase 1 (Next.js + TypeScript + Supabase, ver arquitectura). Este apartado se actualizará con la puesta en marcha del proyecto cuando exista código.
+Aplicación Next.js 16 (App Router) + TypeScript con base de datos PostgreSQL (+pgvector) mediante Supabase.
+
+```bash
+npm install
+docker compose up -d            # PostgreSQL 16 con pgvector en localhost:5433
+cp .env.example .env.local      # configurar valores (local: postgres://scriptura:scriptura@localhost:5433/scriptura)
+npm run db:migrate              # aplicar migraciones versionadas
+npm run db:seed                 # sembrar catálogo de libros y cánones
+npm run dev                     # http://localhost:3000
+```
+
+Verificaciones (la CI las ejecuta en cada push):
+
+```bash
+npm run typecheck   # tipos
+npm run lint        # ESLint
+npm test            # 21 pruebas: unitarias + integración real contra PostgreSQL
+npm run build       # compilación de producción
+```
+
+Estructura: `src/<módulo>/` (bible, community, reputation, moderation, auth, ai, liturgy, email, admin, shared) · `db/migrations/` · `scripts/` · `tests/`. Detalle en `docs/02-ARQUITECTURA.md` y `AGENTS.md`.
 
 ## Licencias y fuentes
 

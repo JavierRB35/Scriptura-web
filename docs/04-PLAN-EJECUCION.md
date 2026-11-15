@@ -10,14 +10,29 @@
 - [x] Selección de arquitectura → `02-ARQUITECTURA.md`.
 - [x] Base documental del repositorio: directriz, especificación funcional, decisiones D01–D25 (en la especificación), auditoría, plan.
 
-## Fase 1 — Infraestructura y persistencia
+## Fase 1 — Infraestructura y persistencia 🔄 (en curso desde 2026-11-15)
 
-- [ ] Proyecto Next.js + TypeScript con estructura modular de `02-ARQUITECTURA.md`.
-- [ ] Esquema PostgreSQL inicial y migraciones versionadas (entidades de §16).
-- [ ] Autenticación (registro, verificación de correo, sesión, recuperación) y tablas de roles.
-- [ ] Entornos separados y variables de entorno documentadas (`.env.example`).
-- [ ] Pipeline de pruebas ejecutándose (unitarias + integración con PostgreSQL efímero).
-- [ ] Despliegue técnico protegido (preview, sin apertura pública).
+- [x] Proyecto Next.js + TypeScript con estructura modular de `02-ARQUITECTURA.md`.
+- [x] Esquema PostgreSQL inicial y migraciones versionadas (entidades de §16):
+      10 migraciones (extensiones, sistema, biblia, usuarios, comunidad, reputación,
+      moderación, IA con pgvector, liturgia/correo, RLS y concesiones). Runner idempotente
+      `npm run db:migrate`; verificado en PostgreSQL 16 real.
+- [x] Catálogo canónico sembrado (73 libros, cánones católico 73 y protestante 66) con
+      pruebas de integridad; origen: auditoría Fase 0.
+- [x] Autenticación y roles — código completo: registro, verificación de correo,
+      sesión (proxy con `getUser()` validado), recuperación, perfiles automáticos con
+      alias provisional y roles acumulables comprobados en base de datos.
+      **Pendiente:** verificación E2E contra una instancia Supabase real (credenciales).
+- [x] Entornos: `.env.example` documentado, PostgreSQL local con pgvector
+      (`docker compose up -d`), separación dev/pre/producción descrita en arquitectura.
+- [x] Pipeline de pruebas: Vitest unitarias (8) + integración real contra PostgreSQL
+      (13: migraciones, siembra, perfiles, roles, comentarios/respuestas/likes,
+      reputación, idempotencia de envíos) y CI de GitHub Actions con servicio
+      pgvector. **Resultado local: 21/21 superadas; typecheck y lint limpios; build de
+      producción correcto; smoke test del servidor compilado (200 en rutas públicas,
+      307 en /admin sin sesión).**
+- [ ] Despliegue técnico protegido (preview en Vercel, sin apertura pública) —
+      **pendiente de credenciales del propietario** (Vercel y proyecto Supabase).
 
 ## Fase 2 — Biblioteca y lectura
 

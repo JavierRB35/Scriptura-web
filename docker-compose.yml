@@ -1,0 +1,25 @@
+# PostgreSQL de desarrollo con pgvector (Fase 1).
+# Uso: docker compose up -d
+# La base de datos de verdad en producción es el PostgreSQL gestionado (Supabase);
+# este contenedor es solo entorno local y de pruebas.
+
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: scriptura-dev-db
+    environment:
+      POSTGRES_USER: scriptura
+      POSTGRES_PASSWORD: scriptura
+      POSTGRES_DB: scriptura
+    ports:
+      - "5433:5432"
+    volumes:
+      - scriptura_dev_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U scriptura -d scriptura"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  scriptura_dev_pgdata:
