@@ -1,5 +1,8 @@
 // Catálogo editorial centralizado: cada libro se incorpora mediante manifest.json
 // + su archivo de lectura. La UI no contiene listas ni rutas por libro.
+import "server-only";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import archive from "../../../data/apocrypha/manifest.json";
 
 interface LibraryMetadata {
@@ -46,6 +49,14 @@ const safeId = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const safeSource = /^es\/[a-z0-9-]+\.md$/;
 const safeCover = /^\/images\/apocrypha\/[a-z0-9-]+\.webp$/;
 
+function hasSource(path: string | undefined): boolean {
+  return Boolean(path && safeSource.test(path) && existsSync(join(process.cwd(), "data", "apocrypha", path)));
+}
+function verifiedCover(path: string | undefined): string | null {
+  if (!path || !safeCover.test(path)) return null;
+  return existsSync(join(process.cwd(), "public", path.slice(1))) ? path : null;
+}
+
 export function getLibraryBooks(): LibraryBook[] {
   return records
     .filter(
@@ -55,7 +66,7 @@ export function getLibraryBooks(): LibraryBook[] {
         (work.translation_es_status === "draft_completed_pending_editorial_review" ||
           work.translation_es_status === "reviewed") &&
         safeId.test(work.id) &&
-        safeSource.test(work.translation_es_file ?? "") &&
+        hasSource(work.translation_es_file) &&
         Boolean(work.library?.summary) &&
         Boolean(work.library?.category)
     )
@@ -72,7 +83,7 @@ export function getLibraryBooks(): LibraryBook[] {
       sourceWitness: work.translation_es_source_witness ?? "Edición documentada",
       sourceFile: work.translation_es_file!,
       draft: work.web_publication_status === "public_draft",
-      cover: work.library?.cover && safeCover.test(work.library.cover) ? work.library.cover : null,
+      cover: verifiedCover(work.library?.cover),
       coverAlt: work.library?.alt ?? ("Documento histórico asociado a " + work.title_es),
     }));
 }
