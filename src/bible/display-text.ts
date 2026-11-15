@@ -2,8 +2,9 @@
  * Normalización tipográfica limitada a la visualización de la RV1909.
  *
  * La fuente publicada es inmutable: esta función NO modifica los registros ni
- * corrige palabras, tildes o signos. Solo reduce las versales decorativas al
- * comienzo de un capítulo y la apertura verificada de Lucas 1:5.
+ * sustituye palabras ni signos. Reduce las versales decorativas al comienzo
+ * de un capítulo y normaliza un repertorio cerrado de tildes históricas
+ * conforme a la ortografía actual, sin modificar la fuente de RV1909.
  *
  * Las inscripciones, el acróstico de Salmos 119 y los nombres divinos que
  * aparecen dentro de otros versículos se conservan sin cambios.
@@ -29,6 +30,30 @@ const UPPERCASE_AFTER_HEADING = /([.:]\s*[¿¡]?(?:[A-ZÀ-ÖØ-Þ]\s+)?)([A-ZÀ-
 const PSALM_HEADING = /^(?:ALEPH\b|Al Músico\b|Al director\b|Salmo\b|Canción\b|Cántico\b|Aleluya\b|Oración\b|Masquil\b|Mictam\b|Sigaión\b)/u;
 const SINGLE_LETTER_CONNECTOR = /(?:^|[.:]\s*)[¿¡]?[A-ZÀ-ÖØ-Þ]\s+$/u;
 
+// Solo grafías históricas cuyo ajuste ortográfico está documentado. La
+// sustitución se limita a palabras completas: no afecta «mí», «más», «tú»,
+// «sé», nombres propios ni al vocabulario antiguo. Fuente: Ortografía RAE.
+const MODERN_SPELLING: Readonly<Record<string, string>> = {
+  "á": "a", "é": "e", "ó": "o", "ú": "u",
+  "fué": "fue", "fuí": "fui", "dió": "dio", "vió": "vio",
+  "fé": "fe", "tí": "ti", "crió": "crio", "rió": "rio",
+};
+const HISTORICAL_WORD = /(^|[^\p{L}])(á|é|ó|ú|fué|fuí|dió|vió|fé|tí|crió|rió)(?=$|[^\p{L}])/giu;
+
+export function modernizeHistoricalSpelling(text: string): string {
+  return text.replace(HISTORICAL_WORD, (_match, prefix: string, word: string) => {
+    const replacement = MODERN_SPELLING[word.toLocaleLowerCase("es")];
+    if (word === word.toLocaleUpperCase("es")) {
+      return prefix + replacement.toLocaleUpperCase("es");
+    }
+    if (word[0] === word[0].toLocaleUpperCase("es")) {
+      return prefix + replacement[0].toLocaleUpperCase("es") + replacement.slice(1);
+    }
+    return prefix + replacement;
+  });
+}
+
+
 export function displayBibleVerse(text: string, location: VerseLocation): string {
   const { bookCode, chapter, verseNumber } = location;
   const isFirstVerse = verseNumber === 1;
@@ -36,17 +61,22 @@ export function displayBibleVerse(text: string, location: VerseLocation): string
   const isVerifiedSecondOpening =
     bookCode === "Lc" && chapter === 1 && verseNumber === 5 &&
     text.startsWith("HUBO en los días");
-  if (!text || (!isFirstVerse && !isVerifiedSecondOpening)) return text;
+  if (!text) return text;
+  let visibleText = text;
 
-  const pattern = isFirstVerse && PSALM_HEADING.test(text)
-    ? UPPERCASE_AFTER_HEADING
-    : UPPERCASE_OPENING;
+  if (isFirstVerse || isVerifiedSecondOpening) {
+    const pattern = isFirstVerse && PSALM_HEADING.test(text)
+      ? UPPERCASE_AFTER_HEADING
+      : UPPERCASE_OPENING;
 
-  return text.replace(pattern, (_match, prefix: string, word: string) => {
-    const titleCase = word[0] + word.slice(1).toLocaleLowerCase("es");
-    const isConnector = SINGLE_LETTER_CONNECTOR.test(prefix);
-    return prefix + (isConnector && !PROPER_NAMES.has(word)
-      ? word.toLocaleLowerCase("es")
-      : titleCase);
-  });
+    visibleText = text.replace(pattern, (_match, prefix: string, word: string) => {
+      const titleCase = word[0] + word.slice(1).toLocaleLowerCase("es");
+      const isConnector = SINGLE_LETTER_CONNECTOR.test(prefix);
+      return prefix + (isConnector && !PROPER_NAMES.has(word)
+        ? word.toLocaleLowerCase("es")
+        : titleCase);
+    });
+  }
+
+  return modernizeHistoricalSpelling(visibleText);
 }

@@ -47,6 +47,17 @@ export default function InformacionPage() {
         </div>
 
         <div>
+          <h2 className="font-semibold">Ortografía de lectura</h2>
+          <p className="mt-2 text-muted">
+            En el lector se muestran con ortografía actual algunas grafías históricas
+            de la Reina-Valera 1909: por ejemplo, «á» pasa a «a», «fué» a «fue»
+            y «crió» a «crio». Es una adaptación ortográfica acotada de la
+            presentación, no una nueva traducción. El texto fuente de 1909 se
+            conserva íntegro y no se sustituyen palabras ni expresiones antiguas.
+          </p>
+        </div>
+
+        <div>
           <h2 className="font-semibold">Estado del desarrollo</h2>
           <p className="mt-2 text-muted">
             El desarrollo por fases y su avance están documentados en el{" "}

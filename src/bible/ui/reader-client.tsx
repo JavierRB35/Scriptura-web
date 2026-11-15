@@ -108,8 +108,9 @@ export function ReaderClient({
     <div>
       {/* Barra de herramientas de lectura */}
       <div className="sticky top-0 z-10 -mx-4 mb-4 flex items-center justify-between gap-2 border-b border-border bg-background/95 px-4 py-2 text-sm backdrop-blur">
-        <span className="text-muted">
-          {editionAbbr} · Capítulo {chapter}
+        <span className="min-w-0 text-muted" title="Texto original de 1909 conservado; lectura con ortografía actualizada">
+          {editionAbbr} · <span className="sm:hidden">Cap. {chapter}</span><span className="hidden sm:inline">Capítulo {chapter}</span>
+          <span className="ml-1 text-xs">· ort. actual</span>
         </span>
         <div className="flex items-center gap-1">
           <button
@@ -132,8 +133,10 @@ export function ReaderClient({
       </div>
 
       {/* V17: cada versículo tiene número visible y párrafo propio.
-          La edición RV1909 mantiene exactamente su ortografía histórica.
-          La capitular se aplica solo al primer versículo y solo con CSS;\n          la grafía visible procede de displayBibleVerse, no de HTML añadido.
+          La edición RV1909 se conserva literalmente en la base de datos.
+          La capitular se aplica solo al primer versículo y solo con CSS;
+          las versales y tildes históricas seleccionadas se actualizan en
+          pantalla mediante displayBibleVerse, no en el texto canónico.
           Android separaba los versículos con \n\n: aquí se respeta el
           ritmo de lectura con espacio vertical, sin alterar la base. */}
       <article

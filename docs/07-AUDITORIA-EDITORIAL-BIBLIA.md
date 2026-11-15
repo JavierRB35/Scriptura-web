@@ -73,3 +73,19 @@ Inspección de **los 31.102 versículos reales** de la base publicada mediante e
 **Tratamiento aplicado:** `src/bible/display-text.ts` normaliza únicamente la **visualización** de las versales tipográficas iniciales del capítulo, los inicios tras los encabezamientos de salmos y Lucas 1:5, sin alterar el registro bíblico persistido, sus huellas de integridad, la edición, la grafía histórica, la puntuación ni los números de versículo. Se conserva la capitalización deliberada en el resto de los pasajes. El lector y los resultados de búsqueda emplean la misma función, con pruebas de regresión en `tests/unit/display-text.test.ts`.
 
 **Garantía editorial:** ante cualquier duda se conserva el texto de la fuente; este ajuste no es una corrección de traducción ni una modernización ortográfica.
+
+## Normalización ortográfica de lectura — 15-11-2026
+
+**Hallazgo concreto aportado por el usuario:** captura de Lucas 1 con la preposición histórica «á» (p. ej. «á mí» en 1:3). El original RV1909 contiene esta grafía, pero la escritura normativa actual es «a» sin tilde. La modificación se limita al **texto mostrado**, no a la fuente publicada.
+
+Consulta de la base de datos real (31.102 versículos): **12.926** versículos contienen «á/Á» como palabra independiente; **615** contienen «ó/Ó»; **696** «é/É»; **17** «ú/Ú»; **2.113** contienen alguna de las formas históricas «fué», «fuí», «dió», «vió», «fé», «tí» o «há». Las categorías se solapan; **no** representan un recuento de errores de transcripción.
+
+### Alcance de la adaptación (solo presentación)
+
+- Sustituciones por palabra completa: `á→a`, `é→e`, `ó→o`, `ú→u`; `fué→fue`, `fuí→fui`, `dió→dio`, `vió→vio`, `fé→fe`, `tí→ti`, `crió→crio`, `rió→rio` (respetando mayúsculas de inicio de oración e inscripciones).
+- **No** se altera ninguna palabra que contenga esas letras en su interior, ni las tildes válidas `mí`, `tú`, `él`, `más`, `sí`, `sé`, `dé`, `aún`, ni la puntuación; los términos arcaicos no se reemplazan ni se moderniza la traducción.
+- `src/bible/display-text.ts` es un transformador puro, aplicado en el lector, en la selección de pasajes y en resultados de búsqueda. La edición original RV1909 permanece en la base de datos y en la importación, sin nueva huella ni migración.
+- Etiqueta informativa «ort. actual» en la barra de lectura y explicación pública en `/informacion`, para no presentar la visualización como reproducción literal de su ortografía original.
+- Pruebas en `tests/unit/display-text.test.ts` y `tests/unit/reader-render.test.ts` comprueban los ejemplos, las exclusiones, las versales, la estructura y la inmutabilidad de la fuente.
+
+**Fundamento normativo:** RAE, *Principales novedades de la Ortografía de la lengua española* (2010, formas como «crio» y «rio»); RAE, *Libro de estilo* (formas «fue», «fui», «dio», «vio»); FundéuRAE, [«dio», «vio» o «fue» se escriben sin tilde](https://www.fundeu.es/recomendacion/dio-vio-o-fue-se-escriben-sin-tilde/). Este ajuste no constituye una revisión filológica integral de los 31.102 versículos.

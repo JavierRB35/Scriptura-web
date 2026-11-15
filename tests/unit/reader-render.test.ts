@@ -25,6 +25,24 @@ const props = {
 };
 
 describe("V17: numeración, separación y fidelidad del lector", () => {
+  it("identifica de forma visible que la lectura usa ortografía actual", () => {
+    const html = renderToStaticMarkup(createElement(ReaderClient, props));
+    expect(html).toContain("ort. actual");
+  });
+
+  it("normaliza la preposición de un versículo real sin cambiar el objeto de datos", () => {
+    const historical = "Me ha parecido también á mí, después de haber entendido";
+    const html = renderToStaticMarkup(createElement(ReaderClient, {
+      ...props,
+      bookCode: "Lc",
+      bookName: "Lucas",
+      verses: [{ verseNumber: 3, verseKey: "3", text: historical }],
+    }));
+    expect(html).toContain("Me ha parecido también a mí, después de haber entendido");
+    expect(html).not.toContain("á mí");
+    expect(historical).toContain("á mí");
+  });
+
   it("aplica una sola letra capitular, exclusivamente al versículo 1", () => {
     const html = renderToStaticMarkup(createElement(ReaderClient, props));
     const antesDelSegundo = html.split('data-verse-number="2"')[0];
