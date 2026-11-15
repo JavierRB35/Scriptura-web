@@ -1,8 +1,8 @@
 # Evangelio de Tomás
 
-**Traducción española de trabajo — Scriptura.** Fuente: traducción inglesa de Mark M. Mattison, publicada en dominio público en https://www.gospels.net/thomas y conservada sin modificaciones en \`data/apocrypha/en/thomas.txt\`.
+**Traducción española de trabajo — Scriptura.** Fuente: traducción inglesa de Mark M. Mattison, publicada en dominio público en https://www.gospels.net/thomas y conservada sin modificaciones en `data/apocrypha/en/thomas.txt`.
 
-**Convenciones documentales:** \`[ ]\` indica una laguna del texto; \`( )\` señala una adición editorial; \`/ \` una corrección editorial de un posible error de copia. Los títulos de los dichos son títulos editoriales de la versión inglesa, no parte del manuscrito. Los **114 dichos** numerados se conservan como unidades textuales: no se inventan divisiones en versículos que no figuran en la fuente.
+**Convenciones documentales:** `[ ]` indica una laguna del texto; `( )` señala una adición editorial; `/ ` una corrección editorial de un posible error de copia. Los títulos de los dichos son títulos editoriales de la versión inglesa, no parte del manuscrito. Los **114 dichos** numerados se conservan como unidades textuales: no se inventan divisiones en versículos que no figuran en la fuente.
 
 ## Prólogo
 
@@ -604,7 +604,7 @@ Las notas siguientes traducen y adaptan las explicaciones editoriales de Mark M.
 
 - **Dicho 13 — «Tres cosas».** También podría traducirse «tres palabras». El término copto correspondiente a «palabra» puede traducirse asimismo como «dicho», como sucede en el comienzo del evangelio.
 - **Dichos 16, 49 y 75 — «Uno».** Literalmente, *monachos*, que suele traducirse por «único», «solitario» o «solo». Sobre la elección del traductor, véase Mark M. Mattison, *The Gospel of Thomas: A New Translation for Spiritual Seekers* (CreateSpace Independent Publishing Platform, 2015), pp. 24-25, en diálogo con Cynthia Bourgeault, *The Wisdom Jesus: Transforming Heart and Mind – a New Perspective on Christ and His Message* (Shambhala, 2009), p. 21; «The Gift of Life: The Unified Solitude of the Desert Fathers», *Parabola* (1989), vol. 14, n.º 2, pp. 27-28; y Gabriele Winkler, «The Origins and Idiosyncrasies of the Earliest Form of Ascetisicm», en William Skuldarek, O.S.B. (ed.), *The Continuing Quest for God: Monastic Spirituality in Tradition and Transition* (The Liturgical Press, 1981), pp. 28-29.
-- **Dicho 61 — «Igual».** El copto dice literalmente «destruido». Puede tratarse de un error del copista: modificando una letra se obtiene «igual», lo que enlazaría con la expresión anterior «Yo soy el que existe en igualdad». Por eso se marca como corrección editorial mediante \`/igual\\\`.
+- **Dicho 61 — «Igual».** El copto dice literalmente «destruido». Puede tratarse de un error del copista: modificando una letra se obtiene «igual», lo que enlazaría con la expresión anterior «Yo soy el que existe en igualdad». Por eso se marca como corrección editorial mediante `/igual\\`.
 - **Dicho 65 — «Acreedor».** También podría leerse «una buena persona». Véase Michael W. Grondin, «Good Man or Usurer? Battle over a Lacuna», revisión del 31 de mayo de 2014, http://gospel-thomas.net/lacuna.htm (consultado por el traductor en 2015).
 - **Dicho 105 — «Bastardo».** Literalmente, «hijo de una prostituta».
 - **Dicho 114 — «Varonil».** Para las dificultades de interpretación, véase Mattison, *The Gospel of Thomas*, pp. 25-26, siguiendo a Samuel Zinner, *The Gospel of Thomas in the Light of Early Jewish, Christian and Islamic Esoteric Trajectories: with a contextualized commentary and a new translation of the Thomas Gospel* (The Matheson Trust, 2011), pp. 288-290, y Paul Schüngel, «Ein Vorschlag, EvTho 114 neu zu übersetzen», *Novum Testamentum* (1994), vol. 36, n.º 4, pp. 394-401.
