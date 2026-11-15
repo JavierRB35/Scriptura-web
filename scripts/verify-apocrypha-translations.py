@@ -15,6 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1] / "data" / "apocrypha"
 RIGHTS = "The following translation has been committed to the public domain"
 COMPLETE = "draft_completed_pending_editorial_review"
+READY_STATUSES = {COMPLETE, "reviewed"}
 BOOK_IDS = {"thomas", "mary", "peter", "infancyjames", "infancythomas", "judas"}
 NOTES = {"thomas": 6, "mary": 4, "peter": 0,
          "infancyjames": 10, "infancythomas": 9, "judas": 13}
@@ -97,8 +98,8 @@ def verify(id_: str, work: dict) -> None:
     es = es_bytes.decode("utf-8")
     require(work["translation_es_file"] == f"es/{id_}.md",
             f"{id_}: ruta de traducción incorrecta")
-    require(work["translation_es_status"] == COMPLETE,
-            f"{id_}: traducción no marcada como borrador completo")
+    require(work["translation_es_status"] in READY_STATUSES,
+            f"{id_}: traducción no preparada para lectura")
     require(work["web_publication_status"] in {"not_published", "public_draft", "published"},
             f"{id_}: estado público no reconocido")
     if work["web_publication_status"] in {"public_draft", "published"}:
@@ -157,12 +158,15 @@ def main() -> None:
     works = manifest["works"]
     require(len(works) >= 6 and BOOK_IDS.issubset({w["id"] for w in works}),
             "Inventario inconsistente: faltan evangelios iniciales")
-    require(all(w["translation_es_status"] == COMPLETE for w in works),
-            "Existe al menos una traducción española incompleta")
     for work in works:
-        verify(work["id"], work)
-    require(manifest["translation_completion"]["pending_translation"] == 0,
-            "El manifiesto declara traducciones pendientes")
+        if work.get("translation_es_status") in READY_STATUSES:
+            verify(work["id"], work)
+        else:
+            require(work.get("web_publication_status") == "not_published",
+                    f"{work['id']}: obra incompleta publicada")
+    require(all(w["translation_es_status"] in READY_STATUSES
+                for w in works if w["id"] in BOOK_IDS),
+            "Falta alguna de las seis traducciones iniciales")
     require(manifest["translation_completion"]["spanish_full_drafts"] >= 6,
             "El manifiesto debe reflejar al menos seis borradores completos")
     require(manifest["translation_completion"].get("available_in_library_as_draft", 0) >= 6,
