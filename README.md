@@ -18,6 +18,8 @@ Plataforma web pública, gratuita e interconfesional para leer la Biblia, compre
 1.189 capítulos, 31.102 versículos, importación reproducible y verificada. Lector,
 búsqueda textual y por referencia en `/biblia`.
 
+**Biblioteca documental de apócrifos:** seis evangelios extracanonicos traducidos íntegramente al español como borradores de trabajo, con originales ingleses de dominio público y numeración histórica preservada. **6/6 traducidos, 0 pendientes; 6 revisiones editoriales pendientes.** No están publicados en el lector web. Véanse [`data/apocrypha/README.md`](data/apocrypha/README.md) y [`docs/10-TRADUCCIONES-APOCRIFOS.md`](docs/10-TRADUCCIONES-APOCRIFOS.md).
+
 **Despliegue técnico (protegido, sin apertura pública del producto):**
 https://scriptura-web-eight.vercel.app — despliegue automático desde `main`.
 Infraestructura: Vercel (web) + Supabase `ScripturaWeb` (PostgreSQL eu-west-3 París,
@@ -37,6 +39,8 @@ La aplicación original Android ([JavierRB35/Scriptura](https://github.com/Javie
 | [`docs/05-DIRECTRIZ-IDENTIDAD-VISUAL.md`](docs/05-DIRECTRIZ-IDENTIDAD-VISUAL.md) | **Directriz visual vinculante V01–V16**: marca, tipografía, colores, ubicación de imágenes, UX, accesibilidad y SEO |
 | [`docs/06-CATALOGO-RECURSOS-GRAFICOS.md`](docs/06-CATALOGO-RECURSOS-GRAFICOS.md) | Inventario inicial de 20 recursos maestros, formatos, ubicación, temas y prompts para diseñador |
 | [`docs/08-INVENTARIO-ARCAISMOS.md`](docs/08-INVENTARIO-ARCAISMOS.md) | Arcaísmos encontrados en la RV1909, recuentos y criterios para una adaptación léxica controlada |
+| [`docs/09-IMAGENES-EVANGELIOS-APOCRIFOS.md`](docs/09-IMAGENES-EVANGELIOS-APOCRIFOS.md) | Catálogo visual, asociaciones y derechos; verificar archivos efectivos antes de usar |
+| [`docs/10-TRADUCCIONES-APOCRIFOS.md`](docs/10-TRADUCCIONES-APOCRIFOS.md) | Inventario de seis traducciones, control de numeración, manuscritos y estado de revisión |
 
 ## Reglas esenciales (resumen)
 
@@ -69,6 +73,7 @@ npm run typecheck   # tipos
 npm run lint        # ESLint
 npm test            # 21 pruebas: unitarias + integración real contra PostgreSQL
 npm run build       # compilación de producción
+python3 scripts/verify-apocrypha-translations.py  # seis apócrifos (integridad estructural)
 ```
 
 Estructura: `src/<módulo>/` (bible, community, reputation, moderation, auth, ai, liturgy, email, admin, shared) · `db/migrations/` · `scripts/` · `tests/`. Detalle en `docs/02-ARQUITECTURA.md` y `AGENTS.md`.
