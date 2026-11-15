@@ -1,6 +1,6 @@
 # Evangelio de Pedro
 
-**Traducción española de trabajo — Scriptura.** Traducción a partir del texto inglés de Mark M. Mattison, dedicado expresamente al dominio público en https://www.gospels.net/peter y archivado en \`data/apocrypha/en/peter.txt\`. La edición inglesa se basa en el fragmento griego de Akhmim. Se conserva la división en **60 unidades numeradas** con los números entre paréntesis (1)–(60). Los encabezamientos de las escenas son editoriales. El comienzo y el final del texto son fragmentarios: no se completan con conjeturas.
+**Traducción española de trabajo — Scriptura.** Traducción a partir del texto inglés de Mark M. Mattison, dedicado expresamente al dominio público en https://www.gospels.net/peter y archivado en `data/apocrypha/en/peter.txt`. La edición inglesa se basa en el fragmento griego de Akhmim. Se conserva la división en **60 unidades numeradas** con los números entre paréntesis (1)–(60). Los encabezamientos de las escenas son editoriales. El comienzo y el final del texto son fragmentarios: no se completan con conjeturas.
 
 ## Pilato y Herodes
 
