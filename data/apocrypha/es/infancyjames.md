@@ -113,3 +113,136 @@ El sacerdote la recibió, la besó y dijo: «El Señor Dios ha engrandecido tu n
 (3) El sumo sacerdote entró en el Santo de los Santos llevando la vestidura de las doce campanillas y oró por ella. Entonces apareció junto a él un ángel del Señor que le dijo: «Zacarías, Zacarías, sal y reúne a los viudos del pueblo; que cada uno lleve un bastón. Aquel a quien el Señor Dios señale con una señal será su esposo».
 
 Los heraldos recorrieron toda la región de Judea e hicieron sonar la trompeta del Señor. Y todos los hombres acudieron apresuradamente.
+
+
+## Capítulo 9. José se hace cargo de María
+
+(1) José dejó el hacha y acudió a la reunión. Cuando todos se hubieron congregado, fueron ante el sacerdote con sus bastones. El sacerdote los tomó todos, entró en el templo y oró. Cuando terminó la oración, salió y devolvió los bastones, pero ninguno mostraba señal alguna. José recogió su bastón el último, y de pronto salió de él una paloma que voló hasta su cabeza. Entonces el sacerdote le dijo: «Has sido elegido para acoger bajo tu protección a la virgen del Señor».
+
+(2) Pero José se negó: «Tengo hijos y soy un hombre anciano, mientras que ella es joven. No quiero convertirme en el hazmerreír del pueblo de Israel».
+
+El sacerdote le dijo: «José, teme al Señor tu Dios y recuerda lo que hizo con Datán, Abirón y Coré: cómo se abrió la tierra y se los tragó a todos por su rebeldía. Teme ahora, José, para que estas cosas no sucedan en tu casa».
+
+(3) José, asustado, aceptó hacerse cargo de ella y le dijo: «María, te he tomado del templo del Señor y ahora te llevo a mi casa. Me marcho a construir casas, pero volveré a buscarte. El Señor te protegerá».
+
+## Capítulo 10. El velo del templo
+
+(1) Los sacerdotes se reunieron en consejo y dijeron: «Hagamos un velo para el templo del Señor».
+
+El sacerdote dijo: «Llamad a las vírgenes puras de la tribu de David». Los encargados salieron a buscarlas y encontraron siete. Entonces el sacerdote recordó que la niña María también era de la tribu de David y era pura delante de Dios. Los encargados fueron a buscarla y la llevaron.
+
+(2) Condujeron a todas al templo del Señor y el sacerdote dijo: «Echad suertes para decidir quién hilará el oro, el blanco, el lino, la seda, el violeta, el escarlata y la púrpura auténtica».
+
+A María le correspondieron la púrpura auténtica y el escarlata. Los tomó y se marchó a casa. Por aquel tiempo, Zacarías se había quedado mudo y Samuel ocupó su puesto hasta que Zacarías recuperase el habla. María tomó el escarlata y empezó a hilarlo.
+
+## Capítulo 11. La anunciación
+
+(1) María tomó el cántaro y fue a llenarlo de agua. Entonces oyó una voz que le decía: «¡Alégrate, llena de bendición! El Señor está contigo. Bendita tú entre las mujeres».
+
+María miró a derecha e izquierda para averiguar de dónde venía aquella voz. Se llenó de miedo y regresó a su casa. Dejó el cántaro, tomó la púrpura, se sentó en su trono y se puso a hilarla.
+
+(2) Se le apareció un ángel del Señor y le dijo: «No temas, María, porque has hallado gracia ante el Señor de todo cuanto existe. Concebirás por la palabra de Dios».
+
+Al oírlo, María se preguntó: «¿Concebiré por obra del Señor, el Dios viviente, y daré a luz como dan a luz todas las mujeres?».
+
+(3) El ángel del Señor le respondió: «No de esa manera, María, porque el poder de Dios te cubrirá con su sombra. Por eso el santo que nazca de ti será llamado Hijo del Altísimo. Le pondrás por nombre Jesús, porque salvará a su pueblo de sus pecados».
+
+María dijo: «Aquí está la sierva del Señor. Que se cumpla en mí tu palabra».
+
+## Capítulo 12. María visita a Isabel
+
+(1) María terminó la púrpura y el escarlata y se los llevó al sacerdote. Él los tomó, la bendijo y dijo: «María, el Señor Dios ha engrandecido tu nombre y serás bendita entre todas las generaciones de la tierra».
+
+(2) María se alegró y fue a visitar a su pariente Isabel. Llamó a la puerta; Isabel la oyó, dejó caer el escarlata y corrió hacia la entrada. Abrió, la bendijo y dijo: «¿Cómo es posible que venga a mí la madre de mi Señor? ¡Mira, el que llevo dentro ha saltado y te ha bendecido!».
+
+Pero María había olvidado los misterios que le había comunicado el ángel Gabriel. Alzó los ojos al cielo y dijo: «Señor, ¿quién soy yo para que todas las mujeres de la tierra me bendigan?».
+
+(3) Pasó tres meses con Isabel. Día tras día, su vientre crecía, y María sintió miedo. Regresó a casa y se escondió del pueblo de Israel. Tenía dieciséis años cuando le sucedieron estos misterios.
+
+## Capítulo 13. José interroga a María
+
+(1) María se encontraba en el sexto mes de su embarazo cuando José regresó de sus construcciones. Entró en casa y la encontró encinta. Se golpeó el rostro, cayó al suelo sobre un saco y lloró amargamente, diciendo: «¿Cómo voy a mirar al Señor Dios? ¿Qué oración puedo decir por esta muchacha, si la recibí virgen del templo del Señor Dios y no supe protegerla? ¿Quién me ha tendido esta trampa? ¿Quién ha hecho semejante maldad en mi casa? ¿Quién ha deshonrado a la virgen? ¿Acaso no estoy reviviendo la historia de Adán? Porque mientras Adán glorificaba a Dios en la hora de la oración, llegó la serpiente, encontró sola a Eva y la engañó. ¡Y ahora me ha ocurrido a mí!».
+
+(2) José se levantó del saco, la llamó y le dijo: «Dios cuidaba de ti. ¿Por qué has hecho esto? Has olvidado al Señor tu Dios. ¿Por qué has humillado tu alma? ¡Te criaron en el Santo de los Santos y recibías alimento de la mano de un ángel!».
+
+(3) María lloró amargamente: «¡Soy pura y no he conocido a ningún hombre!».
+
+José le dijo: «Entonces, ¿de dónde viene lo que llevas en tu vientre?».
+
+Ella respondió: «¡Vive el Señor mi Dios: no sé de dónde ha venido!».
+
+## Capítulo 14. El sueño de José
+
+(1) José tuvo mucho miedo y guardó silencio acerca de María, mientras pensaba qué hacer con ella. Decía para sí: «Si oculto su pecado, se me tendrá por alguien que se opone a la Ley del Señor. Pero si la denuncio ante el pueblo de Israel, temo que lo que lleva dentro proceda de un ángel y yo sea culpable de entregar sangre inocente a una sentencia de muerte. ¿Qué voy a hacer? La dejaré marchar en secreto».
+
+Cayó la noche. (2) De pronto, un ángel del Señor se le apareció en sueños y le dijo: «No temas por esta muchacha, pues lo que lleva dentro procede del Espíritu Santo. Dará a luz un hijo, al que llamarás Jesús, porque salvará a su pueblo de sus pecados».
+
+José despertó, glorificó al Dios de Israel por la gracia que le había concedido y protegió a María.
+
+## Capítulo 15. El sumo sacerdote interroga a María y José
+
+(1) El escriba Anás se acercó a José y le preguntó: «José, ¿por qué no te has presentado ante nuestro grupo de viajeros?».
+
+Él respondió: «Estaba cansado del viaje y descansé el primer día de mi regreso».
+
+Anás se volvió y vio que María estaba embarazada.
+
+(2) Fue rápidamente al sacerdote y le dijo: «José, de quien tú respondiste, ha cometido una gran infracción de la Ley».
+
+El sacerdote preguntó: «¿Qué ha sucedido?».
+
+Anás dijo: «Ha deshonrado a la virgen que recibió del templo del Señor, se ha apropiado de su matrimonio y no lo ha comunicado al pueblo de Israel».
+
+El sacerdote replicó: «¿Ha hecho eso José?».
+
+Anás, el escriba, le dijo: «Envía a tus servidores y encontrarás encinta a la virgen».
+
+Los servidores fueron y la encontraron tal como él había dicho. La condujeron junto con José ante el tribunal.
+
+(3) El sumo sacerdote dijo a María: «María, ¿por qué has hecho esto? ¿Por qué has humillado tu alma y olvidado al Señor tu Dios? Te criaste en el Santo de los Santos, recibías alimento de la mano de un ángel, escuchabas sus himnos y danzabas ante él. ¿Qué has hecho?».
+
+Ella lloró amargamente y respondió: «¡Vive el Señor Dios: soy pura ante Dios y no he conocido a ningún hombre!».
+
+(4) El sacerdote dijo: «José, ¿qué has hecho?».
+
+José respondió: «Vive el Señor mi Dios, y Dios es testigo de la verdad de mis palabras: he sido puro con ella».
+
+El sacerdote dijo: «No des falso testimonio, di la verdad. Te apropiaste de su matrimonio sin comunicarlo al pueblo de Israel y no inclinaste la cabeza bajo la mano poderosa que debía bendecir tu descendencia».
+
+José permaneció en silencio.
+
+## Capítulo 16. La prueba
+
+(1) El sacerdote dijo: «Devuelve a la virgen que recibiste del templo del Señor».
+
+José se echó a llorar.
+
+El sumo sacerdote añadió: «Os daré a beber el agua de la reprensión del Señor, y vuestros pecados quedarán manifiestos ante vuestros ojos».
+
+(2) El sacerdote tomó (el agua), se la dio a José y lo envió al desierto. José regresó sin sufrir daño alguno.
+
+Se la dio también a María y la envió al desierto. Ella regresó igualmente sin sufrir daño.
+
+Todo el pueblo quedó asombrado porque su pecado no había sido revelado.
+
+(3) El sacerdote dijo: «Si el Señor Dios no ha revelado vuestros pecados, tampoco yo os condeno». Y los dejó libres.
+
+José tomó a María y regresó con ella a su casa, lleno de alegría y glorificando al Dios de Israel.
+
+## Capítulo 17. El censo
+
+(1) El rey Augusto promulgó una orden para registrar cuántas personas había en Belén de Judea.
+
+José dijo: «Inscribiré a mis hijos. Pero ¿qué debo hacer con esta muchacha? ¿Cómo la inscribiré? ¿Como mi esposa? Me avergüenza. ¿Como mi hija? Pero el pueblo de Israel sabe que no es hija mía. Este es el día del Señor: haré lo que el Señor quiera».
+
+(2) Aparejó el asno y sentó a María sobre él; uno de sus hijos lo guiaba y Samuel los seguía.
+
+Cuando se acercaban a la tercera milla, José se volvió y vio que María estaba triste. Pensó: «Seguramente quien lleva dentro la está inquietando».
+
+José volvió a mirar y la vio riendo. Le preguntó: «María, ¿qué te ocurre? A veces veo tu rostro sonriente y otras triste».
+
+Ella le respondió: «Es porque veo ante mis ojos a dos pueblos: uno llora y se lamenta; el otro se alegra y se llena de júbilo».
+
+(3) Llegaron a la mitad del camino y María le dijo: «José, bájame del asno, porque quien está dentro de mí se esfuerza por salir».
+
+José la bajó y le dijo: «¿Adónde te llevaré y dónde podré refugiarte durante tu parto? Este lugar es un desierto».
