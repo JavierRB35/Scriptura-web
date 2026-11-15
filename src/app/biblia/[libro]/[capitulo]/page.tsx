@@ -61,7 +61,7 @@ async function ChapterBody({ params, searchParams }: Props) {
   }
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-8 pb-32 lg:pb-12">
+    <div className="mx-auto max-w-3xl px-5 pb-32 pt-5 sm:px-6 sm:pt-8 lg:pb-12">
       <nav aria-label="Miga de pan" className="text-sm text-muted">
         <Link href="/biblia" className="underline underline-offset-2">
           Biblia
