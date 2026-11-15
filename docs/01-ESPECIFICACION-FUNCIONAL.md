@@ -432,6 +432,14 @@ El texto bíblico no se mezclará visualmente con opiniones humanas o contenido 
 
 Utilizar jerarquía tipográfica, etiquetas e identificadores claros para distinguir cada tipo de contenido.
 
+### Directriz obligatoria V17 — Cada versículo numerado y en línea independiente
+
+**Es obligatorio presentar todos los versículos con su número visible y un salto de línea entre cada versículo.** En el lector, cada versículo comienza en una línea o bloque propio; los versículos consecutivos nunca pueden componerse en un único párrafo corrido. El número corresponde exactamente a la edición/versificación que se está mostrando.
+
+La norma se aplica al lector y a toda presentación de secuencias de versículos como texto bíblico, en móvil y escritorio, independientemente de ajustes de fuente o tema. Un salto de línea no exige una línea vacía adicional. La numeración debe resultar legible y accesible. El texto almacenado no se modifica: número, disposición y separación pertenecen a la capa de presentación. Se mantiene la selección individual y de intervalos de versículos.
+
+**Aceptación obligatoria:** verificar números correctos, separación por bloque/línea, responsive y accesibilidad. Una lectura con números omitidos o con versículos consecutivos concatenados en un párrafo NO cumple la especificación. Ver también `docs/05-DIRECTRIZ-IDENTIDAD-VISUAL.md` (V17).
+
 ---
 
 # 7. COMENTARIOS, RESPUESTAS Y LIKES
