@@ -133,7 +133,7 @@ export function ReaderClient({
 
       {/* V17: cada versículo tiene número visible y párrafo propio.
           La edición RV1909 mantiene exactamente su ortografía histórica.
-          Las versales decorativas del inicio se normalizan solo al mostrar.
+          La capitular se aplica solo al primer versículo y solo con CSS;\n          la grafía visible procede de displayBibleVerse, no de HTML añadido.
           Android separaba los versículos con \n\n: aquí se respeta el
           ritmo de lectura con espacio vertical, sin alterar la base. */}
       <article
@@ -166,7 +166,11 @@ export function ReaderClient({
                 {v.verseNumber}
               </button>
               <p
-                className="min-w-0 cursor-pointer leading-[1.7] text-foreground"
+                className={`min-w-0 cursor-pointer leading-[1.7] text-foreground ${
+                  v.verseNumber === 1 && v.text
+                    ? "first-letter:float-left first-letter:mr-2 first-letter:mt-[.1em] first-letter:text-[2.85em] first-letter:font-semibold first-letter:leading-[.78] first-letter:text-accent"
+                    : ""
+                }`}
                 onClick={selectVerse}
               >
                 {v.text ? (
