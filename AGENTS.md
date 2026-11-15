@@ -21,6 +21,13 @@
 - Cambios menores y seguros directamente en `main`; ramas/PR solo con riesgo o tamaño que lo justifiquen.
 - Sin perfeccionismo improductivo (§0.1): analizar lo necesario, decidir, implementar, verificar, avanzar.
 
+## Biblioteca de textos antiguos
+
+- La sección `/biblioteca` lee obras **desde el manifiesto** `data/apocrypha/manifest.json`; cada nueva obra requiere original documentado, traducción española, derechos y metadatos de biblioteca. Ver `docs/11-BIBLIOTECA-WEB.md`.
+- Los seis evangelios extracanonicos iniciales son visibles como **traducciones provisionales, pendientes de revisión editorial independiente**. No presentarlos como versiones académicas cerradas y nunca mezclarlos con el lector de la Biblia RV1909.
+- No añadir portadas por suposición: el archivo WebP local y los derechos deben existir y estar verificados antes de declarar `library.cover`.
+- Se mantiene la norma de evitar funcionalidades ficticias. Cada obra nueva debe ser un texto real y legible; si no está lista, `web_publication_status = not_published`.
+
 ## Comandos esenciales
 
 ```bash
