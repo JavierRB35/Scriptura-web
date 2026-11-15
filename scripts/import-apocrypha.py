@@ -150,23 +150,43 @@ def main() -> None:
         })
         print(f"VERIFICADO {slug}: {len(data)} bytes, SHA256 {sha256(data)}")
 
+    # Nunca sobrescribir el manifiesto editorial si ya contiene traducciones,
+    # licencias, estados públicos o nuevos títulos añadidos posteriormente.
+    manifest_path = ROOT / "manifest.json"
+    if manifest_path.exists():
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        by_id = {item["id"]: item for item in manifest["works"]}
+        for record in records:
+            existing = by_id.get(record["id"])
+            if existing:
+                if existing["text_sha256"] != record["text_sha256"]:
+                    raise RuntimeError(
+                        "La fuente inglesa ha cambiado; revisión editorial manual requerida: "
+                        + record["id"]
+                    )
+                # La ficha existente, incluida la publicación y traducción,
+                # tiene prioridad sobre metadatos de una nueva descarga.
+            else:
+                manifest["works"].append(record)
+    else:
+        manifest = {
+            "collection": "Scriptura — evangelios extracanonicos",
+            "archived_at_utc": datetime.now(timezone.utc).isoformat(),
+            "rights_statement": RIGHTS_SENTENCE,
+            "rights_url": BASE + "/",
+            "type": "editorial_source_archive",
+            "status": "source_only_not_translated_not_published",
+            "works": records,
+        }
+
     ROOT.mkdir(parents=True, exist_ok=True)
     (ROOT / "en").mkdir(exist_ok=True)
     for target, data in staged:
         target.write_bytes(data)
-    manifest = {
-        "collection": "Scriptura — evangelios extracanonicos",
-        "archived_at_utc": datetime.now(timezone.utc).isoformat(),
-        "rights_statement": RIGHTS_SENTENCE,
-        "rights_url": BASE + "/",
-        "type": "editorial_source_archive",
-        "status": "source_only_not_translated_not_published",
-        "works": records,
-    }
-    (ROOT / "manifest.json").write_text(
+    manifest_path.write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
-    print("IMPORTACIÓN COMPLETA: 6/6 originales ingleses, ninguna traducción ni publicación web.")
+    print("IMPORTACIÓN VERIFICADA: seis fuentes inglesas; metadatos editoriales preservados.")
 
 
 if __name__ == "__main__":
