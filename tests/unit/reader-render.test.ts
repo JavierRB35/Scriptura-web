@@ -25,6 +25,17 @@ const props = {
 };
 
 describe("V17: numeración, separación y fidelidad del lector", () => {
+  it("aplica una sola letra capitular, exclusivamente al versículo 1", () => {
+    const html = renderToStaticMarkup(createElement(ReaderClient, props));
+    const antesDelSegundo = html.split('data-verse-number="2"')[0];
+    const despuesDelSegundo = html.split('data-verse-number="2"')[1];
+
+    expect(antesDelSegundo).toContain("first-letter:float-left");
+    expect(despuesDelSegundo).not.toContain("first-letter:float-left");
+    expect(html.match(/first-letter:float-left/g)).toHaveLength(1);
+  });
+
+
   it("renderiza cada versículo numerado en bloque independiente y sin alterar el original", () => {
     const html = renderToStaticMarkup(createElement(ReaderClient, props));
 
