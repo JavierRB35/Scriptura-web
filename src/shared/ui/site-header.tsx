@@ -1,5 +1,6 @@
 // Cabecera con las cinco secciones principales (D13) y estado de sesión real.
 
+import Image from "next/image";
 import Link from "next/link";
 import { getCurrentUser } from "@/auth/session";
 import { LogoutButton } from "./logout-button";
@@ -19,8 +20,22 @@ export async function SiteHeader() {
   return (
     <header className="border-b border-border bg-surface">
       <div className="mx-auto flex max-w-[1240px] items-center justify-between gap-2 px-3 py-3 sm:px-8 lg:px-10">
-        <Link href="/" className="shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
-          <span className="text-lg font-semibold tracking-[-.03em] text-accent sm:text-xl">Scriptura</span>
+        <Link
+          href="/"
+          aria-label="Scriptura — volver al inicio"
+          className="inline-flex shrink-0 items-center rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+        >
+          {/* IMG-02: logotipo compacto aprobado. Se utiliza el WebP original
+              hasta disponer de su versión vectorial definitiva. */}
+          <Image
+            src="/images/approved/IMG-02.webp"
+            alt="Scriptura"
+            width={2172}
+            height={724}
+            sizes="(max-width: 640px) 116px, 152px"
+            className="h-auto w-[116px] object-contain sm:w-[152px]"
+            priority
+          />
         </Link>
         <nav aria-label="Principal" className="hidden xl:block">
           <ul className="flex items-center gap-0.5 text-sm">
