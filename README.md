@@ -12,8 +12,9 @@ Plataforma web pública, gratuita e interconfesional para leer la Biblia, compre
 | **Fase 1** — Infraestructura y persistencia | ✅ Completada |
 | **Fase 2** — Biblioteca y lectura | ✅ Completada (RV1909 íntegra y publicada) |
 | **Fase 3** — Comunidad | ✅ Completada (comentarios, debates, reputación, aislamiento verificado) |
-| **Fase 4** — Administración y moderación | ⏳ Siguiente |
-| Fases 5–7 | Pendientes |
+| **Fase 4** — Administración y moderación | ✅ Completada (moderación con apelaciones, métricas y auditoría) |
+| **Fase 5** — Inteligencia artificial | ⏳ Siguiente |
+| Fases 6–7 | Pendientes |
 
 **Biblia disponible:** Reina-Valera 1909 (dominio público, ebible.org) — 66 libros,
 1.189 capítulos, 31.102 versículos, importación reproducible y verificada. Lector,

@@ -85,12 +85,29 @@
 - [ ] Reputación: eventos verificables, reglas versionadas en configuración, reconocimientos.
 - [ ] Aislamiento de comunidad frente a visitantes probado automatizadamente (§18.7).
 
-## Fase 4 — Administración y moderación
+## Fase 4 — Administración y moderación ✅ (2026-11-15)
 
-- [ ] Panel privado con roles administrador/editor/moderador y comprobación de permisos en cada operación.
-- [ ] Denuncias, cola de revisión, medidas, apelaciones, auditoría.
-- [ ] Gestión editorial de debates y catálogo de traducciones.
-- [ ] Métricas administrativas reales (§15.4).
+- [x] Panel privado (/admin) con métricas reales calculadas desde registros
+      (miembros, aportaciones, debates, denuncias/apelaciones abiertas,
+      restricciones activas, suscripciones, consumo IA, correos) y auditoría
+      reciente visible; acceso restringido por rol comprobado en servidor.
+- [x] Roles diferenciados admin/editor/moderador (acumulables, verificados en
+      cada operación sensible; la concesión se realiza en BD por seguridad).
+- [x] Denuncias: /denuncia para miembros, catálogo cerrado de motivos,
+      sin duplicados abiertos por denunciante/objetivo; cola con contexto del
+      contenido (extracto y autor, sin exponer datos de más).
+- [x] Medidas proporcionales con justificación obligatoria (§11.3): ocultar,
+      restaurar, restricción temporal de 1 a 90 días, advertencia; todo
+      registrado en audit_events y visible en el panel.
+- [x] Apelaciones: /apelar con verificación de medida reciente; estimada
+      restaura contenido y levanta restricciones; desestimada las mantiene;
+      resultado notificado al afectado.
+- [x] Gestión editorial de debates (Fase 3). Publicación de nuevas ediciones
+      exige validaciones del importador (Fase 2); interfaz de catálogo
+      llegará si se amplía el catálogo.
+- [x] 118/118 pruebas, incluido el flujo completo denuncia→ocultación→
+      restricción→apelación→decisión con verificación de visibilidad por
+      políticas RLS.
 
 ## Fase 5 — Inteligencia artificial
 
