@@ -66,7 +66,7 @@ describe("V17: numeración, separación y fidelidad del lector", () => {
     expect(html).toContain('aria-label="Seleccionar versículo 1"');
     expect(html).toContain('aria-label="Seleccionar versículo 2"');
     expect(html).toContain('aria-label="Seleccionar versículo 3"');
-    expect(html).toContain("En el principio crió Dios los cielos y la tierra.");
+    expect(html).toContain("En el principio crio Dios los cielos y la tierra.");
     expect(html).toContain("Y la tierra estaba desordenada y vacía.");
     expect(html).toContain("Este versículo no tiene texto independiente");
     expect(html).not.toContain('id="vundefined"');
@@ -80,6 +80,6 @@ describe("V17: numeración, separación y fidelidad del lector", () => {
     expect(html).toContain("Génesis 1:1-2");
     expect(html).toContain('aria-pressed="true"');
     expect(html).toContain("whitespace-pre-line");
-    expect(html).toContain("En el principio crió Dios los cielos y la tierra.");
+    expect(html).toContain("En el principio crio Dios los cielos y la tierra.");
   });
 });

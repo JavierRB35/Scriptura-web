@@ -8,7 +8,7 @@ const at = (bookCode: string, chapter: number, verseNumber: number) => ({
 describe("normalización de mayúsculas decorativas en la lectura", () => {
   it("normaliza solo el arranque verificado del capítulo", () => {
     expect(displayBibleVerse("EN el principio crió Dios los cielos y la tierra.", at("Gn", 1, 1)))
-      .toBe("En el principio crió Dios los cielos y la tierra.");
+      .toBe("En el principio crio Dios los cielos y la tierra.");
     expect(displayBibleVerse("PABLO, llamado á ser apóstol.", at("1Co", 1, 1)))
       .toBe("Pablo, llamado a ser apóstol.");
     expect(displayBibleVerse("ASÍ que, hermanos...", at("1Co", 2, 1)))
