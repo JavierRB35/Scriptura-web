@@ -1,8 +1,8 @@
 # Evangelio de María
 
-**Traducción española de trabajo — Scriptura.** Traducida de la versión inglesa de Mark M. Mattison, dedicada expresamente al dominio público en https://www.gospels.net/mary; el testimonio de referencia es el texto copto del Papiro Berolinense 8502,1. Original inglés archivado en \`data/apocrypha/en/mary.txt\`.
+**Traducción española de trabajo — Scriptura.** Traducida de la versión inglesa de Mark M. Mattison, dedicada expresamente al dominio público en https://www.gospels.net/mary; el testimonio de referencia es el texto copto del Papiro Berolinense 8502,1. Original inglés archivado en `data/apocrypha/en/mary.txt`.
 
-**Convenciones:** los números de página del manuscrito se reproducen como \`⟦p. n⟧\`, incluso cuando caen dentro de una frase. Los corchetes \`[ ]\` indican lagunas y restituciones; las barras \`/ \` indican correcciones de posibles errores de copia; los paréntesis \`( )\` indican adiciones editoriales. Los títulos son editoriales. **No existen versículos numerados en esta edición, por lo que no se inventan.**
+**Convenciones:** los números de página del manuscrito se reproducen como `⟦p. n⟧`, incluso cuando caen dentro de una frase. Los corchetes `[ ]` indican lagunas y restituciones; las barras `/ ` indican correcciones de posibles errores de copia; los paréntesis `( )` indican adiciones editoriales. Los títulos son editoriales. **No existen versículos numerados en esta edición, por lo que no se inventan.**
 
 **Faltan las páginas 1 a 6 del manuscrito.**
 
@@ -99,4 +99,4 @@ Cuando ⟦p. 19⟧ [Leví dijo estas cosas], empezaron a salir para enseñar y p
 
 ## Nota editorial de Scriptura
 
-Se preservan los intervalos de páginas 1–6 y 11–14 que no han sobrevivido. Las formas \`⟦p. n⟧\` son indicadores de paginación del manuscrito y no numeración de versículos. Esta versión española es **traducción de trabajo a partir del inglés**, no edición crítica cotejada con el copto; requiere revisión editorial previa a su publicación.
+Se preservan los intervalos de páginas 1–6 y 11–14 que no han sobrevivido. Las formas `⟦p. n⟧` son indicadores de paginación del manuscrito y no numeración de versículos. Esta versión española es **traducción de trabajo a partir del inglés**, no edición crítica cotejada con el copto; requiere revisión editorial previa a su publicación.
