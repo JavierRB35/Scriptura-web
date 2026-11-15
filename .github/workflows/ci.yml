@@ -46,7 +46,9 @@ jobs:
         run: npm run typecheck
       - name: Pruebas unitarias
         run: npm run test:unit
+      - name: Preparar base de datos (esquema + catálogo)
+        run: npm run db:migrate && npm run db:seed
       - name: Importar Biblia RV1909 (integridad real en cada CI)
         run: node scripts/import-bible.ts --publish
-      - name: Pruebas de integración (migraciones + integridad bíblica)
+      - name: Pruebas de integración (integridad bíblica y reglas de datos)
         run: npm run test:integration
