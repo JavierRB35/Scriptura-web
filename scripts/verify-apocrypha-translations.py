@@ -1,48 +1,169 @@
 #!/usr/bin/env python3
-"""Control reproducible de la traducción española de Tomás (sin dependencias)."""
+"""Verificación estructural de las seis traducciones españolas de apócrifos.
+
+Sin bibliotecas externas, sin consultas de red ni cambios en la base de datos.
+Valida fuente inglesa, integridad SHA, numeración y variantes; NO sustituye
+una corrección editorial humana ni una colación filológica desde copto/griego.
+"""
+from __future__ import annotations
+
 import hashlib
 import json
 import re
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-archive = ROOT / "data" / "apocrypha"
-manifest = json.loads((archive / "manifest.json").read_text(encoding="utf-8"))
-works = manifest["works"]
-assert len(works) == 6, f"Se esperaban 6 evangelios, hay {len(works)}"
-thomas = next(work for work in works if work["id"] == "thomas")
-assert thomas["translation_es_status"] == "draft_completed_pending_editorial_review"
-assert thomas["translation_es_units"] == 114
-assert sum(work["translation_es_status"] != "pending" for work in works) == 1
+ROOT = Path(__file__).resolve().parents[1] / "data" / "apocrypha"
+RIGHTS = "The following translation has been committed to the public domain"
+COMPLETE = "draft_completed_pending_editorial_review"
+BOOK_IDS = {"thomas", "mary", "peter", "infancyjames", "infancythomas", "judas"}
+NOTES = {"thomas": 6, "mary": 4, "peter": 0,
+         "infancyjames": 10, "infancythomas": 9, "judas": 13}
 
-english = (archive / "en" / "thomas.txt").read_text(encoding="utf-8")
-spanish_path = archive / thomas["translation_es_file"]
-spanish_bytes = spanish_path.read_bytes()
-spanish = spanish_bytes.decode("utf-8")
 
-original_body = english.split("\nThe Gospel\nAccording to Thomas", 1)[0]
-source_ids = [int(x) for x in re.findall(r"(?m)^Saying (\d+):", original_body)]
-translated_ids = [int(x) for x in re.findall(r"(?m)^## Dicho (\d+)\.", spanish)]
-expected = list(range(1, 115))
-assert source_ids == expected, f"Fuente alterada o incompleta: {source_ids}"
-assert translated_ids == source_ids, f"Traducción incompleta o renumerada: {translated_ids}"
+def require(condition: bool, msg: str) -> None:
+    if not condition:
+        raise AssertionError(msg)
 
-sections = re.split(r"(?m)^## Dicho \d+\.[^\n]*\n", spanish)[1:]
-assert len(sections) == 114
-assert all(len(section.strip()) >= 45 for section in sections), "Al menos un dicho está vacío o truncado"
-assert "## Prólogo" in spanish
-assert "## Notas de traducción" in spanish
-assert "SCRIPTURA_LINE_BREAK" not in spanish
-assert "[…]" in spanish
-assert "/igual\\" in spanish
 
-note_numbers = re.findall(r"(?m)^- \*\*Dicho(?:s)? ([^*]+)\*\*", spanish)
-assert len(note_numbers) == 6, f"Faltan notas editoriales: {note_numbers}"
+def git_blob_sha(content: bytes) -> str:
+    return hashlib.sha1(
+        b"blob " + str(len(content)).encode("ascii") + b"\0" + content
+    ).hexdigest()
 
-git_blob_sha = hashlib.sha1(b"blob " + str(len(spanish_bytes)).encode() + b"\0" + spanish_bytes).hexdigest()
-assert git_blob_sha == thomas["translation_es_github_blob_sha"], "La traducción difiere de la versión registrada en el manifiesto"
 
-print(
-    "OK: 6 textos originales; Tomás 114/114 dichos, prólogo, lagunas, "
-    "6 notas y SHA Git comprobados; 5 traducciones pendientes."
-)
+def number_list(body: str, pattern: str) -> list[int]:
+    return [int(m.group(1)) for m in re.finditer(pattern, body, flags=re.M)]
+
+
+def excerpt(text: str, start: str, end: str | None) -> str:
+    i = text.find(start)
+    require(i != -1, f"No se encuentra el encabezado: {start}")
+    j = text.find(end, i) if end is not None else -1
+    if end is not None:
+        require(j != -1, f"No se encuentra el final de sección: {end}")
+    return text[i:j if j >= 0 else None]
+
+
+def sections(text: str, pattern: str) -> dict[int, list[int]]:
+    matches = list(re.finditer(pattern, text, flags=re.M))
+    result: dict[int, list[int]] = {}
+    for i, match in enumerate(matches):
+        number = int(match.group(1))
+        require(number not in result, f"Capítulo duplicado: {number}")
+        ending = matches[i + 1].start() if i + 1 < len(matches) else len(text)
+        body = text[match.end():ending]
+        result[number] = number_list(body, r"\((\d+)\)")
+    return result
+
+
+def verify_chapters(en: str, es: str, id_: str) -> None:
+    en_body = excerpt(
+        en, "Chapter 1:",
+        "Appendix: A Shorter" if id_ == "infancyjames" else "\nNotes\n"
+    )
+    es_body = excerpt(
+        es, "## Capítulo 1.",
+        "## Apéndice." if id_ == "infancyjames" else "\n## Notas "
+    )
+    original = sections(en_body, r"^Chapter (\d+):[^\n]*")
+    translated = sections(es_body, r"^## Capítulo (\d+)\.[^\n]*")
+    expected_count = 25 if id_ == "infancyjames" else 19
+    require(list(original) == list(range(1, expected_count + 1)),
+            f"{id_}: capítulos originales inconsistentes")
+    require(translated == original,
+            f"{id_}: capítulos o párrafos numerados alterados: {original} != {translated}")
+
+    if id_ == "infancyjames":
+        en_appendix = excerpt(en, "Appendix: A Shorter", "\nNotes\n")
+        es_appendix = excerpt(es, "### Capítulo 18 (versión breve)", "\n## Notas ")
+        original_alt = sections(en_appendix, r"^Chapter (\d+):[^\n]*")
+        translated_alt = sections(es_appendix, r"^### Capítulo (\d+) \(versión breve\)[^\n]*")
+        require(list(original_alt) == [18, 19, 20, 21],
+                "Santiago: faltan capítulos alternativos del Papiro Bodmer V")
+        require(translated_alt == original_alt,
+                "Santiago: divergencia de párrafos numerados en versión breve")
+    else:
+        require("capítulos 17 y 18 no aparecen" in es.lower()
+                or "capítulos 17 y 18 no aparecen" in es,
+                "Infancia de Tomás: falta el aviso de manuscritos tardíos")
+        require("capítulo 10" in es.lower(), "Infancia de Tomás: falta nota de posición")
+
+
+def verify(id_: str, work: dict) -> None:
+    en_bytes = (ROOT / "en" / (id_ + ".txt")).read_bytes()
+    en = en_bytes.decode("utf-8")
+    es_path = ROOT / work["translation_es_file"]
+    es_bytes = es_path.read_bytes()
+    es = es_bytes.decode("utf-8")
+    require(work["translation_es_file"] == f"es/{id_}.md",
+            f"{id_}: ruta de traducción incorrecta")
+    require(work["translation_es_status"] == COMPLETE,
+            f"{id_}: traducción no marcada como borrador completo")
+    require(work["web_publication_status"] == "not_published",
+            f"{id_}: publicación no revisada")
+    require(RIGHTS in en, f"{id_}: falta licencia del original inglés")
+    require(hashlib.sha256(en_bytes).hexdigest() == work["text_sha256"],
+            f"{id_}: cambió el original inglés")
+    require(git_blob_sha(es_bytes) == work["translation_es_github_blob_sha"],
+            f"{id_}: el texto español no coincide con el hash versionado")
+    require(len(es) > max(1500, len(en) * 0.6), f"{id_}: traducción aparentemente truncada")
+    require("Traducción española de trabajo" in es,
+            f"{id_}: no se indica que esta versión es una traducción de trabajo")
+    require("SCRIPTURA_LINE_BREAK" not in es,
+            f"{id_}: marcador HTML residual en texto español")
+
+    if id_ == "thomas":
+        en_body = excerpt(en, "Saying 1:", "\nThe Gospel\nAccording to Thomas")
+        en_nums = number_list(en_body, r"^Saying (\d+):")
+        es_nums = number_list(es, r"^## Dicho (\d+)\.")
+        require(en_nums == es_nums == list(range(1, 115)),
+                "Tomás: los 114 dichos no están completos o numerados")
+        require("## Prólogo" in es and "[…]" in es and "/igual\\" in es,
+                "Tomás: faltan el prólogo, lagunas o correcciones de copia")
+    elif id_ == "peter":
+        en_nums = number_list(en[en.index("Pilate and Herod"):], r"\((\d+)\)")
+        es_body = excerpt(es, "## Pilato y Herodes", "\n## Nota editorial")
+        es_nums = number_list(es_body, r"\((\d+)\)")
+        require(en_nums == es_nums == list(range(1, 61)),
+                "Pedro: los 60 números no coinciden con el original")
+    elif id_ == "mary":
+        pages = number_list(es, r"⟦p\. (\d+)⟧")
+        require(pages == [7, 8, 9, 10, 15, 16, 17, 18, 19],
+                f"María: paginación original incompleta: {pages}")
+        require("Faltan las páginas 1 a 6" in es and
+                "Faltan las páginas 11 a 14" in es,
+                "María: deben señalarse las páginas no conservadas")
+    elif id_ == "judas":
+        pages = number_list(es, r"⟦p\. (\d+)⟧")
+        require(pages == list(range(33, 59)),
+                f"Judas: paginación 33–58 incompleta: {pages}")
+    else:
+        verify_chapters(en, es, id_)
+
+    if NOTES[id_] > 0:
+        notes = excerpt(es, "## Notas ", None)
+        n = len(re.findall(r"^- \*\*", notes, flags=re.M))
+        require(n == NOTES[id_], f"{id_}: faltan notas de traducción ({n})")
+
+    print(f"OK {id_}: fuente SHA-256, traducción SHA Git y estructura verificadas")
+
+
+def main() -> None:
+    manifest = json.loads((ROOT / "manifest.json").read_text(encoding="utf-8"))
+    works = manifest["works"]
+    require(len(works) == 6 and {w["id"] for w in works} == BOOK_IDS,
+            "Inventario inconsistente: no están los seis evangelios")
+    require(all(w["translation_es_status"] == COMPLETE for w in works),
+            "Existe al menos una traducción española incompleta")
+    for work in works:
+        verify(work["id"], work)
+    require(manifest["translation_completion"]["pending_translation"] == 0,
+            "El manifiesto declara traducciones pendientes")
+    require(manifest["translation_completion"]["spanish_full_drafts"] == 6,
+            "El manifiesto debe reflejar seis borradores completos")
+    print("VERIFICADO: seis de seis borradores españoles completos, cero traducciones pendientes.")
+    print("AVISO: la verificación es estructural, no un cotejo lingüístico humano.")
+
+
+if __name__ == "__main__":
+    main()
