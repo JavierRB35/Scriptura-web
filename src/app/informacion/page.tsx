@@ -47,6 +47,19 @@ export default function InformacionPage() {
         </div>
 
         <div>
+          <h2 className="font-semibold">Biblioteca de textos antiguos</h2>
+          <p className="mt-2 text-muted">
+            La sección <a href="/biblioteca" className="font-medium text-accent underline underline-offset-2">Biblioteca</a>{" "}
+            ofrece seis evangelios extracanonicos, separados de los libros de la
+            Biblia canónica. Sus versiones españolas son traducciones de trabajo
+            realizadas a partir de las traducciones inglesas de dominio público
+            de Mark M. Mattison. Siguen pendientes de revisión filológica
+            independiente; cada obra indica su procedencia y conserva las
+            lagunas y numeraciones históricas de la fuente.
+          </p>
+        </div>
+
+        <div>
           <h2 className="font-semibold">Ortografía de lectura</h2>
           <p className="mt-2 text-muted">
             En el lector se muestran con ortografía actual algunas grafías históricas
