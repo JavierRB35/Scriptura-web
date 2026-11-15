@@ -94,3 +94,26 @@ Ejemplos: 1 Crónicas 28:7 «aqueste día» → «este día»; Daniel 4:28 «Tod
 **Exclusión intencional:** `llamóle` (5 versículos) necesita cotejar si hoy corresponde `lo llamó`, `la llamó` o `le llamó`, según el referente. Tampoco se modernizan `mas`, `empero`, `he aquí`, `fuere` ni `hubiere` por sustitución ciega.
 
 **Fundamentos lingüísticos:** Atlas Histórico del Español, «La variación entre las formas tipo este y aqueste» (Universitat de les Illes Balears): https://atlashistorico.uib.es/cap/Enrique-Arias1 ; FundéuRAE, «verbos con pronombre añadido, acentuación»: https://www.fundeu.es/recomendacion/verbos-con-encliticos-acentuacion/ . Esta modernización parcial **no constituye una revisión completa del corpus**.
+
+## Tanda contextual 3 — vocabulario y locuciones (15-11-2026)
+
+Se han examinado **216 versículos candidatos** de la edición original RV1909; se aplican sustituciones en **198 versículos diferentes** y se reservan **18** cuyo sentido o construcción requiere una decisión editorial adicional. Registro exhaustivo de referencias de esta tanda: `src/bible/contextual-modernization.ts`.
+
+| Original | Contexto cotejado | Versículos adaptados | Decisión |
+|---|---|---:|---|
+| `llamóle` | cinco nombres impuestos: hijo, serpiente, altar, hijo, localidad | 5 | `lo llamó` o `la llamó`, conforme al referente; expresiones exactas |
+| `hacimiento de gracias` | locución histórica de agradecimiento y sacrificio | 12 | `acción de gracias`; cambiar `el`→`la` o `todo`→`toda` en dos pasajes |
+| `es menester que` | construcciones explícitas de obligación/necesidad | 17 | `es necesario que` sin cambiar el resto de la oración |
+| `en derredor` | localización en torno a un elemento | 71 | `alrededor`, conservando las restantes preposiciones |
+| `mancebo(s)` | referencia indudable a jóvenes | 72 | `joven` / `jóvenes` |
+| `vianda(s)` | comida, alimento o comida sólida en su contexto | 21 | `comida(s)` o `alimento(s)` según el pasaje, con ajustes de concordancia en cuatro casos |
+
+**Excepciones (18):** se conservan sin tocar 10 usos de `mancebos` con posible valor de **criados, ayudantes, guerreros o personal de servicio** (`1S 8:16`, `2S 1:15; 2:14,21; 4:12; 18:15`, `Gn 14:24`, `Ne 4:16`, `Nm 11:28`, `Mc 14:51`) y 9 usos de `vianda(s)` en construcciones litúrgicas o con concordancia no resuelta; el conjunto de 18 versículos distintos se debe a que una referencia coincide entre grupos de candidatos. **Nota:** los recuentos por tipo son 10 y 9; la unión se mide por versículos distintos. No se normalizan estos casos por analogía.
+
+**Cotejos de `llamóle`:** `1Cro 7:16` → `lo llamó Peres` (hijo); `2R 18:4` → `la llamó Nehustán` (serpiente de bronce); `Gn 33:20` → `lo llamó` (altar); `Jc 13:24` → `lo llamó Samsón` (hijo); `Nm 32:42` → `la llamó Noba` (localidad).
+
+**Cotejo de comida ritual:** `Lv 3:11,16`, `Lv 5:13` y `Nm 28:24` permanecen sin transformar, porque no basta sustituir `vianda` por `comida` para obtener una locución litúrgica correcta. También permanecen ciertas descripciones culinarias y pasajes de alimentos sacrificados pendientes de mayor revisión.
+
+**Control de calidad:** `tests/unit/display-text.test.ts` cubre los referentes, las concordancias, las exclusiones y la inmutabilidad; `tests/integration/bible.test.ts` recorre 216 versículos de la fuente original y verifica 198 adaptaciones y 18 preservaciones. Este es el cambio en la capa visible, no una alteración de la edición bíblica.
+
+**Fuente terminológica:** Centro Virtual Cervantes, Biblioteca fraseológica (locución `hacimiento de gracias` = `acción de gracias`): https://cvc.cervantes.es/lengua/biblioteca_fraseologica/n9_marti/fernandez_04.htm ; FundéuRAE sobre pronombres y leísmo: https://www.fundeu.es/recomendacion/leismo-laismo-y-loismo-claves/.

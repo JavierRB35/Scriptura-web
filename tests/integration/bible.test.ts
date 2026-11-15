@@ -156,6 +156,34 @@ d("integridad de la edición publicada (RV1909)", () => {
     expect(demonstratives).toBe(53);
     expect(enclitics).toBe(389);
   });
+  it("prueba 198 modernizaciones contextuales y 18 excepciones sobre fuente real", async () => {
+    const { CONTEXTUAL_REVIEWED_KEYS, adaptContextualLexicon } = await import("@/bible/contextual-modernization");
+    const { rows } = await client.query<{ bookCode: string; chapter: number; verseNumber: number; text: string }>(
+      "SELECT b.code AS \"bookCode\", ch.chapter_number AS chapter, " +
+      "v.verse_number AS \"verseNumber\", v.text_content AS text FROM bible_verses v " +
+      "JOIN bible_chapters ch ON ch.id=v.chapter_id JOIN biblical_books b ON b.id=ch.book_id " +
+      "JOIN bible_editions e ON e.id=ch.edition_id WHERE e.identifier='spaRV1909' " +
+      "AND v.text_content ~* '(^|[^[:alpha:]])(llamóle|hacimiento de gracias|es menester que|en derredor|mancebo|mancebos|vianda|viandas)([^[:alpha:]]|$)'"
+    );
+    expect(rows).toHaveLength(216);
+    expect(CONTEXTUAL_REVIEWED_KEYS.size).toBe(198);
+    let updated = 0; let preserved = 0;
+    for (const verse of rows) {
+      const key = [verse.bookCode, verse.chapter, verse.verseNumber].join(":");
+      const original = verse.text;
+      const result = adaptContextualLexicon(original, verse);
+      if (CONTEXTUAL_REVIEWED_KEYS.has(key)) {
+        expect(result, key).not.toBe(original);
+        updated++;
+      } else {
+        expect(result, key).toBe(original);
+        preserved++;
+      }
+      expect(verse.text).toBe(original);
+    }
+    expect(updated).toBe(198);
+    expect(preserved).toBe(18);
+  });
   it("la numeración de versículos es secuencial en todos los capítulos", async () => {
     const { rows } = await client.query<{ bad: number }>(
       `WITH seq AS (

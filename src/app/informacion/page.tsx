@@ -52,8 +52,9 @@ export default function InformacionPage() {
             En el lector se muestran con ortografía actual algunas grafías históricas
             de la Reina-Valera 1909: por ejemplo, «á» pasa a «a», «fué» a «fue»
             y, según el contexto documentado, «crió» a «creó» o «crio».
-            Se estudian asimismo expresiones antiguas para mejorar la lectura,
-            pero no se sustituyen sin cotejo editorial. Es una adaptación
+            También se han modernizado expresiones cotejadas como «llamóle»,
+            «mancebo» y «hacimiento de gracias» en pasajes concretos. No se
+            sustituyen automáticamente las expresiones ambiguas. Es una adaptación
             parcial, no una nueva traducción. La fuente de 1909 permanece
             íntegra y accesible.
           </p>

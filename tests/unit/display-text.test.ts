@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { displayBibleVerse, modernizeHistoricalSpelling } from "../../src/bible/display-text";
 import { adaptReviewedArchaisms } from "../../src/bible/archaic-display";
+import { adaptContextualLexicon, CONTEXTUAL_REVIEWED_KEYS } from "../../src/bible/contextual-modernization";
 
 const at = (bookCode: string, chapter: number, verseNumber: number) => ({
   bookCode, chapter, verseNumber,
@@ -169,5 +170,73 @@ describe("tanda contextual de arcaísmos cotejados", () => {
       .toBe("Aqueste hombre díjole.");
     expect(displayBibleVerse("Y llamóle Peres.", at("1Cro", 7, 16)))
       .toBe("Y llamóle Peres.");
+  });
+});
+
+
+describe("tanda 3: léxico, locuciones y nombres cotejados", () => {
+  it("coteja género y referente de los cinco «llamóle»", () => {
+    expect(displayBibleVerse("y llamóle Peres", at("1Cro", 7, 16))).toBe("y lo llamó Peres");
+    expect(displayBibleVerse("y llamóle por nombre Nehustán", at("2R", 18, 4))).toBe("y la llamó Nehustán");
+    expect(displayBibleVerse("y llamóle: El Dios de Israel", at("Gn", 33, 20))).toBe("y lo llamó: El Dios de Israel");
+    expect(displayBibleVerse("y llamóle por nombre Samsón", at("Jc", 13, 24))).toBe("y lo llamó Samsón");
+    expect(displayBibleVerse("y llamóle Noba", at("Nm", 32, 42))).toBe("y la llamó Noba");
+  });
+
+  it("conserva concordancia de género y fórmulas de agradecimiento", () => {
+    expect(displayBibleVerse("en el hacimiento de gracias", at("2Co", 4, 15)))
+      .toBe("en la acción de gracias");
+    expect(displayBibleVerse("con todo hacimiento de gracias", at("Hch", 24, 3)))
+      .toBe("con toda acción de gracias");
+    expect(displayBibleVerse("sacrificio de hacimiento de gracias", at("Lv", 22, 29)))
+      .toBe("sacrificio de acción de gracias");
+    expect(displayBibleVerse("en hacimiento de gracias, sacrificio de hacimiento de gracias", at("Lv", 7, 12)))
+      .toBe("en acción de gracias, sacrificio de acción de gracias");
+  });
+
+  it("moderniza necesidad y orientación sin añadir información", () => {
+    expect(displayBibleVerse("Porque es menester que él reine.", at("1Co", 15, 25)))
+      .toBe("Porque es necesario que él reine.");
+    expect(displayBibleVerse("¿qué es menester que yo haga?", at("Hch", 16, 30)))
+      .toBe("¿qué es necesario que yo haga?");
+    expect(displayBibleVerse("enemigos en derredor;", at("1Cro", 22, 9)))
+      .toBe("enemigos alrededor;");
+    expect(displayBibleVerse("En derredor tendrá dieciocho mil cañas.", at("Ez", 48, 35)))
+      .toBe("Alrededor tendrá dieciocho mil cañas.");
+  });
+
+  it("sustituye jóvenes solo donde se ha contrastado el referente", () => {
+    expect(displayBibleVerse("Os escribo a vosotros, mancebos.", at("1Jn", 2, 13)))
+      .toBe("Os escribo a vosotros, jóvenes.");
+    expect(displayBibleVerse("Mancebo, a ti digo.", at("Lc", 7, 14)))
+      .toBe("Joven, a ti digo.");
+    expect(adaptContextualLexicon("tomará vuestros buenos mancebos", at("1S", 8, 16)))
+      .toBe("tomará vuestros buenos mancebos");
+    expect(adaptContextualLexicon("sus mancebos", at("Nm", 11, 28)))
+      .toBe("sus mancebos");
+  });
+
+  it("distingue alimentación corriente de lenguaje ritual", () => {
+    expect(displayBibleVerse("Y no vianda", at("1Co", 3, 2)))
+      .toBe("Y no alimento sólido");
+    expect(displayBibleVerse("la misma vianda espiritual", at("1Co", 10, 3)))
+      .toBe("el mismo alimento espiritual");
+    expect(displayBibleVerse("Mas la vianda firme", at("Hb", 5, 14)))
+      .toBe("Mas el alimento sólido");
+    expect(displayBibleVerse("las viandas que son sacrificadas", at("1Co", 8, 4)))
+      .toBe("los alimentos que son sacrificados");
+    expect(displayBibleVerse("comprar viandas", at("Lc", 9, 13)))
+      .toBe("comprar comida");
+    expect(adaptContextualLexicon("vianda de ofrenda encendida", at("Lv", 3, 11)))
+      .toBe("vianda de ofrenda encendida");
+  });
+
+  it("limita la transformación a 198 referencias y conserva las cadenas fuente", () => {
+    expect(CONTEXTUAL_REVIEWED_KEYS.size).toBe(198);
+    const original = "Por nada estéis afanosos; sino con hacimiento de gracias.";
+    expect(adaptContextualLexicon(original, at("Flp", 4, 6)))
+      .toBe("Por nada estéis afanosos; sino con acción de gracias.");
+    expect(original).toContain("hacimiento de gracias");
+    expect(adaptContextualLexicon(original, at("Gn", 1, 1))).toBe(original);
   });
 });

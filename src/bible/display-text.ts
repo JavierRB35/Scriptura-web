@@ -11,6 +11,7 @@
  */
 import { modernizeCriarInContext, type VerseReference } from "./lexical-revisions";
 import { adaptReviewedArchaisms } from "./archaic-display";
+import { adaptContextualLexicon } from "./contextual-modernization";
 
 type VerseLocation = VerseReference;
 
@@ -77,5 +78,5 @@ export function displayBibleVerse(text: string, location: VerseLocation): string
     });
   }
 
-  return modernizeHistoricalSpelling(adaptReviewedArchaisms(modernizeCriarInContext(visibleText, location), location));
+  return modernizeHistoricalSpelling(adaptContextualLexicon(adaptReviewedArchaisms(modernizeCriarInContext(visibleText, location), location), location));
 }

@@ -72,7 +72,8 @@
 
 - [x] Cotejo de «crió» en 25 referencias con dos sentidos históricos.
 - [x] Primera tanda de demostrativos y enclíticos: 441 versículos únicos revisados, sin alterar el texto de origen; pruebas de integridad en CI.
-- [ ] Evaluar «llamóle» y después las demás expresiones polisémicas con intervención editorial verificable.
+- [x] Tanda 3 (2026-11-15): 198 versículos con «llamóle», «hacimiento de gracias», «es menester que», «en derredor», usos de «mancebo(s)» y «vianda(s)». Cotejados 216 candidatos: 18 preservados por contexto. Prueba de integración contra fuente RV1909.
+- [ ] Revisar las 18 excepciones de la tanda 3 y los restantes arcaísmos polisémicos con intervención editorial verificable.
 - [ ] Auditar exhaustivamente todo el corpus antes de etiquetar una adaptación como completa.
 
 ## Fase 3 — Comunidad
