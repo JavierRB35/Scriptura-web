@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verificación estructural de las seis traducciones españolas de apócrifos.
+"""Verificación estructural de seis traducciones iniciales y de futuras incorporaciones.
 
 Sin bibliotecas externas, sin consultas de red ni cambios en la base de datos.
 Valida fuente inglesa, integridad SHA, numeración y variantes; NO sustituye
@@ -99,8 +99,12 @@ def verify(id_: str, work: dict) -> None:
             f"{id_}: ruta de traducción incorrecta")
     require(work["translation_es_status"] == COMPLETE,
             f"{id_}: traducción no marcada como borrador completo")
-    require(work["web_publication_status"] == "not_published",
-            f"{id_}: publicación no revisada")
+    require(work["web_publication_status"] in {"not_published", "public_draft", "published"},
+            f"{id_}: estado público no reconocido")
+    if work["web_publication_status"] in {"public_draft", "published"}:
+        require(bool(work.get("library", {}).get("category")) and
+                bool(work.get("library", {}).get("summary")),
+                f"{id_}: faltan metadatos públicos del catálogo")
     require(RIGHTS in en, f"{id_}: falta licencia del original inglés")
     require(hashlib.sha256(en_bytes).hexdigest() == work["text_sha256"],
             f"{id_}: cambió el original inglés")
@@ -137,10 +141,10 @@ def verify(id_: str, work: dict) -> None:
         pages = number_list(excerpt(es, "## Introducción", "\n## Notas "), r"⟦p\. (\d+)⟧")
         require(pages == list(range(33, 59)),
                 f"Judas: paginación 33–58 incompleta: {pages}")
-    else:
+    elif id_ in {"infancyjames", "infancythomas"}:
         verify_chapters(en, es, id_)
 
-    if NOTES[id_] > 0:
+    if NOTES.get(id_, 0) > 0:
         notes = excerpt(es, "## Notas ", None)
         n = len(re.findall(r"^- \*\*", notes, flags=re.M))
         require(n == NOTES[id_], f"{id_}: faltan notas de traducción ({n})")
@@ -151,17 +155,19 @@ def verify(id_: str, work: dict) -> None:
 def main() -> None:
     manifest = json.loads((ROOT / "manifest.json").read_text(encoding="utf-8"))
     works = manifest["works"]
-    require(len(works) == 6 and {w["id"] for w in works} == BOOK_IDS,
-            "Inventario inconsistente: no están los seis evangelios")
+    require(len(works) >= 6 and BOOK_IDS.issubset({w["id"] for w in works}),
+            "Inventario inconsistente: faltan evangelios iniciales")
     require(all(w["translation_es_status"] == COMPLETE for w in works),
             "Existe al menos una traducción española incompleta")
     for work in works:
         verify(work["id"], work)
     require(manifest["translation_completion"]["pending_translation"] == 0,
             "El manifiesto declara traducciones pendientes")
-    require(manifest["translation_completion"]["spanish_full_drafts"] == 6,
-            "El manifiesto debe reflejar seis borradores completos")
-    print("VERIFICADO: seis de seis borradores españoles completos, cero traducciones pendientes.")
+    require(manifest["translation_completion"]["spanish_full_drafts"] >= 6,
+            "El manifiesto debe reflejar al menos seis borradores completos")
+    require(manifest["translation_completion"].get("available_in_library_as_draft", 0) >= 6,
+            "El manifiesto debe reflejar las obras accesibles en la Biblioteca")
+    print("VERIFICADO: seis textos iniciales íntegros y catálogo preparado para nuevas obras.")
     print("AVISO: la verificación es estructural, no un cotejo lingüístico humano.")
 
 
