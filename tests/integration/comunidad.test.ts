@@ -315,8 +315,16 @@ d("aislamiento de comunidad (§18.7) con roles reales", () => {
 
   it("limpieza total de usuarios de prueba", async () => {
     await client.query("DELETE FROM auth.users WHERE id = ANY($1::uuid[])", [[ana, berto]]);
-    const { rows: profilesLeft } = await client.query("SELECT count(*)::int AS n FROM profiles");
-    const { rows: eventsLeft } = await client.query("SELECT count(*)::int AS n FROM reputation_events");
+    // Solo los de este fichero: otros ficheros de integración crean los suyos
+    // en paralelo sobre la misma base (§18.7 verifica lo propio, no el global).
+    const { rows: profilesLeft } = await client.query(
+      "SELECT count(*)::int AS n FROM profiles WHERE id = ANY($1::uuid[])",
+      [[ana, berto]]
+    );
+    const { rows: eventsLeft } = await client.query(
+      "SELECT count(*)::int AS n FROM reputation_events WHERE user_id = ANY($1::uuid[])",
+      [[ana, berto]]
+    );
     expect(profilesLeft[0].n).toBe(0);
     expect(eventsLeft[0].n).toBe(0); // ON DELETE CASCADE también en eventos
   });
