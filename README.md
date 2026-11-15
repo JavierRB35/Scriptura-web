@@ -9,8 +9,14 @@ Plataforma web pública, gratuita e interconfesional para leer la Biblia, compre
 | Fase | Estado |
 |---|---|
 | **Fase 0** — Auditoría y preparación | ✅ Completada |
-| **Fase 1** — Infraestructura y persistencia | 🔄 En curso (pendiente despliegue y credenciales) |
-| Fases 2–7 | Pendientes |
+| **Fase 1** — Infraestructura y persistencia | ✅ Completada |
+| **Fase 2** — Biblioteca y lectura | ⏳ Siguiente |
+| Fases 3–7 | Pendientes |
+
+**Despliegue técnico (protegido, sin apertura pública del producto):**
+https://scriptura-web-eight.vercel.app — despliegue automático desde `main`.
+Infraestructura: Vercel (web) + Supabase `ScripturaWeb` (PostgreSQL eu-west-3 París,
+autenticación). Sin datos sintéticos en producción.
 
 La aplicación original Android ([JavierRB35/Scriptura](https://github.com/JavierRB35/Scriptura)) fue auditada como origen de datos y criterios; **no** es código reutilizable para la web y su contenido de la Biblia de Navarra está excluido permanentemente del nuevo proyecto.
 

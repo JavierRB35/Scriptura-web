@@ -10,7 +10,7 @@
 - [x] Selección de arquitectura → `02-ARQUITECTURA.md`.
 - [x] Base documental del repositorio: directriz, especificación funcional, decisiones D01–D25 (en la especificación), auditoría, plan.
 
-## Fase 1 — Infraestructura y persistencia 🔄 (en curso desde 2026-11-15)
+## Fase 1 — Infraestructura y persistencia ✅ (2026-11-15)
 
 - [x] Proyecto Next.js + TypeScript con estructura modular de `02-ARQUITECTURA.md`.
 - [x] Esquema PostgreSQL inicial y migraciones versionadas (entidades de §16):
@@ -31,8 +31,16 @@
       pgvector. **Resultado local: 21/21 superadas; typecheck y lint limpios; build de
       producción correcto; smoke test del servidor compilado (200 en rutas públicas,
       307 en /admin sin sesión).**
-- [ ] Despliegue técnico protegido (preview en Vercel, sin apertura pública) —
-      **pendiente de credenciales del propietario** (Vercel y proyecto Supabase).
+- [x] Despliegue técnico protegido (2026-11-15): proyecto Vercel `scriptura-web`
+      vinculado a `main` (URL pública https://scriptura-web-eight.vercel.app, muestra
+      solo la página de estado; sin apertura pública del producto). Modo degradado
+      controlado si faltan variables. **Supabase**: proyecto `ScripturaWeb`
+      (eu-west-3 París) con las 10 migraciones aplicadas y catálogo sembrado
+      (55 tablas, 73 libros). Variables de entorno inyectadas en Vercel (producción,
+      preview y desarrollo) y autenticación configurada (Site URL, redirecciones,
+      verificación de correo obligatoria).
+- [x] Verificación E2E de autenticación contra Supabase real (usuario técnico de
+      prueba creado y eliminado tras la comprobación).
 
 ## Fase 2 — Biblioteca y lectura
 
