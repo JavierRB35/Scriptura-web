@@ -4,7 +4,7 @@
   "rights_statement": "The following translation has been committed to the public domain and may be freely copied and used, changed or unchanged, for any purpose.",
   "rights_url": "https://www.gospels.net/",
   "type": "editorial_source_archive",
-  "status": "source_only_not_translated_not_published",
+  "status": "spanish_drafts_available_in_library",
   "works": [
     {
       "id": "thomas",
@@ -20,7 +20,7 @@
       "utf8_bytes": 32349,
       "characters": 32331,
       "translation_es_status": "draft_completed_pending_editorial_review",
-      "web_publication_status": "not_published",
+      "web_publication_status": "public_draft",
       "translation_es_file": "es/thomas.md",
       "translation_es_basis": "English public-domain edition by Mark M. Mattison based on Coptic",
       "translation_es_procedure": "AI-assisted Spanish translation from archived public-domain English edition; pending independent editorial / philological review",
@@ -30,7 +30,13 @@
       "translation_es_source_language": "en",
       "translation_es_source_witness": "Nag Hammadi Codex II,2",
       "translation_es_unit_type": "sayings",
-      "translation_es_characters": 33108
+      "translation_es_characters": 33108,
+      "library": {
+        "order": 1,
+        "category": "Evangelios apócrifos",
+        "summary": "Una colección de 114 dichos atribuidos a Jesús. Su estructura es distinta de los relatos narrativos de los evangelios canónicos.",
+        "extent": "114 dichos"
+      }
     },
     {
       "id": "mary",
@@ -46,7 +52,7 @@
       "utf8_bytes": 7423,
       "characters": 7407,
       "translation_es_status": "draft_completed_pending_editorial_review",
-      "web_publication_status": "not_published",
+      "web_publication_status": "public_draft",
       "translation_es_file": "es/mary.md",
       "translation_es_source_language": "en",
       "translation_es_basis": "English public-domain edition by Mark M. Mattison based on Coptic",
@@ -56,7 +62,13 @@
       "translation_es_unit_type": "extant manuscript pages (7-10; 15-19)",
       "translation_es_notes": "Páginas conservadas 7-10 y 15-19; faltan 1-6 y 11-14; cuatro notas",
       "translation_es_github_blob_sha": "63ccff97914ba31f0d789fad710205986ee4f492",
-      "translation_es_characters": 8053
+      "translation_es_characters": 8053,
+      "library": {
+        "order": 2,
+        "category": "Evangelios apócrifos",
+        "summary": "Enseñanzas atribuidas a Jesús y un diálogo sobre la autoridad de María. Se conservan únicamente algunas páginas del manuscrito.",
+        "extent": "Páginas 7–10 y 15–19"
+      }
     },
     {
       "id": "judas",
@@ -72,7 +84,7 @@
       "utf8_bytes": 22162,
       "characters": 22054,
       "translation_es_status": "draft_completed_pending_editorial_review",
-      "web_publication_status": "not_published",
+      "web_publication_status": "public_draft",
       "translation_es_file": "es/judas.md",
       "translation_es_source_language": "en",
       "translation_es_basis": "English public-domain edition by Mark M. Mattison based on Coptic",
@@ -82,7 +94,13 @@
       "translation_es_unit_type": "extant manuscript pages (33-58)",
       "translation_es_notes": "Páginas 33-58 conservadas; lagunas y 13 notas críticas",
       "translation_es_github_blob_sha": "1643479bd1cebdf1b44408c0b8f5e449005e1359",
-      "translation_es_characters": 23604
+      "translation_es_characters": 23604,
+      "library": {
+        "order": 6,
+        "category": "Evangelios apócrifos",
+        "summary": "Diálogos de Jesús con sus discípulos y Judas Iscariote, conservados en un manuscrito copto con importantes lagunas.",
+        "extent": "Páginas 33–58"
+      }
     },
     {
       "id": "peter",
@@ -98,7 +116,7 @@
       "utf8_bytes": 9335,
       "characters": 9335,
       "translation_es_status": "draft_completed_pending_editorial_review",
-      "web_publication_status": "not_published",
+      "web_publication_status": "public_draft",
       "translation_es_file": "es/peter.md",
       "translation_es_source_language": "en",
       "translation_es_basis": "English public-domain edition by Mark M. Mattison based on Greek",
@@ -108,7 +126,13 @@
       "translation_es_unit_type": "numbered textual units",
       "translation_es_notes": "60 segmentos numerados; inicio y final fragmentarios",
       "translation_es_github_blob_sha": "619437949302d682a141a8f60d1b1d8788d60021",
-      "translation_es_characters": 9844
+      "translation_es_characters": 9844,
+      "library": {
+        "order": 3,
+        "category": "Evangelios apócrifos",
+        "summary": "Relato fragmentario sobre la pasión, la sepultura y la resurrección de Jesús, con elementos narrativos propios.",
+        "extent": "60 unidades numeradas"
+      }
     },
     {
       "id": "infancyjames",
@@ -124,7 +148,7 @@
       "utf8_bytes": 36584,
       "characters": 35707,
       "translation_es_status": "draft_completed_pending_editorial_review",
-      "web_publication_status": "not_published",
+      "web_publication_status": "public_draft",
       "translation_es_file": "es/infancyjames.md",
       "translation_es_source_language": "en",
       "translation_es_basis": "English public-domain edition by Mark M. Mattison based on Greek",
@@ -134,7 +158,13 @@
       "translation_es_unit_type": "chapters plus 4 alternative chapters",
       "translation_es_notes": "25 capítulos completos, versión breve alternativa 18-21 y 10 notas editoriales",
       "translation_es_github_blob_sha": "d0955d734e555edae757b7a3a71b6a8d6955db51",
-      "translation_es_characters": 35453
+      "translation_es_characters": 35453,
+      "library": {
+        "order": 4,
+        "category": "Evangelios de la infancia",
+        "summary": "Tradiciones sobre Joaquín, Ana, María y el nacimiento de Jesús. Incluye una versión breve alternativa de cuatro capítulos.",
+        "extent": "25 capítulos y variante"
+      }
     },
     {
       "id": "infancythomas",
@@ -150,7 +180,7 @@
       "utf8_bytes": 20291,
       "characters": 19846,
       "translation_es_status": "draft_completed_pending_editorial_review",
-      "web_publication_status": "not_published",
+      "web_publication_status": "public_draft",
       "translation_es_file": "es/infancythomas.md",
       "translation_es_source_language": "en",
       "translation_es_basis": "English public-domain edition by Mark M. Mattison based on Greek",
@@ -160,7 +190,13 @@
       "translation_es_unit_type": "chapters",
       "translation_es_notes": "19 capítulos; advertencias de fuente de 10 y 17-18; nueve notas",
       "translation_es_github_blob_sha": "d872cc7079d0a462fcca77a5b659083f14304d0e",
-      "translation_es_characters": 20376
+      "translation_es_characters": 20376,
+      "library": {
+        "order": 5,
+        "category": "Evangelios de la infancia",
+        "summary": "Relatos sobre la infancia de Jesús y los prodigios atribuidos al niño. Es distinto del Evangelio de Tomás de los dichos.",
+        "extent": "19 capítulos"
+      }
     }
   ],
   "translation_policy": "Seis traducciones completas de trabajo en español, derivadas de la edición inglesa de dominio público. Numeración original (dichos, capítulos, unidades numeradas o páginas) preservada sin inventar versículos. Se conservan lagunas y notas. Pendiente revisión editorial y cotejo de idiomas antiguos antes de cualquier publicación.",
@@ -169,6 +205,8 @@
     "spanish_full_drafts": 6,
     "pending_translation": 0,
     "pending_independent_editorial_review": 6,
-    "not_published_on_web": 6
-  }
+    "not_published_on_web": 0,
+    "available_in_library_as_draft": 6
+  },
+  "library_publishing_policy": "Las seis versiones son borradores completos pendientes de revisión editorial independiente. Acceso público de lectura como traducciones provisionales, separadas de la Biblia canónica. No indexar hasta revisión."
 }
