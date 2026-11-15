@@ -19,8 +19,14 @@
       "text_sha256": "43b3e8eb9259ef0a06c671034c6c5bc8c8a5f04397b363d5989bd2bfb518d55e",
       "utf8_bytes": 32349,
       "characters": 32331,
-      "translation_es_status": "pending",
-      "web_publication_status": "not_published"
+      "translation_es_status": "draft_completed_pending_editorial_review",
+      "web_publication_status": "not_published",
+      "translation_es_file": "es/thomas.md",
+      "translation_es_basis": "Mark M. Mattison (English, public domain), based on Nag Hammadi Codex II,2",
+      "translation_es_procedure": "Spanish translation by AI in Scriptura; not an independently verified translation from Coptic",
+      "translation_es_units": 114,
+      "translation_es_github_blob_sha": "0bc3f882b9e522d616492dde522c2b297922825a",
+      "translation_es_notes": "114 dichos numerados; se conservan lagunas, interpolaciones y notas editoriales; no es una división por versículos bíblicos."
     },
     {
       "id": "mary",
@@ -102,5 +108,6 @@
       "translation_es_status": "pending",
       "web_publication_status": "not_published"
     }
-  ]
+  ],
+  "translation_policy": "Uno por uno. La traducción española es derivada de la edición inglesa archivada, con fuente y avisos de crítica textual. No publicar sin posterior revisión editorial."
 }
