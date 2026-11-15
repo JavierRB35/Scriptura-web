@@ -1,0 +1,44 @@
+# Archivo puntual de traducciones inglesas liberadas al dominio público.
+# No ejecuta cambios sobre base de datos ni publica los textos en la web.
+name: Archivar evangelios apocrifos (fuentes inglesas)
+
+on:
+  push:
+    paths:
+      - .github/workflows/import-apocrypha.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scriptura-import-apocrypha
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Preparar extractor
+        run: python -m pip install 'beautifulsoup4>=4.13,<5'
+      - name: Descargar y validar los seis originales ingleses
+        run: python scripts/import-apocrypha.py
+      - name: Versionar solo archivos documentales verificados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/apocrypha/en data/apocrypha/manifest.json
+          if git diff --cached --quiet; then
+            echo "No hay cambios editoriales"
+            exit 0
+          fi
+          git commit -m "data(apocrypha): archivar seis traducciones originales de dominio publico"
+          git pull --rebase origin main
+          git push origin HEAD:main
