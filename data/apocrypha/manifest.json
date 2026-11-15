@@ -22,11 +22,15 @@
       "translation_es_status": "draft_completed_pending_editorial_review",
       "web_publication_status": "not_published",
       "translation_es_file": "es/thomas.md",
-      "translation_es_basis": "Mark M. Mattison (English, public domain), based on Nag Hammadi Codex II,2",
-      "translation_es_procedure": "Spanish translation by AI in Scriptura; not an independently verified translation from Coptic",
+      "translation_es_basis": "English public-domain edition by Mark M. Mattison based on Coptic",
+      "translation_es_procedure": "AI-assisted Spanish translation from archived public-domain English edition; pending independent editorial / philological review",
       "translation_es_units": 114,
       "translation_es_github_blob_sha": "0bc3f882b9e522d616492dde522c2b297922825a",
-      "translation_es_notes": "114 dichos numerados; se conservan lagunas, interpolaciones y notas editoriales; no es una división por versículos bíblicos."
+      "translation_es_notes": "114 dichos numerados; prólogo y seis notas",
+      "translation_es_source_language": "en",
+      "translation_es_source_witness": "Nag Hammadi Codex II,2",
+      "translation_es_unit_type": "sayings",
+      "translation_es_characters": 33118
     },
     {
       "id": "mary",
@@ -41,8 +45,18 @@
       "text_sha256": "3c712c7fe33c6a7f5188ff779ab84d62c824cf67d90799576566501d0db6bc8c",
       "utf8_bytes": 7423,
       "characters": 7407,
-      "translation_es_status": "pending",
-      "web_publication_status": "not_published"
+      "translation_es_status": "draft_completed_pending_editorial_review",
+      "web_publication_status": "not_published",
+      "translation_es_file": "es/mary.md",
+      "translation_es_source_language": "en",
+      "translation_es_basis": "English public-domain edition by Mark M. Mattison based on Coptic",
+      "translation_es_source_witness": "Papyrus Berolinensis 8502,1",
+      "translation_es_procedure": "AI-assisted Spanish translation from archived public-domain English edition; pending independent editorial / philological review",
+      "translation_es_units": 9,
+      "translation_es_unit_type": "extant manuscript pages (7-10; 15-19)",
+      "translation_es_notes": "Páginas conservadas 7-10 y 15-19; faltan 1-6 y 11-14; cuatro notas",
+      "translation_es_github_blob_sha": "9d1f131da78ccf0ba42bd6ed0668053cc106315a",
+      "translation_es_characters": 8065
     },
     {
       "id": "judas",
@@ -57,8 +71,18 @@
       "text_sha256": "7d3b28d0f63e1fa773e88698c2cd451a372278a847b0a99da4fae75bb2db31b9",
       "utf8_bytes": 22162,
       "characters": 22054,
-      "translation_es_status": "pending",
-      "web_publication_status": "not_published"
+      "translation_es_status": "draft_completed_pending_editorial_review",
+      "web_publication_status": "not_published",
+      "translation_es_file": "es/judas.md",
+      "translation_es_source_language": "en",
+      "translation_es_basis": "English public-domain edition by Mark M. Mattison based on Coptic",
+      "translation_es_source_witness": "Codex Tchacos III",
+      "translation_es_procedure": "AI-assisted Spanish translation from archived public-domain English edition; pending independent editorial / philological review",
+      "translation_es_units": 26,
+      "translation_es_unit_type": "extant manuscript pages (33-58)",
+      "translation_es_notes": "Páginas 33-58 conservadas; lagunas y 13 notas críticas",
+      "translation_es_github_blob_sha": "f4aa5963eca5bd8fd41eaddf3ef71a01b8945fa0",
+      "translation_es_characters": 23612
     },
     {
       "id": "peter",
@@ -73,8 +97,18 @@
       "text_sha256": "d5c3debc3c8c82ae8ec7081fa6ec5693beb2c8bec98ec1f0fb472e05c19c7aba",
       "utf8_bytes": 9335,
       "characters": 9335,
-      "translation_es_status": "pending",
-      "web_publication_status": "not_published"
+      "translation_es_status": "draft_completed_pending_editorial_review",
+      "web_publication_status": "not_published",
+      "translation_es_file": "es/peter.md",
+      "translation_es_source_language": "en",
+      "translation_es_basis": "English public-domain edition by Mark M. Mattison based on Greek",
+      "translation_es_source_witness": "Akhmim Greek fragment",
+      "translation_es_procedure": "AI-assisted Spanish translation from archived public-domain English edition; pending independent editorial / philological review",
+      "translation_es_units": 60,
+      "translation_es_unit_type": "numbered textual units",
+      "translation_es_notes": "60 segmentos numerados; inicio y final fragmentarios",
+      "translation_es_github_blob_sha": "91d8ace106cd095e9dedbf3a53ef6b580c9a7d9a",
+      "translation_es_characters": 9846
     },
     {
       "id": "infancyjames",
@@ -89,8 +123,18 @@
       "text_sha256": "80304238eadcba4d36cc2ff4c32e03ce45f58e2e73a30ef491441e0de2051525",
       "utf8_bytes": 36584,
       "characters": 35707,
-      "translation_es_status": "pending",
-      "web_publication_status": "not_published"
+      "translation_es_status": "draft_completed_pending_editorial_review",
+      "web_publication_status": "not_published",
+      "translation_es_file": "es/infancyjames.md",
+      "translation_es_source_language": "en",
+      "translation_es_basis": "English public-domain edition by Mark M. Mattison based on Greek",
+      "translation_es_source_witness": "Greek critical text of Émile de Strycker; alternate Bodmer V",
+      "translation_es_procedure": "AI-assisted Spanish translation from archived public-domain English edition; pending independent editorial / philological review",
+      "translation_es_units": 25,
+      "translation_es_unit_type": "chapters plus 4 alternative chapters",
+      "translation_es_notes": "25 capítulos completos, versión breve alternativa 18-21 y 10 notas editoriales",
+      "translation_es_github_blob_sha": "734a134404ef91ad3a4111c2335d4a6673924479",
+      "translation_es_characters": 35463
     },
     {
       "id": "infancythomas",
@@ -105,9 +149,26 @@
       "text_sha256": "8779f72138284921d0f08cb209da23caf24293f2ec1c725675a7a3a973c11cf3",
       "utf8_bytes": 20291,
       "characters": 19846,
-      "translation_es_status": "pending",
-      "web_publication_status": "not_published"
+      "translation_es_status": "draft_completed_pending_editorial_review",
+      "web_publication_status": "not_published",
+      "translation_es_file": "es/infancythomas.md",
+      "translation_es_source_language": "en",
+      "translation_es_basis": "English public-domain edition by Mark M. Mattison based on Greek",
+      "translation_es_source_witness": "Hagios Saba 259; later manuscripts for chapters 17-18",
+      "translation_es_procedure": "AI-assisted Spanish translation from archived public-domain English edition; pending independent editorial / philological review",
+      "translation_es_units": 19,
+      "translation_es_unit_type": "chapters",
+      "translation_es_notes": "19 capítulos; advertencias de fuente de 10 y 17-18; nueve notas",
+      "translation_es_github_blob_sha": "a112d4e626f0e60d4c01cb242180abde50d78d52",
+      "translation_es_characters": 20392
     }
   ],
-  "translation_policy": "Uno por uno. La traducción española es derivada de la edición inglesa archivada, con fuente y avisos de crítica textual. No publicar sin posterior revisión editorial."
+  "translation_policy": "Seis traducciones completas de trabajo en español, derivadas de la edición inglesa de dominio público. Numeración original (dichos, capítulos, unidades numeradas o páginas) preservada sin inventar versículos. Se conservan lagunas y notas. Pendiente revisión editorial y cotejo de idiomas antiguos antes de cualquier publicación.",
+  "translation_completion": {
+    "source_works": 6,
+    "spanish_full_drafts": 6,
+    "pending_translation": 0,
+    "pending_independent_editorial_review": 6,
+    "not_published_on_web": 6
+  }
 }
