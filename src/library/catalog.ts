@@ -52,7 +52,8 @@ export function getLibraryBooks(): LibraryBook[] {
       (work) =>
         (work.web_publication_status === "public_draft" ||
           work.web_publication_status === "published") &&
-        work.translation_es_status === "draft_completed_pending_editorial_review" &&
+        (work.translation_es_status === "draft_completed_pending_editorial_review" ||
+          work.translation_es_status === "reviewed") &&
         safeId.test(work.id) &&
         safeSource.test(work.translation_es_file ?? "") &&
         Boolean(work.library?.summary) &&
