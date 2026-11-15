@@ -45,3 +45,19 @@ Las piezas generadas como imágenes rasterizadas no se convierten en vectores re
 6. Hacer commit en `main` con archivos y manifiesto; registrar SHA y actualizar estado por ID a `integrado` solo tras comprobar la existencia real.
 
 **Estado de entrega al 2026-11-15:** 20 conceptos aceptados y **20 archivos WebP verificados en `main`**. Pendientes SVG reales y algunas adaptaciones PNG/WebP por dimensión y proporción, integración en pantallas, comprobaciones de accesibilidad e identidad. La documentación **no** da por finalizada la implementación visual.
+
+
+## Integración real de la landing — 2026-11-15
+
+Se han cotejado el árbol de `main` y `docs/recursos/manifest.json`: **IMG-01 a IMG-20 existen físicamente en `public/images/approved/` como WebP**. No afirmar que faltan los archivos; la falta de versiones SVG de los logos u otras adaptaciones no equivale a ausencia de los originales aceptados.
+
+**Integración directa y trazable, sin generar ni sustituir imágenes** (commit [`a035fb6`](https://github.com/JavierRB35/Scriptura-web/commit/a035fb66c86265ed0549e722d8ada7aaea2c480e)):
+
+| Recurso aprobado | Ruta confirmada en `main` | Uso real actual |
+|---|---|---|
+| IMG-04 | `public/images/approved/IMG-04.webp` | Ilustración principal de la portada, columna derecha del hero |
+| IMG-05 | `public/images/approved/IMG-05.webp` | Miniatura de la tarjeta de biblioteca y lectura en la portada |
+| IMG-06 | `public/images/approved/IMG-06.webp` | Miniatura de la tarjeta editorial sobre debates en la portada |
+| IMG-08 | `public/images/approved/IMG-08.webp` | Miniatura de la tarjeta editorial sobre fuentes en la portada |
+
+Las imágenes se sirven con `next/image` con tamaños responsive, relación de aspecto editorial y sin texto de interfaz superpuesto. **No** implica todavía convertir/validar formatos vectoriales, contrastes u otros destinos descritos en el catálogo; `production_ready: false` en el manifiesto se conserva hasta finalizar esas adaptaciones. La IMG-01 no debe utilizarse como logotipo: su ficha de manifiesto indica una composición paisajística aunque el catálogo la denomine logotipo horizontal. No inventar sustitutos; resolver ese desfase solo a partir del diseño aprobado.
