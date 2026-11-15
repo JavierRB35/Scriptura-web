@@ -4,6 +4,7 @@
 
 import { beforeAll, describe, expect, it } from "vitest";
 import pg from "pg";
+import { CHAPTER_VERSES_SQL } from "@/bible/verse-query";
 
 const DATABASE_URL = process.env.DATABASE_URL;
 const d = describe.skipIf(!DATABASE_URL);
@@ -34,6 +35,25 @@ d("integridad de la edición publicada (RV1909)", () => {
     expect(rows[0].books).toBe(66);
     expect(rows[0].chapters).toBe(1189);
     expect(rows[0].verses).toBe(31102);
+  });
+
+  it("entrega nombres y números de versículos compatibles con el lector web (V17)", async () => {
+    const { rows: editions } = await client.query<{ id: string }>(
+      "SELECT id FROM bible_editions WHERE identifier = 'spaRV1909' LIMIT 1"
+    );
+    const { rows } = await client.query<{
+      verseNumber: number;
+      verseKey: string;
+      text: string;
+    }>(CHAPTER_VERSES_SQL, [editions[0].id, "Gn", 1]);
+
+    expect(rows).toHaveLength(31);
+    expect(rows[0].verseNumber).toBe(1);
+    expect(rows[0].verseKey).toBe("1");
+    expect(rows[0].text).toBe("EN el principio crió Dios los cielos y la tierra.");
+    expect(rows[1].verseNumber).toBe(2);
+    expect(rows.every((v, i) => v.verseNumber === i + 1)).toBe(true);
+    expect(Object.keys(rows[0]).sort()).toEqual(["text", "verseKey", "verseNumber"]);
   });
 
   it("registra exactamente los 18 versículos sin texto como advertencias del lote", async () => {
