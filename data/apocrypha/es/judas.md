@@ -1,8 +1,8 @@
 # Evangelio de Judas
 
-**Traducción española de trabajo — Scriptura.** Basada en la traducción inglesa de Mark M. Mattison, liberada expresamente al dominio público en https://www.gospels.net/judas y conservada en \`data/apocrypha/en/judas.txt\`. La edición inglesa sigue el texto copto del *Códice Tchacos*, tratado 3.
+**Traducción española de trabajo — Scriptura.** Basada en la traducción inglesa de Mark M. Mattison, liberada expresamente al dominio público en https://www.gospels.net/judas y conservada en `data/apocrypha/en/judas.txt`. La edición inglesa sigue el texto copto del *Códice Tchacos*, tratado 3.
 
-**Convenciones:** \`⟦p. 33⟧\` y las indicaciones siguientes son **páginas del manuscrito**, no versículos. Los corchetes \`[ ]\` conservan lagunas y restituciones del original de referencia; los paréntesis \`( )\` señalan intervenciones editoriales. Los títulos son editoriales; **no se inventa una numeración de versículos inexistente en la fuente**.
+**Convenciones:** `⟦p. 33⟧` y las indicaciones siguientes son **páginas del manuscrito**, no versículos. Los corchetes `[ ]` conservan lagunas y restituciones del original de referencia; los paréntesis `( )` señalan intervenciones editoriales. Los títulos son editoriales; **no se inventa una numeración de versículos inexistente en la fuente**.
 
 ## Introducción
 
