@@ -1,8 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Literata, Source_Sans_3 } from "next/font/google";
 
-// Landing: composición editorial basada únicamente en información comprobada
-// en el repositorio. No depende de CSS Modules ni de imágenes sin entregar.
+// Landing editorial: imágenes aprobadas verificadas en main y datos reales.
+// No se alteran enlaces, autenticación ni lógica de negocio.
 const literata = Literata({
   variable: "--font-landing-literata",
   subsets: ["latin"],
@@ -85,55 +86,40 @@ export default function Home() {
             </p>
           </div>
 
-          <aside
-            aria-label="Datos de la biblioteca bíblica disponible"
-            className="relative min-w-0 overflow-hidden rounded-[18px] bg-[#1F5C45] px-6 py-8 text-[#F7F1E5] shadow-[0_28px_65px_rgba(31,92,69,.18)] sm:px-9 sm:py-10 lg:min-h-[550px] lg:px-10 lg:py-12"
-          >
-            <div className="absolute inset-4 rounded-[10px] border border-[#A3B9A8]/30" aria-hidden="true" />
-            <div className="relative flex h-full min-h-[340px] flex-col justify-between gap-12 lg:min-h-[445px]">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[.21em] text-[#D4DECE]">
-                  Biblioteca de Scriptura
-                </p>
-                <div className="mt-10 h-px w-12 bg-[#D6B077]" aria-hidden="true" />
-                <h2
-                  className="mt-6 max-w-[355px] text-[clamp(2.1rem,3.1vw,3.4rem)] font-normal leading-[1.24] tracking-[-.03em]"
-                  style={serif}
-                >
-                  Lectura sin distracciones.
-                </h2>
-                <p className="mt-4 max-w-[330px] text-base leading-[1.75] text-[#E5EBE3]">
-                  Una edición íntegra de las Escrituras, accesible libro a
-                  libro, capítulo a capítulo.
-                </p>
-              </div>
-              <div>
-                <div className="grid grid-cols-3 gap-3 border-y border-[#A3B9A8]/40 py-6">
-                  <div>
-                    <p className="text-[clamp(1.45rem,2.5vw,2.15rem)] leading-tight" style={serif}>
-                      66
-                    </p>
-                    <p className="mt-2 text-xs text-[#D4DECE]">libros</p>
-                  </div>
-                  <div>
-                    <p className="text-[clamp(1.45rem,2.5vw,2.15rem)] leading-tight" style={serif}>
-                      1.189
-                    </p>
-                    <p className="mt-2 text-xs text-[#D4DECE]">capítulos</p>
-                  </div>
-                  <div>
-                    <p className="text-[clamp(1.45rem,2.5vw,2.15rem)] leading-tight" style={serif}>
-                      31.102
-                    </p>
-                    <p className="mt-2 text-xs text-[#D4DECE]">versículos</p>
-                  </div>
-                </div>
-                <p className="mt-5 text-xs leading-relaxed text-[#D4DECE]">
-                  Reina-Valera 1909 · Importación verificada en el proyecto
-                </p>
-              </div>
+          <figure className="min-w-0 overflow-hidden rounded-2xl border border-border bg-surface shadow-[0_24px_56px_rgba(31,92,69,.12)]">
+            <div className="relative aspect-video w-full overflow-hidden bg-accent-soft">
+              <Image
+                src="/images/approved/IMG-04.webp"
+                alt="El camino de la lectura. Ilustración editorial aprobada para la portada de Scriptura."
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 45vw"
+                className="object-cover"
+              />
             </div>
-          </aside>
+            <figcaption className="px-5 py-5 sm:px-7 sm:py-6">
+              <p className="text-xs font-bold uppercase tracking-[.16em] text-accent">
+                Biblioteca bíblica · Reina-Valera 1909
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
+                Texto íntegro disponible para lectura y búsqueda por referencias.
+              </p>
+              <div className="mt-5 grid grid-cols-3 gap-3 border-t border-border pt-5">
+                <div>
+                  <p className="text-xl font-medium text-foreground sm:text-2xl" style={serif}>66</p>
+                  <p className="mt-1 text-xs text-muted">libros</p>
+                </div>
+                <div>
+                  <p className="text-xl font-medium text-foreground sm:text-2xl" style={serif}>1.189</p>
+                  <p className="mt-1 text-xs text-muted">capítulos</p>
+                </div>
+                <div>
+                  <p className="text-xl font-medium text-foreground sm:text-2xl" style={serif}>31.102</p>
+                  <p className="mt-1 text-xs text-muted">versículos</p>
+                </div>
+              </div>
+            </figcaption>
+          </figure>
         </section>
 
         <section
@@ -159,7 +145,16 @@ export default function Home() {
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
-            <article className="rounded-xl border border-[#C4D5CA] bg-accent-soft p-7 sm:p-8">
+            <article className="overflow-hidden rounded-xl border border-[#C4D5CA] bg-accent-soft p-7 sm:p-8">
+              <div className="relative -mx-7 -mt-7 mb-7 aspect-video overflow-hidden bg-accent-soft sm:-mx-8 sm:-mt-8">
+                <Image
+                  src="/images/approved/IMG-05.webp"
+                  alt="Imagen editorial de la biblioteca bíblica"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover"
+                />
+              </div>
               <p className="text-sm font-semibold text-accent">01 · Disponible</p>
               <h3 className="mt-9 text-[1.55rem] font-normal leading-[1.3]" style={serif}>
                 Leer con claridad
@@ -176,7 +171,16 @@ export default function Home() {
               </Link>
             </article>
 
-            <article className="rounded-xl border border-border bg-surface p-7 sm:p-8">
+            <article className="overflow-hidden rounded-xl border border-border bg-surface p-7 sm:p-8">
+              <div className="relative -mx-7 -mt-7 mb-7 aspect-video overflow-hidden bg-accent-soft sm:-mx-8 sm:-mt-8">
+                <Image
+                  src="/images/approved/IMG-06.webp"
+                  alt="Imagen editorial de los debates bíblicos"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover"
+                />
+              </div>
               <p className="text-sm font-semibold text-muted">02 · En desarrollo</p>
               <h3 className="mt-9 text-[1.55rem] font-normal leading-[1.3]" style={serif}>
                 Reflexionar en comunidad
@@ -187,7 +191,16 @@ export default function Home() {
               </p>
             </article>
 
-            <article className="rounded-xl border border-border bg-surface p-7 sm:p-8">
+            <article className="overflow-hidden rounded-xl border border-border bg-surface p-7 sm:p-8">
+              <div className="relative -mx-7 -mt-7 mb-7 aspect-video overflow-hidden bg-accent-soft sm:-mx-8 sm:-mt-8">
+                <Image
+                  src="/images/approved/IMG-08.webp"
+                  alt="Imagen editorial de fuentes documentales"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover"
+                />
+              </div>
               <p className="text-sm font-semibold text-muted">03 · En desarrollo</p>
               <h3 className="mt-9 text-[1.55rem] font-normal leading-[1.3]" style={serif}>
                 Comprender con fuentes
