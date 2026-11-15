@@ -34,5 +34,18 @@ El informe contiene procedencia, huella SHA-256 del ZIP, cantidades y referencia
 
 - Importador: comprueba secuencia por capítulo y cantidades canónicas.
 - Lector: numera y separa los versículos en bloques individuales; también identifica los 18 vacíos documentados.
-- Pendiente: ejecutar el auditor sobre el ZIP completo, analizar incidencias concretas y contrastar la edición con fuentes originales antes de efectuar cualquier corrección del texto bíblico.
+- Auditoría del ZIP completo ejecutada en CI el 15-11-2026: **0 incidencias detectadas con las reglas técnicas vigentes** (véase resultado y limitaciones a continuación). No se ha justificado modificación de los pasajes bíblicos.
+- Pendiente: revisión lingüística experta de los 31.102 versículos y cotejo de posibles discrepancias concretas con testigos independientes de la misma edición. La ausencia de alertas automáticas no certifica corrección ortográfica o gramatical total.
 - La inspección del código no constituye una comprobación visual del despliegue ni una ejecución de pruebas de CI.
+
+## Ejecución real y decisión editorial — 15-11-2026
+
+- Fuente descargada: `https://eBible.org/Scriptures/spaRV1909_usfm.zip`.
+- SHA-256 del ZIP original: `56937c2be9ad278aed91370d6a15a98fe976f275d0cbaa6e26910291d949c7a5`.
+- Ejecución CI: https://github.com/JavierRB35/Scriptura-web/actions/runs/43726275490
+- Informe íntegro: artefacto `auditoria-editorial-rv1909` de esa ejecución (`auditoria-rv1909.json`).
+- Cobertura estructural: **66 libros, 1.189 capítulos, 31.102 versículos; 18 posiciones vacías conocidas**.
+- Resultado del detector: `"findings": []` (cero incidencias según sus reglas).
+- Clasificación: ninguna incidencia técnica que deba corregirse. No hay casos concretos en este informe que puedan contrastarse con otra edición como errores de transcripción.
+- **Decisión:** cero cambios al texto canónico o a la base de datos; no cabe justificar correcciones sin evidencia de error. Se mantienen las grafías históricas.
+- Alcance limitado: el auditor identifica caracteres dañados, controles, espacios anómalos, puntuación repetida, marcadores USFM residuales y secuencia numérica; **no realiza revisión filológica, normativa ortográfica ni gramatical exhaustiva**. No atribuirle esa capacidad ni anunciar la Biblia como «impecable» basándose en este resultado.
