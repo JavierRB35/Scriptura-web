@@ -25,9 +25,6 @@ export function detectEditorialAnomalies(text: string): string[] {
 }
 
 async function main() {
-  if (!filename && !process.env.DATABASE_URL) {
-    // No se necesita acceso a la base de datos, solo al ZIP de origen.
-  }
   const bytes = filename
     ? await readFile(filename)
     : Buffer.from(await (async () => {
