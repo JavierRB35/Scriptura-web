@@ -75,3 +75,12 @@ Este bloque ilustra **solamente la estructura**: es deliberadamente parcial y su
 - `tests/unit/catholic-import.test.ts`, `tests/unit/reader-render.test.ts`: regresiones estructurales y de presentación.
 
 **Limitación:** estas pruebas demuestran que el validador rechaza textos incompletos; **no** prueban que exista ya un testigo real cotejado ni que el catálogo completo esté publicado en producción.
+
+## Fuentes históricas localizadas para construir el testigo
+
+- Original en la Biblioteca de la Universidad de Sevilla, **La Sagrada Biblia. Tomo I (1824)**: https://idus.us.es/items/60154398-b068-4bc8-ba22-9d407d4ca8f6 (facsimilar auténtico, pero solo un tomo; buscar los siguientes en la colección).
+- Edición Torres Amat ilustrada por Doré, **1883–1884, cuatro tomos**: https://biblico.net/biblias-en-pdf/ (enlaces a los originales digitalizados de la Universidad de Sevilla). No adoptar una transcripción de esta edición como si fuera la segunda de 1832–1835 sin advertir las diferencias.
+- Volúmenes de **Wikisource** e imágenes digitalizadas: https://es.wikisource.org/wiki/La_Sagrada_Biblia_(XV) (cada página puede tener estado distinto de revisión; comprobar derechos de las transcripciones y atribuir si aplica).
+- Testigos de lectura actual para cotejos puntuales (NO autorizan por sí solos una copia masiva de sus bases de datos): https://fidesviva.org/es/biblia y https://iterfidei.com/es/biblia. Ambos exponen los 73 libros y atribuyen la traducción a Torres Amat; se debe comprobar la procedencia concreta, numeración y licencia del corpus antes de reutilizarlo.
+
+**No existe todavía en el proyecto una transcripción íntegra y revisada con derechos de reutilización documentados.** Tampoco se han incorporado documentos facsimilares completos al repositorio; los enlaces anteriores son referencias para la obtención y cotejo.
