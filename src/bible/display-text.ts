@@ -54,7 +54,7 @@ export function modernizeHistoricalSpelling(text: string): string {
 }
 
 
-export function displayBibleVerse(text: string, location: VerseLocation): string {
+export function displayBibleVerse(text: string, location: VerseLocation, editionIdentifier = "spaRV1909"): string {\n  // Nunca aplicar normalizaciones específicas de Reina-Valera a otras traducciones.\n  if (editionIdentifier !== "spaRV1909") return text;
   const { bookCode, chapter, verseNumber } = location;
   const isFirstVerse = verseNumber === 1;
   // Lucas 1:5 inicia el relato después del prólogo (versículos 1–4).
