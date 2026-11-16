@@ -24,7 +24,7 @@ interface Props {
   bookName: string;
   bookCode: string;
   chapter: number;
-  editionAbbr: string;
+  editionAbbr: string;\n  editionIdentifier: string;
   editionId: string;
   verses: VerseRow[];
   initialRange: { start: number; end: number } | null;
@@ -115,10 +115,10 @@ export function ReaderClient({
       .filter((v) => v.verseNumber >= selected.start && v.verseNumber <= selected.end)
       .map(
         (v) =>
-          `${v.verseNumber} ${displayBibleVerse(v.text, { bookCode, chapter, verseNumber: v.verseNumber })}`
+          `${v.verseNumber} ${displayBibleVerse(v.text, { bookCode, chapter, verseNumber: v.verseNumber }, editionIdentifier)}`
       )
       .join("\n");
-  }, [selected, verses, bookCode, chapter]);
+  }, [selected, verses, bookCode, chapter, editionIdentifier]);
 
   async function copyLink() {
     if (!selected) return;
@@ -138,10 +138,10 @@ export function ReaderClient({
       <div className="sticky top-0 z-10 -mx-4 mb-6 flex items-center justify-between gap-2 border-b border-border bg-background/95 px-4 py-2 text-sm backdrop-blur">
         <span
           className="min-w-0 text-muted"
-          title="Texto original de 1909 conservado; lectura con ortografía actualizada"
+          title={editionIdentifier === "spaRV1909" ? "RV1909: lectura con ortografía actualizada; original conservado" : "Texto histórico de la edición conservado sin adaptación RV1909"}
         >
           {editionAbbr} · Capítulo {chapter} · {comments.length} reflex.
-          <span className="ml-1 text-xs">· ort. actual</span>
+          {editionIdentifier === "spaRV1909" && <span className="ml-1 text-xs">· ort. actual</span>}
         </span>
         <div className="flex items-center gap-1">
           <Link
@@ -208,7 +208,7 @@ export function ReaderClient({
                   <sup className="mr-1 select-none font-medium text-accent">
                     {v.verseNumber}
                   </sup>
-                  {displayBibleVerse(v.text, { bookCode, chapter, verseNumber: v.verseNumber })}
+                  {displayBibleVerse(v.text, { bookCode, chapter, verseNumber: v.verseNumber }, editionIdentifier)}
                 </>
               ) : (
                 <em className="text-muted">
