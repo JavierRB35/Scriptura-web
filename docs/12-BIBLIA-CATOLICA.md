@@ -12,7 +12,7 @@ El desarrollo incorporado a la rama principal prepara la publicación de una tra
 
 - 73 libros (46 del Antiguo Testamento y 27 del Nuevo), en el orden de `src/bible/catalog.json`.
 - Siete deuterocanónicos íntegros: `Tb` (14 capítulos), `Jdt` (16), `Sb` (19), `Si` (51), `Ba` (6), `1M` (16) y `2M` (15).
-- Además de Ester 1–10 y Daniel 1–12: Ester 11–16 y Daniel 13–14, de acuerdo con la **numeración Vulgata/Torres Amat** que adopta el importador. Los pasajes griegos intercalados y las diferencias internas de versificación se deben cotejar con el testigo físico/digital concreto; no basta con añadir capítulos vacíos.
+- Además de Ester 1–10 y Daniel 1–12: Ester 11–16, Daniel 3 (oración de Azarías/cántico de los tres jóvenes hasta al menos v. 90) y Daniel 13–14, de acuerdo con la **numeración Vulgata/Torres Amat** que adopta el importador. Los pasajes griegos intercalados y las diferencias internas de versificación se deben cotejar con el testigo físico/digital concreto; no basta con añadir capítulos vacíos.
 - Total de capítulos esperados bajo este convenio: **1.334**. Esto no equivale a garantizar la integridad filológica: debe revisarse cada libro, incluido el contenido original, con una fuente independiente.
 - Versículos con su número y separados, sin contenido sintético, generativo ni inventado. Si existen subdivisiones auténticas, preservar `key` y documentarlas.
 
