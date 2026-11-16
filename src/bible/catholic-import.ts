@@ -77,6 +77,12 @@ export function validateCatholicWitness(
           chapter.verses.length === 0) {
         throw new Error(`${book.code}: capítulo ${ci + 1} ausente o vacío.`);
       }
+      // La oración de Azarías y el cántico de los tres jóvenes forman parte
+      // de Daniel 3; no basta con incorporar Daniel 13 y 14.
+      if (book.code === "Dn" && chapter.number === 3 &&
+          !chapter.verses.some(v => v.number >= 90)) {
+        throw new Error("Dn 3: faltan las adiciones griegas (versículos hasta al menos 90).");
+      }
       chapters++;
       const keys = new Set<string>();
       let prev = 0;
