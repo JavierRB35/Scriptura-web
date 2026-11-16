@@ -20,6 +20,7 @@ const props = {
   bookCode: "Gn",
   chapter: 1,
   editionAbbr: "RV1909",
+  editionIdentifier: "spaRV1909",
   editionId: "edicion-test",
   verses,
   initialRange: null,
@@ -31,6 +32,16 @@ describe("V17: numeración, separación y fidelidad del lector", () => {
   it("identifica de forma visible que la lectura usa ortografía actual", () => {
     const html = renderToStaticMarkup(createElement(ReaderClient, props));
     expect(html).toContain("ort. actual");
+  });
+
+  it("no modifica el texto católico usando transformaciones específicas de RV1909", () => {
+    const html = renderToStaticMarkup(createElement(ReaderClient, {
+      ...props,
+      editionAbbr: "TA",
+      editionIdentifier: "spaTorresAmat1835",
+    }));
+    expect(html).toContain("EN el principio crió Dios los cielos y la tierra.");
+    expect(html).not.toContain("ort. actual");
   });
 
   it("normaliza la preposición de un versículo real sin cambiar el objeto de datos", () => {
