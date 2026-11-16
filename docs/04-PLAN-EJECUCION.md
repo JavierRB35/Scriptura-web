@@ -1,6 +1,8 @@
 # PLAN DE EJECUCIÓN — SCRIPTURA WEB
 
 **Reglas:** las fases no son lanzamientos públicos; la web permanece protegida hasta la finalización total (§21). No iniciar una fase con dependencias críticas rotas de la anterior. Permitir trabajo paralelo con componentes desacoplados.
+**Despliegue:** producción actualizada con las Fases 0-6 (2026-11-16, commit 5d6ab04): todas las rutas verificadas en https://scriptura-web-eight.vercel.app (Biblia RV1909 íntegra, comunidad, debates, moderación, apelaciones, asistente IA en modo degradado honesto, lecturas diarias). Sin apertura pública del producto.
+
 **Cómo usar este documento:** marcar [x] al completar y anotar la fecha. Es el registro vivo de avance para la continuidad entre sesiones (directriz §4).
 
 ## Fase 0 — Auditoría y preparación ✅ (2026-11-15)
