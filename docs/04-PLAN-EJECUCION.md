@@ -192,3 +192,18 @@
 | Fase 1 | Credenciales: Supabase, Vercel, Resend, proveedor IA |
 | Fase 6/7 | Revisión jurídica RGPD (categorías especiales, menores) antes de tratamiento real |
 | Fase 7 | Autorización de apertura pública |
+
+
+## D26 — Biblia católica íntegra (16-11-2026)
+
+- [x] Inventario: catálogo católico de 73 libros ya existente; edición de lectura real actual RV1909 de 66 libros.
+- [x] Fuente histórica candidata: Félix Torres Amat, segunda edición (1832–1835), traducción de dominio público; separar derechos de traducción y procedencia de la transcripción.
+- [x] Validador estricto: exige 73 libros, 1334 capítulos para versificación de Vulgata, con Ester 11–16, Daniel 13–14 y Baruc 6; sin versículos vacíos ni duplicados.
+- [x] Importador atómico con hash de fuente y contenido, edición separada y no sobrescritura de ediciones publicadas.
+- [x] Preferencia de lector católico condicionada a su publicación efectiva, y aislamiento de la capa de modernización RV1909.
+- [ ] Obtener y cotejar un testigo digital completo de **todos** los libros, con documentación de derechos de la transcripción y referencias (sin confiar en OCR sin revisión).
+- [ ] Validar el corpus real y resolver diferencias de numeración por edición (incluidos salmos/fragmentos).
+- [ ] Importar los 73 libros en Supabase y publicar la edición tras comprobaciones en base de datos y la web.
+- [ ] Verificar CI, lectura, búsqueda, navegación, referencias y derechos en producción, y efectuar revisión editorial posterior.
+
+**Estado veraz:** todavía no está publicada la Biblia católica completa; la web sigue sirviendo RV1909 hasta la incorporación de un testigo íntegro revisado.
