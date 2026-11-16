@@ -204,6 +204,6 @@
 - [ ] Obtener y cotejar un testigo digital completo de **todos** los libros, con documentación de derechos de la transcripción y referencias (sin confiar en OCR sin revisión).
 - [ ] Validar el corpus real y resolver diferencias de numeración por edición (incluidos salmos/fragmentos).
 - [ ] Importar los 73 libros en Supabase y publicar la edición tras comprobaciones en base de datos y la web.
-- [ ] Verificar CI, lectura, búsqueda, navegación, referencias y derechos en producción, y efectuar revisión editorial posterior.
+- [x] CI del código de preparación: lint, tipos, unitarias e integración en verde (ejecución https://github.com/JavierRB35/Scriptura-web/actions/runs/43837641660, 16-11-2026).\n- [ ] Verificar lectura, búsqueda, navegación, referencias y derechos **tras la importación de los 73 libros**, y efectuar revisión editorial posterior.
 
 **Estado veraz:** todavía no está publicada la Biblia católica completa; la web sigue sirviendo RV1909 hasta la incorporación de un testigo íntegro revisado.
