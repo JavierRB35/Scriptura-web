@@ -31,7 +31,7 @@ export default function InformacionPage() {
         <div>
           <h2 className="font-semibold">Textos bíblicos y derechos</h2>
           <p className="mt-2 text-muted">
-            La primera edición prevista es la <strong>Reina-Valera 1909</strong>, en su
+            La primera edición publicada es la <strong>Reina-Valera 1909</strong>, en su
             versión histórica de dominio público, con procedencia documentada de{" "}
             <a
               href="https://ebible.org/spaRV1909/"
@@ -41,7 +41,7 @@ export default function InformacionPage() {
             >
               ebible.org
             </a>
-            . Cada edición publicada incluirá su situación de derechos, verificable
+            . La edición católica completa de <strong>Félix Torres Amat</strong> (73 libros) está en preparación editorial y no será anunciada como disponible hasta publicar los textos cotejados de todos sus libros y las adiciones de Ester y Daniel. Cada edición publicada incluirá su situación de derechos, verificable
             desde la interfaz. No se utiliza la Biblia de la Universidad de Navarra ni
             sus materiales protegidos.
           </p>
