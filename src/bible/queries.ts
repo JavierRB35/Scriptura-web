@@ -34,7 +34,7 @@ export interface ChapterInfo {
   next: { slug: string; chapter: number; label: string } | null;
 }
 
-/** Primera edición publicada (hoy solo RV1909). */
+/** Edición preferente: Torres Amat católica solo tras publicación íntegra; RV1909 como respaldo. */
 export async function getPublishedEdition(): Promise<EditionInfo | null> {
   await connection(); // datos por petición: nunca prerenderizados ni cacheados
   const { rows } = await query<{
@@ -48,7 +48,7 @@ export async function getPublishedEdition(): Promise<EditionInfo | null> {
   }>(
     `SELECT id, identifier, full_name, abbreviation, language, canon_coverage, url
        FROM bible_editions WHERE publication_status = 'published'
-      ORDER BY created_at LIMIT 1`
+      ORDER BY CASE WHEN identifier = 'spaTorresAmat1835' THEN 0 ELSE 1 END, created_at LIMIT 1`
   );
   if (rows.length === 0) return null;
   const r = rows[0];
@@ -127,23 +127,23 @@ export async function getChapter(
   // Anterior/siguiente sobre la rejilla real de capítulos de la edición.
   const { rows: nav } = await query<{
     prev_ch: number | null;
-    prev_book: string | null;
+    prev_book: string | null;\n    prev_code: string | null;
     next_ch: number | null;
-    next_book: string | null;
+    next_book: string | null;\n    next_code: string | null;
   }>(
     `WITH grid AS (
        SELECT b.code, b.name_es, ch.chapter_number,
               LAG(ch.chapter_number)  OVER w AS prev_ch,
-              LAG(b.name_es)          OVER w AS prev_book,
+              LAG(b.name_es)          OVER w AS prev_book,\n              LAG(b.code)             OVER w AS prev_code,
               LEAD(ch.chapter_number) OVER w AS next_ch,
-              LEAD(b.name_es)         OVER w AS next_book
+              LEAD(b.name_es)         OVER w AS next_book,\n              LEAD(b.code)            OVER w AS next_code
          FROM bible_chapters ch
          JOIN biblical_books b ON b.id = ch.book_id
          JOIN edition_books eb ON eb.edition_id = ch.edition_id AND eb.book_id = ch.book_id
         WHERE ch.edition_id = $1
        WINDOW w AS (ORDER BY eb.position, ch.chapter_number)
      )
-     SELECT prev_ch, prev_book, next_ch, next_book
+     SELECT prev_ch, prev_book, prev_code, next_ch, next_book, next_code
        FROM grid WHERE code = $2 AND chapter_number = $3`,
     [editionId, bookCode, chapterNumber]
   );
@@ -154,7 +154,7 @@ export async function getChapter(
   let next: ChapterInfo["next"] = null;
   if (n?.prev_ch != null) {
     const cross = n.prev_book !== head.book_name;
-    const bookCodeNav = cross ? bookBefore(bookCode) : bookCode;
+    const bookCodeNav = cross ? n.prev_code! : bookCode;
     prev = {
       slug: slugOf(bookCodeNav),
       chapter: n.prev_ch,
@@ -163,7 +163,7 @@ export async function getChapter(
   }
   if (n?.next_ch != null) {
     const cross = n.next_book !== head.book_name;
-    const bookCodeNav = cross ? bookAfter(bookCode) : bookCode;
+    const bookCodeNav = cross ? n.next_code! : bookCode;
     next = {
       slug: slugOf(bookCodeNav),
       chapter: n.next_ch,
@@ -189,16 +189,6 @@ export async function getChapter(
     prev,
     next,
   };
-}
-
-import { BOOKS } from "./catalog";
-function bookBefore(code: string): string {
-  const i = BOOKS.findIndex((b) => b.code === code);
-  return BOOKS[Math.max(0, i - 1)].code;
-}
-function bookAfter(code: string): string {
-  const i = BOOKS.findIndex((b) => b.code === code);
-  return BOOKS[Math.min(BOOKS.length - 1, i + 1)].code;
 }
 
 export interface SearchHit {
