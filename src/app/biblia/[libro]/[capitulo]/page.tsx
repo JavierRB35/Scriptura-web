@@ -94,7 +94,8 @@ async function ChapterBody({ params, searchParams }: Props) {
             bookName={chapter.bookName}
             bookCode={chapter.bookCode}
             chapter={chapter.chapterNumber}
-            editionAbbr={edition.abbreviation}\n            editionIdentifier={edition.identifier}
+            editionAbbr={edition.abbreviation}
+            editionIdentifier={edition.identifier}
             editionId={edition.id}
             verses={chapter.verses}
             initialRange={initialRange}
