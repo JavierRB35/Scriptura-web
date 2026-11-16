@@ -127,16 +127,20 @@ export async function getChapter(
   // Anterior/siguiente sobre la rejilla real de capítulos de la edición.
   const { rows: nav } = await query<{
     prev_ch: number | null;
-    prev_book: string | null;\n    prev_code: string | null;
+    prev_book: string | null;
+    prev_code: string | null;
     next_ch: number | null;
-    next_book: string | null;\n    next_code: string | null;
+    next_book: string | null;
+    next_code: string | null;
   }>(
     `WITH grid AS (
        SELECT b.code, b.name_es, ch.chapter_number,
               LAG(ch.chapter_number)  OVER w AS prev_ch,
-              LAG(b.name_es)          OVER w AS prev_book,\n              LAG(b.code)             OVER w AS prev_code,
+              LAG(b.name_es)          OVER w AS prev_book,
+              LAG(b.code)             OVER w AS prev_code,
               LEAD(ch.chapter_number) OVER w AS next_ch,
-              LEAD(b.name_es)         OVER w AS next_book,\n              LEAD(b.code)            OVER w AS next_code
+              LEAD(b.name_es)         OVER w AS next_book,
+              LEAD(b.code)            OVER w AS next_code
          FROM bible_chapters ch
          JOIN biblical_books b ON b.id = ch.book_id
          JOIN edition_books eb ON eb.edition_id = ch.edition_id AND eb.book_id = ch.book_id
