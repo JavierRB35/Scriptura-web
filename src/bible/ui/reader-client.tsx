@@ -62,6 +62,7 @@ export function ReaderClient({
   bookCode,
   chapter,
   editionAbbr,
+  editionIdentifier,
   verses,
   initialRange,
   user,
