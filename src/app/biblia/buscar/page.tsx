@@ -111,7 +111,7 @@ async function BuscarCuerpo({ searchParams }: Props) {
                 {hit.bookName} {hit.chapter}:{hit.verseNumber}
               </span>
               <p className="mt-1 leading-7">
-                {displayBibleVerse(hit.text, { bookCode: hit.bookCode, chapter: hit.chapter, verseNumber: hit.verseNumber })}
+                {displayBibleVerse(hit.text, { bookCode: hit.bookCode, chapter: hit.chapter, verseNumber: hit.verseNumber }, edition.identifier)}
               </p>
             </Link>
           </li>
