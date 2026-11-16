@@ -23,7 +23,7 @@ function fixture(): CatholicWitness {
       code: b.code,
       chapters: Array.from({ length: CATHOLIC_EXPECTED_CHAPTERS[b.code] }, (_, i) => ({
         number: i + 1,
-        verses: Array.from({ length: 26 }, (_, j) => ({
+        verses: Array.from({ length: b.code === "Dn" && i === 2 ? 90 : 26 }, (_, j) => ({
           number: j + 1,
           text: `Versículo de prueba ${j + 1}`
         }))
@@ -37,7 +37,7 @@ describe("validación del canon católico íntegro", () => {
   it("exige 73 libros, 1334 capítulos y numeración efectiva", () => {
     const f = fixture();
     expect(validateCatholicWitness(f, codes)).toEqual({
-      books: 73, chapters: 1334, verses: 1334 * 26
+      books: 73, chapters: 1334, verses: 1334 * 26 + 64
     });
     expect(f.books.find(b=>b.code==="Est")?.chapters).toHaveLength(16);
     expect(f.books.find(b=>b.code==="Dn")?.chapters).toHaveLength(14);
@@ -56,6 +56,13 @@ describe("validación del canon católico íntegro", () => {
     g.books.find(b=>b.code==="Dn")!.chapters.pop();
     expect(()=>validateCatholicWitness(g,codes)).toThrow(/Dn.*14/);
   });
+  it("rechaza Daniel 3 sin el cántico de los tres jóvenes", () => {
+    const f = fixture();
+    f.books.find(b => b.code === "Dn")!.chapters[2].verses = 
+      f.books.find(b => b.code === "Dn")!.chapters[2].verses.slice(0, 26);
+    expect(() => validateCatholicWitness(f, codes)).toThrow(/Dn 3.*adiciones/);
+  });
+
   it("rechaza saltos, texto vacío o falta de cotejo editorial", () => {
     const f = fixture();
     f.books[0].chapters[0].verses[3].number = 8;
