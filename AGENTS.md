@@ -12,7 +12,7 @@
 ## Reglas de trabajo
 
 - **Ninguna funcionalidad ficticia** (§0.2): sin datos ni respuestas simuladas. Los estados vacíos son honestos.
-- **Ningún contenido de la Biblia de Navarra** en este repositorio, jamás (§5.1). Primera edición: Reina-Valera 1909, dominio público, de ebible.org.
+- **Ningún contenido de la Biblia de Navarra** en este repositorio, jamás (§5.1). Se conserva la Reina-Valera 1909 (eBible.org) como edición histórica; **la directriz editorial posterior D26 prioriza el canon católico íntegro de 73 libros** usando una traducción histórica de dominio público (Torres Amat) con testigo cotejado. No declarar publicada la edición católica sin importación real de los 73 libros, las adiciones de Ester y Daniel y pruebas de integridad. Ver `docs/12-BIBLIA-CATOLICA.md`.
 - Textos bíblicos publicados: **inmutables**; solo cambian mediante nueva importación trazable.
 - **V17: TODOS los versículos deben mostrarse OBLIGATORIAMENTE numerados y separados por un salto de línea:** cada versículo en su propio bloque/línea, nunca varios concatenados en un párrafo. Aplica al lector y secuencias de versículos en todas las pantallas, móvil y escritorio. Mantener texto original intacto y comprobarlo en pruebas. Véanse `docs/01-ESPECIFICACION-FUNCIONAL.md` §6.4 y `docs/05-DIRECTRIZ-IDENTIDAD-VISUAL.md` §5.1.
 - Comunidad solo para registrados, bloqueado en servidor **y** base de datos (§18.7).
