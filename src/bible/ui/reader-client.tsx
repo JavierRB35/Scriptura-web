@@ -24,7 +24,8 @@ interface Props {
   bookName: string;
   bookCode: string;
   chapter: number;
-  editionAbbr: string;\n  editionIdentifier: string;
+  editionAbbr: string;
+  editionIdentifier: string;
   editionId: string;
   verses: VerseRow[];
   initialRange: { start: number; end: number } | null;
