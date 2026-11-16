@@ -147,13 +147,34 @@
       unitaria de citas/inyección está en verde; la E2E requiere clave.
 - [ ] 146/146 pruebas en verde; CI valida todo el flujo sin proveedor.
 
-## Fase 6 — Lecturas diarias por correo
+## Fase 6 — Lecturas diarias por correo 🔄 (2026-11-16: infraestructura completa)
 
-- [ ] Modelo de calendario litúrgico de España (celebraciones, ciclos, variantes) en tablas propias.
-- [ ] Suscripciones independientes con confirmación, zona horaria IANA y hora de envío.
-- [ ] Plantilla de correo responsive; textos completos solo con derechos (RV1909 atribuida), referencia y enlace si no.
-- [ ] Cola duradera idempotente; reintentos; control de duplicados y rebotes (§13.6).
-- [ ] Pruebas de fechas litúrgicas representativas (§22.6).
+- [x] Calendario litúrgico general computable (§13.2): computus de Pascua,
+      estaciones (Adviento/Navidad/Cuaresma/Pascua/Ordinario), solemnidades
+      fijas, ciclos dominicales A/B/C y feriales I/II, numeración de
+      domingos garantizada por el final (Cristo Rey = 34º). 11 pruebas contra
+      hechos conocidos y límites canónicos (Pascua 22-mar/25-abr, siempre domingo).
+- [x] Suscripciones independientes con doble opt-in (§13.1): alta con zona
+      horaria IANA validada, token hash SHA-256 con caducidad, confirmación,
+      baja por enlace en cada correo, reintento de alta pendiente.
+- [x] Cola duradera idempotente (§13.4): restricción única (suscripción,
+      fecha, versión), procesado con SKIP LOCKED, reintentos hasta 5 con
+      registro por intento (email_delivery_attempts), zonas horarias por
+      suscriptor y operaciones en UTC.
+- [x] Integridad (§13.3): sin datos editoriales de lecturas para una fecha,
+      el envío se OMITE con incidencia registrada — nunca se inventan
+      referencias ni textos. Envío real probado con lecturas sembradas y
+      texto íntegro de RV1909 (dominio público) + traducción identificada.
+- [x] Proveedor de correo sustituible (Resend) con claves solo en servidor;
+      sin clave, los envíos fallan con error honesto. Plantilla HTML/texto
+      responsive (§13.5) con identidad, celebración, lecturas, traducción y baja.
+- [x] 161/161 pruebas; flujo completo verificado: alta → confirmar → encolar →
+      enviar (proveedor falso en pruebas) → intento registrado → baja.
+- [ ] Datos editoriales del leccionario (referencias por celebración):
+      requieren trabajo editorial con fuentes verificadas; sin ellos el
+      servicio omite con incidencia (diseñado así por §13.3).
+- [ ] Programación real (cron) y envío E2E con Resend: requieren RESEND_API_KEY
+      y credenciales de cron del propietario. Worker listo: scripts/email-worker.mjs.
 
 ## Fase 7 — Integración y aceptación
 
