@@ -17,9 +17,9 @@ Plataforma web pública, gratuita e interconfesional para leer la Biblia, compre
 | **Fase 6** — Lecturas diarias por correo | 🔄 Infraestructura completa |
 | **Fase 7** — Integración y aceptación | Pendiente |
 
-**Biblia disponible:** Reina-Valera 1909 (dominio público, ebible.org) — 66 libros,
+**Biblia actualmente publicada:** Reina-Valera 1909 (dominio público, ebible.org) — 66 libros,
 1.189 capítulos, 31.102 versículos, importación reproducible y verificada. Lector,
-búsqueda textual y por referencia en `/biblia`.
+búsqueda textual y por referencia en `/biblia`. **Nuevo objetivo editorial vinculante (D26):** publicación de la Biblia católica íntegra de 73 libros, mediante la edición histórica de Félix Torres Amat. El importador, validación y preferencia de lector están preparados; **no hay todavía testigo íntegro verificado ni importación católica publicada**. Véase [`docs/12-BIBLIA-CATOLICA.md`](docs/12-BIBLIA-CATOLICA.md).
 
 **Biblioteca de textos antiguos:** disponible en **`/biblioteca`**, con lectura de los seis evangelios extracanonicos traducidos al español y fichas de procedencia. Las seis versiones son **borradores completos, pendientes de revisión editorial**; esta condición está visible en la web. Catálogo extensible por manifiesto, sin crear rutas manuales. Véanse [`data/apocrypha/README.md`](data/apocrypha/README.md) y [`docs/11-BIBLIOTECA-WEB.md`](docs/11-BIBLIOTECA-WEB.md).
 
