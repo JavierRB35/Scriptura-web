@@ -1835,3 +1835,14 @@ No introduzcas funciones nuevas que desvirtúen el producto.
 No anuncies como completado algo que no haya sido comprobado.
 
 **Tu responsabilidad es entregar Scriptura Web terminada, verificable, documentada y preparada para su publicación, respetando íntegramente esta especificación.**
+
+
+---
+
+## D26 — Directriz editorial posterior (16-11-2026): Biblia católica íntegra
+
+**Prioridad sobre §5.2-§5.4 y decisiones de cobertura anteriores, exclusivamente en lo relativo a edición bíblica por defecto:** el propietario decide que Scriptura-web debe presentar una **Biblia católica completa (73 libros)**, incluidos Tobías, Judit, Sabiduría, Eclesiástico, Baruc, 1–2 Macabeos y las adiciones de Ester y Daniel. La primera edición publicada, Reina-Valera 1909 (66 libros), se conserva como fuente histórica independiente, sin mezclas ni modificaciones de su texto.
+
+Se adopta como objetivo una transcripción verificada de **La Sagrada Biblia de Félix Torres Amat**, segunda edición del siglo XIX, traducción del dominio público. El material de origen y la transcripción digital han de estar documentados por separado; ningún texto de la Biblia de Navarra se incorpora. La edición católica solo se marca como **publicada** cuando se han verificado todas sus referencias, derechos de uso y contenido, sin posiciones artificiales ni capítulos faltantes. Entonces pasa a ser edición predeterminada, manteniendo Reina-Valera como alternativa de archivo.
+
+**Estado operativo al registrar D26:** infraestructura de validación/importación y prioridad de lector implementadas; corpus textual completo **aún no importado ni publicado**. No afirmar que el objetivo está finalizado mientras no se compruebe la carga real de los 73 libros. Seguimiento en `docs/12-BIBLIA-CATOLICA.md`.
