@@ -1,6 +1,6 @@
 // Validación estricta y pura del testigo católico Torres Amat.
 // Rechaza material parcial; nunca reconstruye versículos ausentes.
-import { EXPECTED_CHAPTERS } from "./usfm";
+import { EXPECTED_CHAPTERS } from "./usfm.ts";
 
 export const CATHOLIC_EDITION_ID = "spaTorresAmat1835";
 export const CATHOLIC_EXPECTED_CHAPTERS: Readonly<Record<string, number>> = {
